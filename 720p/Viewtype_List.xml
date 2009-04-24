@@ -63,7 +63,6 @@
 		<align>left</align>
 		<aligny>center</aligny>
 	</include>
-
 	<include name="ListLabel_SubTV">
 		<posx>105</posx>
 		<posy>20</posy>
@@ -73,9 +72,21 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<animation effect="slide" start="0,10" end="0,10" time="0" condition="Container.Content(seasons)">Conditional</animation>			
-		<animation effect="slide" start="0,-10" end="0,-10" time="0" condition="Container.Content(episodes) + [[IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Plot)] | [!IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]]">Conditional</animation>		
-	</include>	
-	
+		<animation effect="slide" start="0,-10" end="0,-10" time="0" condition="Container.Content(episodes) + [[IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Plot)] | [!IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]]">Conditional</animation>
+	</include>
+<!-- mod : display director & writer in selected row BEGIN -->
+	<include name="ListLabel_SubTV_alt"> <!-- used for displaying dir and authors in selected row -->
+		<posx>105</posx>
+		<posy>30</posy>
+		<width>480</width>
+		<height>41</height>
+		<font>Font_ListSub</font>
+		<align>left</align>
+		<aligny>center</aligny>
+		<animation effect="slide" start="0,10" end="0,10" time="0" condition="Container.Content(seasons)">Conditional</animation>			
+		<animation effect="slide" start="0,-10" end="0,-10" time="0" condition="Container.Content(episodes) + [[IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Plot)] | [!IsEmpty(ListItem.Writer) + IsEmpty(ListItem.Plot)]]">Conditional</animation>
+	</include>
+<!-- mod : display director & writer in selected row END -->	
 	<include name="ListLabel_Main_Playlist">
 		<posx>70</posx>
 		<posy>0</posy>
@@ -225,7 +236,44 @@
 				<visible>Window.IsActive(2) | [Window.IsActive(25) + Skin.HasSetting(videotv)] | [Window.IsActive(25) + Skin.HasSetting(videomovies) + Skin.HasSetting(movieslistfull)] | [[Window.IsActive(500) | Window.IsActive(501) | [Window.IsActive(502) + !Container.Content(artists) + !Container.Content(years) + !Container.Content(genres)]] + Skin.HasSetting(musiclistfull)]</visible>			
 				<visible>Control.IsVisible(50)</visible>
 			</control>
-		
+<!-- 	mod : display plot in selected row BEGIN -->
+			<control type="image">
+				<animation effect="slide" end="60,15" time="0" condition="Container(50).Row(0)">Conditional</animation>
+				<animation effect="slide" end="60,100" time="0" condition="Container(50).Row(1)">Conditional</animation>
+				<animation effect="slide" end="60,185" time="0" condition="Container(50).Row(2)">Conditional</animation>
+				<animation effect="slide" end="60,270" time="0" condition="Container(50).Row(3)">Conditional</animation>
+				<animation effect="slide" end="60,355" time="0" condition="Container(50).Row(4)">Conditional</animation>
+				<animation effect="slide" end="60,325" time="0" condition="Container(50).Row(5)">Conditional</animation>
+				<animation effect="slide" end="60,390" time="0" condition="Container(50).Row(6)">Conditional</animation>
+
+				<posx>8</posx>
+				<posy>80</posy>
+				<width>743</width>
+				<height>203</height>
+				<texture>list/listpanel_selectbar.png</texture>
+
+				<visible>[Window.IsActive(25) + Skin.HasSetting(videotv)]</visible>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+			</control>
+
+			<control type="image">
+				<visible>[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(25) + Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]</visible>
+				<animation effect="slide" end="0,0" time="0" condition="Container(50).Row(0)">Conditional</animation>
+				<animation effect="slide" end="0,65" time="0" condition="Container(50).Row(1)">Conditional</animation>
+				<animation effect="slide" end="0,130" time="0" condition="Container(50).Row(2)">Conditional</animation>
+				<animation effect="slide" end="0,195" time="0" condition="Container(50).Row(3)">Conditional</animation>
+				<animation effect="slide" end="0,260" time="0" condition="Container(50).Row(4)">Conditional</animation>
+				<animation effect="slide" end="0,325" time="0" condition="Container(50).Row(5)">Conditional</animation>
+				<animation effect="slide" end="0,390" time="0" condition="Container(50).Row(6)">Conditional</animation>
+				<posx>8</posx>
+				<posy>80</posy>
+				<width>743</width>
+				<height>150</height>
+				<texture>list/listpanel_selectbar.png</texture>
+				<include>Animation_ButtonFocusFade</include>
+				<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
+			</control>
+<!-- 	mod : display plot in selected row END -->
 			<control type="list" id="50">
 				<viewtype label="31752">list</viewtype>
 				<posx>60</posx>
@@ -427,7 +475,7 @@
 					<control type="label" id="623">
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>	
-						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<label>REALISATEUR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>					
 					</control>
 					<control type="label" id="623">
@@ -487,8 +535,9 @@
 						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(25) + Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]" height="65">
-					<control type="image">
+<!-- 	mod : display plot in selected row BEGIN -->
+				<focusedlayout condition="[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(25) + Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]" height="130">
+				<control type="image">
 						<posx>12</posx>
 						<posy>64</posy>
 						<height>1</height>
@@ -499,11 +548,12 @@
 						<posx>8</posx>
 						<posy>-5</posy>
 						<width>743</width>
-						<height>75</height>
+						<height>150</height>
 						<texture>list/listpanel_selectbar.png</texture>
 						<include>Animation_ButtonFocusFade</include>
 						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
+<!-- 	mod : display plot in selected row END -->
 					<control type="label">
 						<posx>644</posx>
 						<posy>0</posy>
@@ -539,7 +589,7 @@
 					<control type="label" id="623">
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
-						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<label>REALISATEUR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 						<include>Animation_ButtonFocusFade_fix</include>						
 					</control>
@@ -632,7 +682,7 @@
 					<control type="label" id="623">
 						<include>ListLabel_Sub</include>
 						<include>subcolorfocus</include>
-						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<label>REALISATEUR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 						<include>Animation_ButtonFocusFade</include>						
 					</control>
@@ -700,7 +750,6 @@
 						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>
 						<include>Animation_ButtonFocusFade</include>						
 					</control>		
-
 					
 				</focusedlayout>
 				<itemlayout condition="[Window.IsActive(25) + Skin.HasSetting(videotv)]" height="85">
@@ -735,20 +784,22 @@
 						<label>$INFO[ListItem.Episode] EPISODES</label>
 						<visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
 					</control>
+<!-- mod : display director & writer in non selected row BEGIN -->					
 					<control type="label">
 						<include>ListLabel_SubTV</include>
-						<include>subcolornofocus</include>	
-						<label>$INFO[ListItem.Writer,WRITTEN BY: ,]</label>
-						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Writer)</visible>
+						<include>subcolornofocus</include>
+						<label>$INFO[ListItem.Director,REALISATEUR: ] | $INFO[ListItem.Writer,AUTEUR: ]</label>
+						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Director) + !IsEmpty(ListItem.Writer)</visible>
 					</control>
+<!-- mod : display director & writer in non selected row END -->					
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>	
 						<label>$INFO[ListItem.Plot]</label>
 						<visible>!IsEmpty(ListItem.Plot) + Container.Content(episodes)</visible>
-						<animation effect="slide" start="0,19" end="0,19" time="0" condition="true">Conditional</animation>						
+						<animation effect="slide" start="0,19" end="0,19" time="0" condition="true">Conditional</animation>
 					</control>
-					<control type="label">
+ 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>	
 						<label>$INFO[ListItem.Genre]</label>
@@ -783,25 +834,26 @@
 						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout condition="[Window.IsActive(25) + Skin.HasSetting(videotv)]" height="85">
+<!-- 	mod : display plot in selected row BEGIN -->
+				<focusedlayout condition="[Window.IsActive(25) + Skin.HasSetting(videotv)]" height="180">
 					<control type="image">
 						<posx>12</posx>
-						<posy>84</posy>
+						<posy>178</posy>
 						<height>1</height>
 						<width>739</width>
 						<texture>list/listpanel_line.png</texture>
 					</control>
+
 					<control type="image">
 						<posx>8</posx>
-						<posy>-5</posy>
+						<posy>-10</posy>
 						<width>743</width>
-						<height>95</height>
+						<height>203</height>
 						<texture>list/listpanel_selectbar.png</texture>
-						<include>Animation_ButtonFocusFade</include>
+					<include>Animation_ButtonFocusFade</include>
 						<visible>Control.IsVisible(50) | Window.IsActive(106) | Window.IsActive(129) | Window.IsActive(126) | Window.IsActive(601) | Window.IsActive(602) | Window.IsActive(111) | Window.IsActive(2003)</visible>
 					</control>
-					
-					
+<!-- 	mod : display plot in selected row END -->
 					<control type="label">
 						<include>ListLabel_Track</include>
 						<include>listcolornofocus</include>
@@ -833,10 +885,11 @@
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>	
-						<label>$INFO[ListItem.Writer,WRITTEN BY: ,]</label>
+						<label>$INFO[ListItem.Writer,ÉCRIT PAR: ,]</label>
 						<include>Animation_ButtonFocusFade_fix</include>						
 						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Writer)</visible>
 					</control>
+<!-- mod : display plot in selected row BEGIN-->
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>	
@@ -845,6 +898,7 @@
 						<visible>!IsEmpty(ListItem.Plot) + Container.Content(episodes)</visible>
 						<animation effect="slide" start="0,19" end="0,19" time="0" condition="true">Conditional</animation>						
 					</control>
+<!-- mod : display plot in selected row END-->
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolornofocus</include>	
@@ -884,8 +938,6 @@
 						<colordiffuse>FF585858</colordiffuse>
 						<visible>![Container.Content(artists) | Container.Content(years) | Container.Content(genres)]</visible>						
 					</control>					
-					
-					
 					<control type="label">
 						<include>ListLabel_Track</include>
 						<include>listcolorfocus</include>
@@ -914,13 +966,16 @@
 						<include>Animation_ButtonFocusFade</include>						
 						<visible>!IsEmpty(ListItem.Episode) + !Container.Content(episodes)</visible>
 					</control>
+<!-- 	mod : display director & writer in selected row BEGIN -->
 					<control type="label">
-						<include>ListLabel_SubTV</include>
+						<include>ListLabel_SubTV_alt</include>
 						<include>subcolorfocus</include>	
-						<label>WRITTEN BY: $INFO[ListItem.Writer]</label>
+						<label>$INFO[ListItem.Director,Réalisé par: ][CR]$INFO[ListItem.Writer,ÉCRIT PAR: ]</label>
 						<include>Animation_ButtonFocusFade</include>						
-						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Writer)</visible>
+						<visible>Container.Content(episodes) + !IsEmpty(ListItem.Writer) + !IsEmpty(ListItem.Director)</visible>
 					</control>
+<!-- 	mod : display director & writer in selected row END -->					
+<!-- 	mod : display plot in selected row BEGIN
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolorfocus</include>	
@@ -929,6 +984,7 @@
 						<visible>!IsEmpty(ListItem.Plot) + Container.Content(episodes)</visible>
 						<animation effect="slide" start="0,19" end="0,19" time="0" condition="true">Conditional</animation>						
 					</control>
+		mod : display plot in selected row END-->
 					<control type="label">
 						<include>ListLabel_SubTV</include>
 						<include>subcolorfocus</include>	
@@ -978,7 +1034,7 @@
 			</control>				
 			<control type="label" id="161">
 				<include>List_Objects</include>
-				<label>$INFO[Container(50).NumItems] MOVIES</label>
+				<label>$INFO[Container(50).NumItems] FILMS</label>
 				<visible>Container.Content(movies)</visible>
 			</control>
 			<control type="label" id="161">
@@ -988,12 +1044,12 @@
 			</control>
 			<control type="label" id="161">
 				<include>List_Objects</include>
-				<label>$INFO[Container(50).NumItems] ARTISTS</label>
+				<label>$INFO[Container(50).NumItems] ARTISTES</label>
 				<visible>Container.Content(artists)</visible>
 			</control>
 			<control type="label" id="161">
 				<include>List_Objects</include>
-				<label>$INFO[Container(50).NumItems] SEASONS</label>
+				<label>$INFO[Container(50).NumItems] SAISONS</label>
 				<visible>Container.Content(seasons)</visible>
 			</control>				
 			<control type="label" id="161">
@@ -1003,22 +1059,67 @@
 			</control>				
 			<control type="label">
 				<include>List_Objects</include>
-				<label>$INFO[Container(50).NumItems] ITEMS</label>
+				<label>$INFO[Container(50).NumItems] OBJETS</label>
 				<visible>!Control.IsVisible(161)</visible>				
 			</control>
 			<control type="label" id="161">
 				<include>List_Objects</include>
-				<label>$INFO[Container(50).NumItems] TRACKS</label>
+				<label>$INFO[Container(50).NumItems] PISTES</label>
 				<visible>Container.Content(songs)</visible>				
 			</control>
 			<control type="label" id="161">
 				<include>List_Objects</include>
-				<label>$INFO[Container(50).NumItems] YEARS</label>
+				<label>$INFO[Container(50).NumItems] ANNÉE</label>
 				<visible>Container.Content(years)</visible>				
-			</control>				
-		
+			</control>
+		</control>
+<!-- 	mod : display plot in selected row BEGIN -->
+		<control type="textbox">
+			<visible>Control.IsVisible(50)+[Window.IsActive(2) + Skin.HasSetting(pictureslistfull)] | [Window.IsActive(25) + Skin.HasSetting(movieslistfull) + !Skin.HasSetting(videotv)] | [[Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)] + Skin.HasSetting(musiclistfull)]</visible>
+			<animation effect="slide" end="0,0" time="0" condition="Container(50).Row(0)">Conditional</animation>
+			<animation effect="slide" end="0,65" time="0" condition="Container(50).Row(1)">Conditional</animation>
+			<animation effect="slide" end="0,130" time="0" condition="Container(50).Row(2)">Conditional</animation>
+			<animation effect="slide" end="0,195" time="0" condition="Container(50).Row(3)">Conditional</animation>
+			<animation effect="slide" end="0,260" time="0" condition="Container(50).Row(4)">Conditional</animation>
+			<animation effect="slide" end="0,325" time="0" condition="Container(50).Row(5)">Conditional</animation>
+			<animation effect="slide" end="0,390" time="0" condition="Container(50).Row(6)">Conditional</animation>
+
+			<posx>105</posx>
+			<posy>170</posy>
+			<width>500</width>
+			<height>75</height>
+			<font>Font_ListSub</font>
+			<align>left</align>
+			
+			<include>subcolorfocus</include>
+			<label>$INFO[listitem.Plot]</label>
+			<aligny>top</aligny>
+			<wrapmultiline>true</wrapmultiline>				
 		</control>
 
+		<control type="textbox">
+			<visible>Control.IsVisible(50)+[Window.IsActive(25) + Skin.HasSetting(videotv)]</visible>
+			<animation effect="slide" end="60,15" time="0" condition="Container(50).Row(0)">Conditional</animation>
+			<animation effect="slide" end="60,100" time="0" condition="Container(50).Row(1)">Conditional</animation>
+			<animation effect="slide" end="60,185" time="0" condition="Container(50).Row(2)">Conditional</animation>
+			<animation effect="slide" end="60,270" time="0" condition="Container(50).Row(3)">Conditional</animation>
+			<animation effect="slide" end="60,355" time="0" condition="Container(50).Row(4)">Conditional</animation>
+			<animation effect="slide" end="60,325" time="0" condition="Container(50).Row(5)">Conditional</animation>
+			<animation effect="slide" end="60,390" time="0" condition="Container(50).Row(6)">Conditional</animation>
+
+			<posx>105</posx>
+			<posy>170</posy>
+			<width>500</width>
+			<height>75</height>
+			<font>Font_ListSub</font>
+			<align>left</align>
+			
+			<include>subcolorfocus</include>
+			<label>$INFO[listitem.Plot]</label>
+			<aligny>top</aligny>
+			<wrapmultiline>true</wrapmultiline>				
+		</control>
+<!-- 	mod : display plot in selected row END -->
 		<control type="group">
 			<posx>855</posx>
 			<posy>110</posy>
