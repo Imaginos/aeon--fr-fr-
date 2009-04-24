@@ -1,0 +1,1 @@
+Le fichier string.xml est identique à celui du dossier 'French'
