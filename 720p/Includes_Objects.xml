@@ -447,7 +447,7 @@
 	</include>
 	
 	<include name="FSInfoButtonWidth_French">
-		<width>90</width>	
+		<width>110</width>	
 	</include>	
 	
 	<include name="Objects_FSInfoButton">
