@@ -47,6 +47,12 @@
 
 <!-- Media Window options -->
   
+	<string id="31044">ART</string>
+	<string id="31045">VIGNETTE</string>
+	<string id="31046">RÉSUMÉ</string>
+	<string id="31047">DISPOSITION</string>
+	<string id="31048">TRIGGER</string>
+	<string id="31049">AUTO</string>
 	<string id="31050">VUE: </string> 
 	<string id="31051">ALÉATOIRE</string>
 	<string id="31052">ÉPAIS</string>
@@ -57,17 +63,17 @@
 	<string id="31057">FICHIERS</string>
 	<string id="31058">CACHER DÉJÀ VUES</string>
 	<string id="31059">VIGNETTES: POSTERS</string>
-	<string id="31060">ASSEMBLER: NON</string>
-	<string id="31061">ASSEMBLER: OUI</string>
+	<string id="31060">DISPOSITION: PLAT</string>
+	<string id="31061">ASSEMBLER: RELIEF</string>
 	<string id="31062">SAISON</string>
 	<string id="31063">ÉPISODE</string>
 	<string id="31064">FANART</string>
 	<string id="31065">BANDEAU</string>
-	<string id="31066">-</string>
+	<string id="31066">RECOUVREMENT</string>
 	<string id="31067">ARRIÈRE-PLAN</string>
 	<string id="31068">BIBLIOTHÈQUE</string>
 	<string id="31069">LABELS</string>
-	<string id="31070">-</string>
+	<string id="31070">INFO</string>
 	<string id="31071">MINCE</string>
 	<string id="31072">COMPLET</string>
 	<string id="31073">DÉFAUT</string>
@@ -89,7 +95,7 @@
 	<string id="31086">RACCOURCI</string>
 	<string id="31087">BASCULER LES RACCOURCIS DE L'ACCUEIL</string>
 	<string id="31088">DÉPLACEZ GAUCHE/DROITE POUR PARCOURIR, VALIDEZ POUR CHANGER</string>
-	<string id="31089">FURNITURE</string>
+	<string id="31089">AGENCEMENTS</string>
 	<string id="31090">AGENCER LES OBJETS DE LA PAGE D'ACCUEIL</string>
 	<string id="31091">DÉPLACEZ GAUCHE/DROITE POUR PARCOURIR, VALIDEZ POUR RELOCALISER</string>
 	<string id="31092">VALIDEZ POUR RELOCALISER LE MENU PRINCIPAL</string>
@@ -124,7 +130,7 @@
 	<string id="31124">AGENCEMENTS</string> 
 	<string id="31125">HORLOGE ET FLUX RSS</string>
 	<string id="31126">EFFACER</string> 
-	<string id="31127">LA CONFIGURATION PERSONALISÉE</string>
+	<string id="31127">EFFACER CONFIGURATION PERSO.</string>
 	<string id="31128">OSD</string>
 	<string id="31129">LIVE MUSIQUE INFO</string>
 
@@ -170,13 +176,13 @@
 	<string id="31207">REDÉMARRER</string> 
 	<string id="31208">ÉTEINDRE</string>
 	<string id="31209">DÉCONNECTER</string>
-	<string id="31210">EJECTER</string>
+	<string id="31210">ÉJECTER</string>
 
 <!--  Set Content / Add Source dialogs  --> 
   
 	<string id="31220">DOSSIER CONTENANT DES:</string>
 	<string id="31221">ENTREZ LE CHEMIN OU PARCOURIR POUR LOCALISER VOS MÉDIAS</string>
-	<string id="31222">CHOISIR UN NOM POUR CETTE SOURCE</string>
+	<string id="31222">CHOISISSEZ UN NOM POUR CETTE SOURCE</string>
 	<string id="31223">LISTE</string>
 	<string id="31224">TITRE</string>
 
@@ -197,7 +203,7 @@
 	<string id="31242">TOUT ACTIVER</string>
 	<string id="31243">TOUT DÉSACTIVER</string>
     <string id="31244">MENUS</string>
-	<string id="31245">NAVIGATION FORME</string>
+	<string id="31245">DISPOSITION DE NAVIGATION</string>
   
 <!-- Aeon Advanced options -->
   
@@ -317,9 +323,17 @@
 	<string id="31430">ENVOYER</string>
 	<string id="31431">APPUYEZ VERS LE HAUT OU LE BAS POUR CHANGER LE CLASSEMENT</string>
 	<string id="31432">SAISON</string>
-	<string id="31433">EPISODE</string>
+	<string id="31433">ÉPISODE</string>
 	<string id="31434">DURÉE</string>
 	<string id="31435">DETAILS CASTING INDISPONIBLES</string>
+	<string id="31436">ANNÉE</string>
+	<string id="31437">GENRE</string>
+	<string id="31439">VU</string>
+	<string id="31440">NON VU</string>
+	<string id="31441">DATE INDISPONIBLE</string>
+	<string id="31442">DATE DE MODIFICATION INDISPONIBLE</string>
+	<string id="31443">RÉSOLUTION NON PRÉCISÉE</string>
+	<string id="31444">TAILLE DE FICHIER INDISPONIBLE</string>
 
 <!--  Aeon Assistant  -->
 
@@ -410,6 +424,7 @@
 	<string id="31754">SELECTIONNEZ</string>	
 	<string id="31755">UNE DIRECTION POUR LA VUE[CR]CLIQUEZ POUR SORTIR</string>	
 	<string id="31756">SEULE LA VUE LISTE EST DISPONIBLE POUR LES ÉPISODES</string>
+	<string id="31757">MULTIPLEX</string>
 
 <!-- Aeon Settings panel labels -->
   
@@ -466,7 +481,8 @@
 	<string id="31931">VIDÉOS</string>
 	<string id="31932">FICHIERS</string>
 	<string id="31933">SÉRIES</string>
+	<string id="31934">FILMS</string>
+	<string id="31935">OBJETS</string>
+	<string id="31936">PISTES</string>
 
-	<string id="31250">Le réal</string>
-	
 </strings>
