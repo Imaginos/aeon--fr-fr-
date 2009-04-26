@@ -21,13 +21,11 @@
 	</include>	
 	
 	<include name="Furniture_PanelMediaFlagsVars">
-		<posy>538</posy>
-		<width>110</width>
-		<height>72</height>
+		<posy>454</posy>
+		<width>90</width>
+		<height>59</height>
 		<include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-		<visible>Control.IsVisible(55)</visible>
-		<colordiffuse>30FFFFFF</colordiffuse>		
+		<visible>Control.IsVisible(52)</visible>		
 	</include>	
 	
 	<include name="Furniture_ShowcaseMediaFlagsBlack">
@@ -314,7 +312,12 @@
 					<include>Furniture_ListMediaFlagsVars</include>
 					<texture>flags/dolbydigital.png</texture>
 					<visible>substring(listitem.studio,ac-3)</visible>
-				</control>	
+				</control>
+				<control type="image" id="188">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<texture>flags/mp3.png</texture>
+					<visible>substring(listitem.studio,mp3) | substring(listitem.studio,MPEG Audio)</visible>
+				</control>				
 			</control>
 			<control type="group">
 				<posx>855</posx>
@@ -350,23 +353,6 @@
 				</control>					
 			</control>			
 	</include>
-	
-	<include name="Furniture_ListMediaFlagsTV">
-		<visible>Window.IsActive(25) + [Container.Content(tvshows) | Container.Content(seasons)]</visible>
-			<control type="group">
-				<posx>951</posx>
-				<control type="image">
-					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/default.png</texture>
-					<visible>!Control.IsVisible(288) + !Skin.HasSetting(nodefaultflags)</visible>
-				</control>					
-				<control type="image" id="288">
-					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/tv/hbo.png</texture>
-					<visible>substring(listitem.title,band of brothers) | substring(listitem.title,curb your)</visible>
-				</control>			
-			</control>
-	</include>	
 	
 	<include name="Furniture_ShowcaseMediaFlags">
 		<control type="group">
@@ -599,7 +585,12 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/dolbydigital.png</texture>
 					<visible>substring(listitem.studio,ac-3)</visible>
-				</control>	
+				</control>
+				<control type="image" id="84">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/mp3.png</texture>
+					<visible>substring(listitem.studio,mp3) | substring(listitem.studio,MPEG Audio)</visible>
+				</control>				
 			</control>
 			<control type="group">
 				<posx>190</posx>
@@ -627,17 +618,24 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/divx.png</texture>
+					<visible>substring(listitem.filename,divx)</visible>
 				</control>				
 			</control>
 		</control>
 	</include>
+	
 
-	<include name="Furniture_PanelMediaFlags">		
+	<include name="Furniture_MultiplexMediaFlags">		
 		<control type="group">
-			<visible>Window.IsActive(25) + Control.IsVisible(55) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
+			<visible>Window.IsActive(25) + Control.IsVisible(52) + !Skin.HasSetting(nomediaflags) + Container.Content(movies)</visible>
 			<include>Animation_CommonFade</include>
+			<include>Animation_HideMultiplex</include>			
 			<control type="group">
-				<posx>80</posx>
+				<posx>60</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/default.png</texture>
@@ -775,7 +773,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<posx>995</posx>
+				<posx>1005</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/defaultscreen.png</texture>
@@ -828,7 +826,7 @@
 				</control>				
 			</control>
 			<control type="group">
-				<posx>1085</posx>
+				<posx>1115</posx>
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/defaultsound.png</texture>
@@ -872,11 +870,6 @@
 					<texture>flags/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv)</visible>
 				</control>				
-				<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/divx.png</texture>
-					<visible>substring(listitem.filename,divx)</visible>
-				</control>	
 			</control>
 		</control>		
 	</include>

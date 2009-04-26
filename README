@@ -6,3 +6,9 @@ Cette version complète et prête à l'emploi est exclusivement destinée à une util
 
 -== Flags ajoutés ==-
 Environ 97 flags ajoutés
+
+-== Fichiers ayant subit une modification ==-
+720p/
+Includes_Objects.xml
+Includes_MediaFlags.xml
+Viewtype_List.xml

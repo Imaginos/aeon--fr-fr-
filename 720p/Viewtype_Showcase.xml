@@ -21,18 +21,19 @@
 <!-- Movie Showcase Variables: Main thumbs -->
 	
     <include name="MovieShowcaseThumbDimensions">
-        <posx>49</posx>
-        <posy>8</posy>
-        <width>173</width>
-        <height>254</height>
+        <posx>61</posx>
+        <posy>47</posy>
+        <width>151</width>
+        <height>222</height>
     </include>
 
     <include name="MovieShowcaseThumbReflectionDimensions">
-        <posx>49</posx>
-        <posy>260</posy>
-        <width>173</width>
-        <height>254</height>
+        <posx>61</posx>
+        <posy>268</posy>
+        <width>151</width>
+        <height>222</height>
     </include>
+
 
     <include name="MovieShowcaseThumb">
         <include>MovieShowcaseThumbDimensions</include>
@@ -89,7 +90,7 @@
 	
     <include name="MusicShowcaseThumbReflectionDimensions">
         <posx>18</posx>
-        <posy>250</posy>
+        <posy>245</posy>
         <width>234</width>
         <height>234</height>
     </include>
@@ -110,14 +111,14 @@
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>d0FFFFFF</colordiffuse>
         <texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudiobig.png</texture>
-        <aspectratio scalediffuse="false">scale</aspectratio>
+        <aspectratio>scale</aspectratio>
     </include>
 	
     <include name="MusicShowcaseThumbReflectionMain">
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>52FFFFFF</colordiffuse>
         <texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudiobig.png</texture>
-        <aspectratio scalediffuse="false">scale</aspectratio>
+        <aspectratio>scale</aspectratio>
     </include>
 	
 <!-- Music Showcase Variables: Thumb glass overlays -->
@@ -2836,7 +2837,21 @@
 					<scroll>false</scroll>
                     <include>ShowcaseMainLabel</include>
 					<visible>Window.IsActive(502) + stringcompare(container(57).numitems,0)</visible>
-                </control>				
+                </control>
+<!-- Ajout pour l'affichage de la duré -->				
+                <control type="label">
+                        <description>Runtime</description>
+                        <posx>240</posx>
+                        <posy>669</posy>
+                        <width>93</width>
+                        <height>20</height>
+                        <align>left</align>
+                        <font>Font_FSInfoPlot</font>
+                        <textcolor>b91a1a1c</textcolor>
+                        <label>$INFO[ListItem.Duration]</label>
+                        <visible>Container.Content(movies) + !Skin.HasSetting(nomediaflags) + !Window.IsActive(24)</visible>			
+                </control> 
+<!-- Fin de l'ajout pour l'affichage de la duré -->				
                 <control type="label">
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                     <include>ShowcaseMainLabel</include>
