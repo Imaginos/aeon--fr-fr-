@@ -250,6 +250,7 @@
 				<font>Font_MultiplexPlot</font>
 				<info>Container(52).ListItem.Plot</info>
 				<textcolor>d0FFFFFF</textcolor>
+				<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>					
 				<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>	
 			</control>
 			
@@ -500,6 +501,7 @@
 				<font>Font_MultiplexPlot</font>
 				<info fallback="31414">Container(52).ListItem.Plot</info>
 				<textcolor>d0FFFFFF</textcolor>
+				<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>					
 				<visible>!Container.Content(seasons)</visible>
 			</control>
 			
@@ -511,6 +513,7 @@
 				<font>Font_MultiplexPlot</font>
 				<info fallback="31414">Container(52).ShowPlot</info>
 				<textcolor>d0FFFFFF</textcolor>
+				<autoscroll delay="10000" time="2000" repeat="10000">Skin.HasSetting(allowscroll)</autoscroll>					
 				<visible>Container.Content(seasons)</visible>
 			</control>			
 			
@@ -810,10 +813,10 @@
 					<colordiffuse>58FFFFFF</colordiffuse>
 				</control>
 				<control type="image">
-					<posx>89</posx>
-					<posy>101</posy>
-					<width>52</width>
-					<height>48</height>
+					<posx>181</posx>
+					<posy>39</posy>
+					<width>48</width>
+					<height>52</height>
 					<info>ListItem.Overlay</info>
 					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<include>Animation_VisibleChange200</include>
@@ -865,10 +868,10 @@
 					<visible>!Container(52).Column(4)</visible>					
 				</control>
 				<control type="image">
-					<posx>89</posx>
-					<posy>101</posy>
-					<width>52</width>
-					<height>48</height>
+					<posx>181</posx>
+					<posy>39</posy>
+					<width>48</width>
+					<height>52</height>
 					<info>ListItem.Overlay</info>
 					<visible>!Skin.HasSetting(nooverlays) + !IsEmpty(ListItem.Overlay)</visible>
 					<include>Animation_VisibleChange200</include>
