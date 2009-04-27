@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- $Revision: 204$ -->
-<!-- Date of translation : 2009-04-27 (23h34 UMT) -->
+<!-- Date of translation : 2009-04-27 (22h00 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -47,10 +47,10 @@
 
 <!-- Media Window options -->
   
-	<string id="31044">ART</string>
+	<string id="31044">FANART</string>
 	<string id="31045">VIGNETTE</string>
 	<string id="31046">RÉSUMÉ</string>
-	<string id="31047">DISPOSITION</string>
+	<string id="31047">PRÉSENTATION</string>
 	<string id="31048">ACTION</string>
 	<string id="31049">AUTO</string>
 	<string id="31050">VUE: </string> 
@@ -190,7 +190,7 @@
   
 	<string id="31230">AEON</string> 
 	<string id="31231">OPTIONS</string>
-	<string id="31232">GENERAL</string>
+	<string id="31232">GÉNÉRAL</string>
 	<string id="31233">CONFIGURATION GLOBALE</string>
 	<string id="31234">ACCUEIL</string>
 	<string id="31235">OPTIONS PAGE PRINCIPALE</string>
@@ -403,7 +403,7 @@
 	<string id="31706">AVANCE RAPIDE</string>
 	<string id="31707">VOLUME</string>
 	<string id="31708">POSITION</string>
-	<string id="31709">TEMPS ÉCOULÉ</string>
+	<string id="31709">DURÉE</string>
 	<string id="31710">TEMPS RESTANT</string>
 	<string id="31711">BOOKMARKS DISPONIBLES</string>
 	<string id="31712">HAUT/BAS: MENU/BOOKMARKS[CR]GAUCHE/DROITE: MENU OPTIONS</string>
@@ -484,5 +484,7 @@
 	<string id="31934">FILMS</string>
 	<string id="31935">OBJETS</string>
 	<string id="31936">PISTES</string>
+	<string id="31937">ÉPISODES</string>
+	<string id="31938">SAISONS</string>
 
 </strings>
