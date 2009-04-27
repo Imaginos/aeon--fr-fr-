@@ -21,19 +21,18 @@
 <!-- Movie Showcase Variables: Main thumbs -->
 	
     <include name="MovieShowcaseThumbDimensions">
-        <posx>61</posx>
-        <posy>47</posy>
-        <width>151</width>
-        <height>222</height>
+        <posx>49</posx>
+        <posy>8</posy>
+        <width>173</width>
+        <height>254</height>
     </include>
 
     <include name="MovieShowcaseThumbReflectionDimensions">
-        <posx>61</posx>
-        <posy>268</posy>
-        <width>151</width>
-        <height>222</height>
+        <posx>49</posx>
+        <posy>260</posy>
+        <width>173</width>
+        <height>254</height>
     </include>
-
 
     <include name="MovieShowcaseThumb">
         <include>MovieShowcaseThumbDimensions</include>
@@ -2662,7 +2661,7 @@
                 <scrolltime>250</scrolltime>
 				<include>Animation_HideShowcase</include>
                 <focusposition>3</focusposition>
-				<visible>!Container.Content(episodes)</visible>
+				<visible>![Window.IsActive(25) + Skin.HasSetting(videotv)] | [Window.IsActive(25) + Skin.HasSetting(videotv) + Skin.HasSetting(unlockTVviews)]</visible>
                 <itemlayout height="350" width="196" condition="Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)">
                     <control type="image">
                         <include>MovieShowcaseThumbMain</include>
@@ -2838,7 +2837,7 @@
                     <include>ShowcaseMainLabel</include>
 					<visible>Window.IsActive(502) + stringcompare(container(57).numitems,0)</visible>
                 </control>
-<!-- Ajout pour l'affichage de la duré -->				
+<!-- Ajout pour l'affichage de la durÃ©e -->				
                 <control type="label">
                         <description>Runtime</description>
                         <posx>240</posx>
@@ -2851,7 +2850,7 @@
                         <label>$INFO[ListItem.Duration]</label>
                         <visible>Container.Content(movies) + !Skin.HasSetting(nomediaflags) + !Window.IsActive(24)</visible>			
                 </control> 
-<!-- Fin de l'ajout pour l'affichage de la duré -->				
+<!-- Fin de l'ajout pour l'affichage de la durÃ©e -->				
                 <control type="label">
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                     <include>ShowcaseMainLabel</include>

@@ -317,7 +317,12 @@
 					<include>Furniture_ListMediaFlagsVars</include>
 					<texture>flags/mp3.png</texture>
 					<visible>substring(listitem.studio,mp3) | substring(listitem.studio,MPEG Audio)</visible>
-				</control>				
+				</control>
+				<control type="image" id="188">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<texture>flags/aac.png</texture>
+					<visible>substring(listitem.studio,aac)</visible>
+				</control>			
 			</control>
 			<control type="group">
 				<posx>855</posx>
@@ -403,7 +408,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/disney.png</texture>
-					<visible>substring(listitem.studio,Disney) | substring(listitem.studio,Pixar)</visible>
+					<visible>substring(listitem.studio,Disney)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -478,7 +483,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/paramount.png</texture>
-					<visible>substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)</visible>
+					<visible>substring(listitem.studio,Paramount)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -515,6 +520,556 @@
 					<texture>flags/miramax.png</texture>
 					<visible>substring(listitem.studio,Miramax) + !substring(listitem.studio,Universal)</visible>
 				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/zentropa.png</texture>
+					<visible>substring(listitem.studio,Zentropa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/zdf.png</texture>
+					<visible>substring(listitem.studio,ZDF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/saul_zaentz.png</texture>
+					<visible>substring(listitem.studio,Zaentz)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/xfilme.png</texture>
+					<visible>substring(listitem.studio,Xfilme)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/working_title.png</texture>
+					<visible>substring(listitem.studio,Working Title)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/wfdif.png</texture>
+					<visible>substring(listitem.studio,WFDiF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/wdr.png</texture>
+					<visible>substring(listitem.studio,WDR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/warner_independent_pictures.png</texture>
+					<visible>substring(listitem.studio,Warner Independent)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/village_roadshow.png</texture>
+					<visible>substring(listitem.studio,Village Roadshow)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/ugc.png</texture>
+					<visible>substring(listitem.studio,UGC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/tvp.png</texture>
+					<visible>substring(listitem.studio,TVP)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/tvn.png</texture>
+					<visible>substring(listitem.studio,Tvn)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/turner.png</texture>
+					<visible>substring(listitem.studio,Turner)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/tor.png</texture>
+					<visible>substring(listitem.studio,tor)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/thisisthat.png</texture>
+					<visible>substring(listitem.studio,This Is That)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/thinkfilm.png</texture>
+					<visible>substring(listitem.studio,ThinkFilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/syrena.png</texture>
+					<visible>substring(listitem.studio,Syrena)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/showtime.png</texture>
+					<visible>substring(listitem.studio,Showtime)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/sfi.png</texture>
+					<visible>substring(listitem.studio,SFI)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/semafor.png</texture>
+					<visible>substring(listitem.studio,SeMaFor)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/Screen_Australia.png</texture>
+					<visible>substring(listitem.studio,Screen Australia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/scott_free.png</texture>
+					<visible>substring(listitem.studio,Scott)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/scifi.png</texture>
+					<visible>substring(listitem.studio,SciFi)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/sandrew.png</texture>
+					<visible>substring(listitem.studio,Sandrew)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/rogue.png</texture>
+					<visible>substring(listitem.studio,Rogue)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/rhombus.png</texture>
+					<visible>substring(listitem.studio,Rhombus)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/relativity.png</texture>
+					<visible>substring(listitem.studio,Relativity)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/regency.png</texture>
+					<visible>substring(listitem.studio,Regency)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/rankin.png</texture>
+					<visible>substring(listitem.studio,Rankin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/rai.png</texture>
+					<visible>substring(listitem.studio,Rai)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/premiere.png</texture>
+					<visible>substring(listitem.studio,Premiere)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/polygram.png</texture>
+					<visible>substring(listitem.studio,PolyGram)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/film_polski.png</texture>
+					<visible>substring(listitem.studio,Polski)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/polsat.png</texture>
+					<visible>substring(listitem.studio,Polsat)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/platige.png</texture>
+					<visible>substring(listitem.studio,Platige)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/pisf.png</texture>
+					<visible>substring(listitem.studio,PISF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/pecf.png</texture>
+					<visible>substring(listitem.studio,PECF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/orion.png</texture>
+					<visible>substring(listitem.studio,ORiON)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/nuimage.png</texture>
+					<visible>substring(listitem.studio,NUIMAGE)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/nothing.png</texture>
+					<visible>substring(listitem.studio,nothing)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/nala.png</texture>
+					<visible>substring(listitem.studio,NALA)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/morgan_creek.png</texture>
+					<visible>substring(listitem.studio,Morgan Creek)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/monolith.png</texture>
+					<visible>substring(listitem.studio,Monolith)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/mibac.png</texture>
+					<visible>substring(listitem.studio,MiBAC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/maverick.png</texture>
+					<visible>substring(listitem.studio,Maverick)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/marvel.png</texture>
+					<visible>substring(listitem.studio,MARVEL)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/mandalay.png</texture>
+					<visible>substring(listitem.studio,Mandalay)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/magnolia.png</texture>
+					<visible>substring(listitem.studio,Magnolia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/madman.png</texture>
+					<visible>substring(listitem.studio,Madman Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/lionsgate.png</texture>
+					<visible>substring(listitem.studio,Lionsgate)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/legendary.png</texture>
+					<visible>substring(listitem.studio,Legendary)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/lakeshore.png</texture>
+					<visible>substring(listitem.studio,Lakeshore)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/kadr.png</texture>
+					<visible>substring(listitem.studio,KADR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/jim_henson.png</texture>
+					<visible>listitem.studio,Jim Henson)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/jerry_bruckheimer.png</texture>
+					<visible>substring(listitem.studio,Jerry Bruckheimer)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/interactual.png</texture>
+					<visible>substring(listitem.studio,interActual)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/infinifilm.png</texture>
+					<visible>substring(listitem.studio,infinifilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/industrial_light.png</texture>
+					<visible>substring(listitem.studio,Industrial Light and Magic)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/imax.png</texture>
+					<visible>substring(listitem.studio,IMAX)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/imagine.png</texture>
+					<visible>substring(listitem.studio,Imagine)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/icon.png</texture>
+					<visible>substring(listitem.studio,Icon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/hbo.png</texture>
+					<visible>substring(listitem.studio,HBO)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/halestorm.png</texture>
+					<visible>substring(listitem.studio,Halestorm Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/gutek.png</texture>
+					<visible>substring(listitem.studio,Gutek)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/gramercy.png</texture>
+					<visible>substring(listitem.studio,Gramercy)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/gofilms.png</texture>
+					<visible>substring(listitem.studio,Go Films)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/fuji.png</texture>
+					<visible>substring(listitem.studio,Fuji)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/franchise.png</texture>
+					<visible>substring(listitem.studio,Franchise)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/fox.png</texture>
+					<visible>substring(listitem.studio,FOX Network)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/filmax.png</texture>
+					<visible>substring(listitem.studio,Filmax)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/excel.png</texture>
+					<visible>substring(listitem.studio,Excel)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/Europa_Corp.png</texture>
+					<visible>substring(listitem.studio,Europa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/eurimages.png</texture>
+					<visible>substring(listitem.studio,Eurimages)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/eleven.png</texture>
+					<visible>substring(listitem.studio,eleven: a music company)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/premiere-direkt.png</texture>
+					<visible>substring(listitem.studio,Direkt)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/digital_playground.png</texture>
+					<visible>substring(listitem.studio,Digital Playground)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/dfi.png</texture>
+					<visible>substring(listitem.studio,DFI)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/czolowka.png</texture>
+					<visible>substring(listitem.studio,Czolowka)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/constantin.png</texture>
+					<visible>substring(listitem.studio,Constantin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/cnc.png</texture>
+					<visible>substring(listitem.studio,CNC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/celador.png</texture>
+					<visible>substring(listitem.studio,celador)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/cbs.png</texture>
+					<visible>substring(listitem.studio,CBS)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/cartoon.png</texture>
+					<visible>substring(listitem.studio,Cartoon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/carolco.png</texture>
+					<visible>substring(listitem.studio,Carolco)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/canalplus.png</texture>
+					<visible>substring(listitem.studio,Canal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/blackdog.png</texture>
+					<visible>substring(listitem.studio,Black Dog)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/beacon.png</texture>
+					<visible>substring(listitem.studio,Beacon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/bbc.png</texture>
+					<visible>substring(listitem.studio,BBC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/bandapart.png</texture>
+					<visible>substring(listitem.studio,Band Apart)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/bad_robot.png</texture>
+					<visible>substring(listitem.studio,Bad Robot)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/artisan.png</texture>
+					<visible>substring(listitem.studio,Artisan)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/arte.png</texture>
+					<visible>substring(listitem.studio,Arte)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/anchor_bay.png</texture>
+					<visible>substring(listitem.studio,Anchor Bay)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/amblin.png</texture>
+					<visible>substring(listitem.studio,Amblin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/alcon.png</texture>
+					<visible>substring(listitem.studio,Alcon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/abc.png</texture>
+					<visible>substring(listitem.studio,ABC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/abandon.png</texture>
+					<visible>substring(listitem.studio,Abandon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/comedy_central.png</texture>
+					<visible>substring(listitem.studio,Comedy Central)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/alliance_atlantis.png</texture>
+					<visible>substring(listitem.studio,Alliance Atlantis)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/ghibli.png</texture>
+					<visible>substring(listitem.studio,Ghibli)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/weinstein.png</texture>
+					<visible>substring(listitem.studio,Weinstein)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/pixar.png</texture>
+					<visible>substring(listitem.studio,Pixar)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/walden.png</texture>
+					<visible>substring(listitem.studio,Walden)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/capcom.png</texture>
+					<visible>substring(listitem.studio,Capcom)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/summit.png</texture>
+					<visible>substring(listitem.studio,Summit)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/kaze.png</texture>
+					<visible>substring(listitem.studio,Kaze)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/ladd.png</texture>
+					<visible>substring(listitem.studio,The Ladd Company)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/de_laurentiis.png</texture>
+					<visible>substring(listitem.studio,De Laurentiis)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/babylonian.png</texture>
+					<visible>substring(listitem.studio,Babylonian Productions)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/rko_radio.png</texture>
+					<visible>substring(listitem.studio,RKO Radio)</visible>
+				</control> -->
 			</control>
 			<control type="group">
 				<posx>975</posx>
@@ -590,7 +1145,12 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/mp3.png</texture>
 					<visible>substring(listitem.studio,mp3) | substring(listitem.studio,MPEG Audio)</visible>
-				</control>				
+				</control>
+				<control type="image" id="188">
+					<include>Furniture_ListMediaFlagsVars</include>
+					<texture>flags/aac.png</texture>
+					<visible>substring(listitem.studio,aac)</visible>
+				</control>			
 			</control>
 			<control type="group">
 				<posx>190</posx>
@@ -659,7 +1219,7 @@
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/disney.png</texture>
-					<visible>substring(listitem.studio,Disney) | substring(listitem.studio,Pixar)</visible>
+					<visible>substring(listitem.studio,Disney)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -734,7 +1294,7 @@
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/paramount.png</texture>
-					<visible>substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)</visible>
+					<visible>substring(listitem.studio,Paramount)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -770,6 +1330,556 @@
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/miramax.png</texture>
 					<visible>substring(listitem.studio,Miramax) + !substring(listitem.studio,Universal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/zentropa.png</texture>
+					<visible>substring(listitem.studio,Zentropa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/zdf.png</texture>
+					<visible>substring(listitem.studio,ZDF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/saul_zaentz.png</texture>
+					<visible>substring(listitem.studio,Zaentz)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/xfilme.png</texture>
+					<visible>substring(listitem.studio,Xfilme)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/working_title.png</texture>
+					<visible>substring(listitem.studio,Working Title)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/wfdif.png</texture>
+					<visible>substring(listitem.studio,WFDiF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/wdr.png</texture>
+					<visible>substring(listitem.studio,WDR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/warner_independent_pictures.png</texture>
+					<visible>substring(listitem.studio,Warner Independent)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/village_roadshow.png</texture>
+					<visible>substring(listitem.studio,Village Roadshow)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/ugc.png</texture>
+					<visible>substring(listitem.studio,UGC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/tvp.png</texture>
+					<visible>substring(listitem.studio,TVP)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/tvn.png</texture>
+					<visible>substring(listitem.studio,Tvn)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/turner.png</texture>
+					<visible>substring(listitem.studio,Turner)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/tor.png</texture>
+					<visible>substring(listitem.studio,tor)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/thisisthat.png</texture>
+					<visible>substring(listitem.studio,This Is That)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/thinkfilm.png</texture>
+					<visible>substring(listitem.studio,ThinkFilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/syrena.png</texture>
+					<visible>substring(listitem.studio,Syrena)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/showtime.png</texture>
+					<visible>substring(listitem.studio,Showtime)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/sfi.png</texture>
+					<visible>substring(listitem.studio,SFI)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/semafor.png</texture>
+					<visible>substring(listitem.studio,SeMaFor)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/Screen_Australia.png</texture>
+					<visible>substring(listitem.studio,Screen Australia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/scott_free.png</texture>
+					<visible>substring(listitem.studio,Scott)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/scifi.png</texture>
+					<visible>substring(listitem.studio,SciFi)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/sandrew.png</texture>
+					<visible>substring(listitem.studio,Sandrew)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/rogue.png</texture>
+					<visible>substring(listitem.studio,Rogue)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/rhombus.png</texture>
+					<visible>substring(listitem.studio,Rhombus)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/relativity.png</texture>
+					<visible>substring(listitem.studio,Relativity)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/regency.png</texture>
+					<visible>substring(listitem.studio,Regency)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/rankin.png</texture>
+					<visible>substring(listitem.studio,Rankin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/rai.png</texture>
+					<visible>substring(listitem.studio,Rai)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/premiere.png</texture>
+					<visible>substring(listitem.studio,Premiere)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/polygram.png</texture>
+					<visible>substring(listitem.studio,PolyGram)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/film_polski.png</texture>
+					<visible>substring(listitem.studio,Polski)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/polsat.png</texture>
+					<visible>substring(listitem.studio,Polsat)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/platige.png</texture>
+					<visible>substring(listitem.studio,Platige)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/pisf.png</texture>
+					<visible>substring(listitem.studio,PISF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/pecf.png</texture>
+					<visible>substring(listitem.studio,PECF)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/orion.png</texture>
+					<visible>substring(listitem.studio,ORiON)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/nuimage.png</texture>
+					<visible>substring(listitem.studio,NUIMAGE)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/nothing.png</texture>
+					<visible>substring(listitem.studio,nothing)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/nala.png</texture>
+					<visible>substring(listitem.studio,NALA)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/morgan_creek.png</texture>
+					<visible>substring(listitem.studio,Morgan Creek)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/monolith.png</texture>
+					<visible>substring(listitem.studio,Monolith)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/mibac.png</texture>
+					<visible>substring(listitem.studio,MiBAC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/maverick.png</texture>
+					<visible>substring(listitem.studio,Maverick)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/marvel.png</texture>
+					<visible>substring(listitem.studio,MARVEL)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/mandalay.png</texture>
+					<visible>substring(listitem.studio,Mandalay)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/magnolia.png</texture>
+					<visible>substring(listitem.studio,Magnolia)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/madman.png</texture>
+					<visible>substring(listitem.studio,Madman Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/lionsgate.png</texture>
+					<visible>substring(listitem.studio,Lionsgate)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/legendary.png</texture>
+					<visible>substring(listitem.studio,Legendary)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/lakeshore.png</texture>
+					<visible>substring(listitem.studio,Lakeshore)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/kadr.png</texture>
+					<visible>substring(listitem.studio,KADR)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/jim_henson.png</texture>
+					<visible>substring(listitem.studio,Jim Henson)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/jerry_bruckheimer.png</texture>
+					<visible>substring(listitem.studio,Jerry Bruckheimer)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/interactual.png</texture>
+					<visible>substring(listitem.studio,interActual)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/infinifilm.png</texture>
+					<visible>substring(listitem.studio,infinifilm)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/industrial_light.png</texture>
+					<visible>substring(listitem.studio,Industrial Light and Magic)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/imax.png</texture>
+					<visible>substring(listitem.studio,IMAX)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/imagine.png</texture>
+					<visible>substring(listitem.studio,Imagine)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/icon.png</texture>
+					<visible>substring(listitem.studio,Icon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/hbo.png</texture>
+					<visible>substring(listitem.studio,HBO)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/halestorm.png</texture>
+					<visible>substring(listitem.studio,Halestorm Entertainment)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/gutek.png</texture>
+					<visible>substring(listitem.studio,Gutek)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/gramercy.png</texture>
+					<visible>substring(listitem.studio,Gramercy)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/gofilms.png</texture>
+					<visible>substring(listitem.studio,Go Films)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/fuji.png</texture>
+					<visible>substring(listitem.studio,Fuji)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/franchise.png</texture>
+					<visible>substring(listitem.studio,Franchise)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/fox.png</texture>
+					<visible>substring(listitem.studio,FOX Network)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/filmax.png</texture>
+					<visible>substring(listitem.studio,Filmax)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/excel.png</texture>
+					<visible>substring(listitem.studio,Excel)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/Europa_Corp.png</texture>
+					<visible>substring(listitem.studio,Europa)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/eurimages.png</texture>
+					<visible>substring(listitem.studio,Eurimages)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/eleven.png</texture>
+					<visible>substring(listitem.studio,eleven: a music company)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/premiere-direkt.png</texture>
+					<visible>substring(listitem.studio,Direkt)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/digital_playground.png</texture>
+					<visible>substring(listitem.studio,Digital Playground)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/dfi.png</texture>
+					<visible>substring(listitem.studio,DFI)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/czolowka.png</texture>
+					<visible>substring(listitem.studio,Czolowka)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/constantin.png</texture>
+					<visible>substring(listitem.studio,Constantin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/cnc.png</texture>
+					<visible>substring(listitem.studio,CNC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/celador.png</texture>
+					<visible>substring(listitem.studio,celador)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/cbs.png</texture>
+					<visible>substring(listitem.studio,CBS)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/cartoon.png</texture>
+					<visible>substring(listitem.studio,Cartoon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/carolco.png</texture>
+					<visible>substring(listitem.studio,Carolco)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/canalplus.png</texture>
+					<visible>substring(listitem.studio,Canal)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/blackdog.png</texture>
+					<visible>substring(listitem.studio,Black Dog)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/beacon.png</texture>
+					<visible>substring(listitem.studio,Beacon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/bbc.png</texture>
+					<visible>substring(listitem.studio,BBC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/bandapart.png</texture>
+					<visible>substring(listitem.studio,Band Apart)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/bad_robot.png</texture>
+					<visible>substring(listitem.studio,Bad Robot)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/artisan.png</texture>
+					<visible>substring(listitem.studio,Artisan)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/arte.png</texture>
+					<visible>substring(listitem.studio,Arte)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/anchor_bay.png</texture>
+					<visible>substring(listitem.studio,Anchor Bay)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/amblin.png</texture>
+					<visible>substring(listitem.studio,Amblin)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/alcon.png</texture>
+					<visible>substring(listitem.studio,Alcon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/abc.png</texture>
+					<visible>substring(listitem.studio,ABC)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/abandon.png</texture>
+					<visible>substring(listitem.studio,Abandon)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/comedy_central.png</texture>
+					<visible>substring(listitem.studio,Comedy Central)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/alliance_atlantis.png</texture>
+					<visible>substring(listitem.studio,Alliance Atlantis)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/ghibli.png</texture>
+					<visible>substring(listitem.studio,Ghibli)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/weinstein.png</texture>
+					<visible>substring(listitem.studio,Weinstein)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/pixar.png</texture>
+					<visible>substring(listitem.studio,Pixar)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/walden.png</texture>
+					<visible>substring(listitem.studio,Walden)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/capcom.png</texture>
+					<visible>substring(listitem.studio,Capcom)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/summit.png</texture>
+					<visible>substring(listitem.studio,Summit)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/kaze.png</texture>
+					<visible>substring(listitem.studio,Kaze)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/ladd.png</texture>
+					<visible>substring(listitem.studio,The Ladd Company)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/de_laurentiis.png</texture>
+					<visible>substring(listitem.studio,De Laurentiis)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/babylonian.png</texture>
+					<visible>substring(listitem.studio,Babylonian Productions)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/rko_radio.png</texture>
+					<visible>substring(listitem.studio,RKO Radio)</visible>
 				</control>
 			</control>
 			<control type="group">
