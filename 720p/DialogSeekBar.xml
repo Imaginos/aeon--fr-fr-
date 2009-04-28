@@ -55,7 +55,7 @@
 		<font>Font_OSDSeek</font>
 		<textcolor>FF363636</textcolor>
 		<include>Animation_CommonFade</include>	
-		<label>PAUSED</label>
+		<label>PAUSE</label>
 		<visible>Player.Paused</visible>
 	</control>	
 	
