@@ -1069,7 +1069,12 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/rko_radio.png</texture>
 					<visible>substring(listitem.studio,RKO Radio)</visible>
-				</control> -->
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/square_enix.png.png</texture>
+					<visible>substring(listitem.studio,Square Enix)</visible>
+				</control>
 			</control>
 			<control type="group">
 				<posx>975</posx>
@@ -1842,44 +1847,49 @@
 					<visible>substring(listitem.studio,Pixar)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/walden.png</texture>
 					<visible>substring(listitem.studio,Walden)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/capcom.png</texture>
 					<visible>substring(listitem.studio,Capcom)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/summit.png</texture>
 					<visible>substring(listitem.studio,Summit)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/kaze.png</texture>
 					<visible>substring(listitem.studio,Kaze)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/ladd.png</texture>
 					<visible>substring(listitem.studio,The Ladd Company)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/de_laurentiis.png</texture>
 					<visible>substring(listitem.studio,De Laurentiis)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/babylonian.png</texture>
 					<visible>substring(listitem.studio,Babylonian Productions)</visible>
 				</control>
 				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/rko_radio.png</texture>
 					<visible>substring(listitem.studio,RKO Radio)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/square_enix.png.png</texture>
+					<visible>substring(listitem.studio,Square Enix)</visible>
 				</control>
 			</control>
 			<control type="group">
