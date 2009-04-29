@@ -109,6 +109,21 @@
 				<height>381</height>
 				<texture>multiplex/multiplex_full_infobigthumb.png</texture>
 				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>
+			</control>
+
+			<control type="image">
+				<width>1280</width>
+				<height>381</height>
+				<texture>multiplex/lite/multiplex_full_infoplot.png</texture>
+				<visible>Skin.HasSetting(lite) + ![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>
+				<animation effect="fade" start="80" end="80" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>				
+			</control>
+			
+			<control type="image">
+				<width>1280</width>
+				<height>381</height>
+				<texture>multiplex/lite/multiplex_full_infobigthumb.png</texture>
+				<visible>Skin.HasSetting(lite) + [Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>
 			</control>			
 
 			<control type="group">
@@ -251,6 +266,7 @@
 					<height>169</height>
 					<texture>common/black.png</texture>
 					<colordiffuse>94FFFFFF</colordiffuse>
+					<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 				</control>				
 				<control type="largeimage">
 					<posx>2</posx>
@@ -269,6 +285,7 @@
 					<height>169</height>
 					<texture>common/black.png</texture>
 					<colordiffuse>94FFFFFF</colordiffuse>
+					<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 				</control>				
 				<control type="largeimage">
 					<posx>2</posx>
@@ -292,6 +309,7 @@
 					<height>351</height>
 					<texture>common/black.png</texture>
 					<colordiffuse>94FFFFFF</colordiffuse>
+					<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 				</control>				
 				<control type="multiimage">
 					<posx>2</posx>
@@ -316,6 +334,7 @@
 					<height>351</height>
 					<texture>common/black.png</texture>
 					<colordiffuse>94FFFFFF</colordiffuse>
+					<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 				</control>				
 				<control type="largeimage">
 					<posx>2</posx>
@@ -325,8 +344,10 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>400</fadetime>
 					<texture>$INFO[Container(52).listitem.property(fanart_image)]</texture>
-				</control>			
-			</control>					
+				</control>
+			</control>
+
+			
 		</control>	
 	</include>
 	
@@ -547,8 +568,9 @@
 					<aspectratio>scale</aspectratio>
 					<texture>$INFO[Container(52).listitem.thumb]</texture>
 					<visible>Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)</visible>
-					<include>Animation_VisibleChange200</include>					
-				</control>				
+					<include>Animation_VisibleChange200</include>
+				</control>
+	
 			</control>
 			
 			<control type="group">
@@ -611,7 +633,15 @@
 				<width>1280</width>
 				<height>274</height>
 				<texture>multiplex/multiplex_full_base.png</texture>
+				<visible>!Skin.HasSetting(lite)</visible>
 			</control>
+			
+			<control type="image" id="304">
+				<width>1280</width>
+				<height>274</height>
+				<texture>multiplex/lite/multiplex_full_base.png</texture>
+				<visible>Skin.HasSetting(lite)</visible>
+			</control>			
 			
 			<control type="image">
 				<posx>56</posx>
@@ -620,6 +650,7 @@
 				<height>136</height>
 				<texture>multiplex/multiplex_frame.png</texture>
 				<animation effect="slide" start="0,0" end="0,-15" time="400" easing="inout" tween="cubic" condition="Control.HasFocus(60)">Conditional</animation>				
+				<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>				
 			</control>
 			
 			<control type="image">
@@ -632,6 +663,7 @@
 				<animation effect="slide" start="-100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 				<visible>!Control.IsVisible(105)</visible>
 				<include>Animation_CommonFade</include>
+				<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 			</control>
 			
 			<control type="image">
@@ -644,6 +676,7 @@
 				<animation effect="slide" start="100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 				<visible>!Control.IsVisible(105)</visible>
 				<include>Animation_CommonFade</include>
+				<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 			</control>				
 		</control>	
 	</include>
@@ -683,6 +716,7 @@
 				<animation effect="slide" start="-100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 				<visible>!Control.IsVisible(105)</visible>
 				<include>Animation_CommonFade</include>
+				<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 			</control>
 			
 			<control type="image">
@@ -695,6 +729,7 @@
 				<animation effect="slide" start="100" end="0" delay="800" time="400" easing="out" tween="cubic">WindowOpen</animation>
 				<visible>!Control.IsVisible(105)</visible>
 				<include>Animation_CommonFade</include>
+				<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>					
 			</control>				
 		</control>	
 	</include>
@@ -736,6 +771,7 @@
 				<texture>multiplex/multiplex_gradient.png</texture>
 				<include>Animation_HideMultiplex</include>
 				<visible>Control.IsVisible(52)</visible>
+				<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>
 			</control>
 		</control>	
 	</include>
@@ -838,23 +874,36 @@
 					<include>MultiplexSeasonOverlayWrap</include>
 					<texture>common/black.png</texture>
 					<colordiffuse>b6FFFFFF</colordiffuse>	
-					<visible>Container.Content(seasons)</visible>					
+					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>					
 				</control>
 				<control type="label">
 					<posx>115</posx>
-					<posy>119</posy>
+					<posy>129</posy>
 					<width>229</width>
 					<height>30</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_MultiplexSeasonLabel</font>
 					<label>$INFO[ListItem.Label]</label>
-					<visible>Container.Content(seasons)</visible>					
-				</control>		
+					<visible>Container.Content(seasons)</visible>
+					<animation effect="zoom" center="115,100" start="80" end="80" time="0" condition="true">Conditional</animation>						
+				</control>
+				<control type="label">
+					<posx>115</posx>
+					<posy>129</posy>
+					<width>229</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_MultiplexSeasonLabel</font>
+					<label>$LOCALIZE[31433] $INFO[ListItem.Episode]</label>
+					<animation effect="zoom" center="115,100" start="80" end="80" time="0" condition="true">Conditional</animation>						
+					<visible>Container.Content(episodes)</visible>					
+				</control>							
 				<control type="image">
 					<include>MultiplexSeasonOverlayWrap</include>
 					<texture>multiplex/multiplex_seasongradient.png</texture>			
-					<visible>Container.Content(seasons)</visible>					
+					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>					
 				</control>							
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
@@ -894,25 +943,37 @@
 					<texture>common/black.png</texture>
 					<colordiffuse>b6FFFFFF</colordiffuse>
 					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>						
-					<visible>Container.Content(seasons)</visible>					
+					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>					
 				</control>
 				<control type="label">
 					<posx>115</posx>
-					<posy>119</posy>
+					<posy>129</posy>
 					<width>229</width>
 					<height>30</height>
 					<align>center</align>
 					<aligny>center</aligny>
 					<font>Font_MultiplexSeasonLabel</font>
 					<label>$INFO[ListItem.Label]</label>
-					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>						
+					<animation effect="zoom" center="115,100" start="80" end="100" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>						
 					<visible>Container.Content(seasons)</visible>					
 				</control>
+				<control type="label">
+					<posx>115</posx>
+					<posy>129</posy>
+					<width>229</width>
+					<height>30</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Font_MultiplexSeasonLabel</font>
+					<label>$LOCALIZE[31433] $INFO[ListItem.Episode]</label>
+					<animation effect="zoom" center="115,100" start="80" end="100" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>						
+					<visible>Container.Content(episodes)</visible>					
+				</control>				
 				<control type="image">
 					<include>MultiplexSeasonOverlayWrap</include>
 					<texture>multiplex/multiplex_seasongradient.png</texture>
 					<animation effect="zoom" center="115,75" start="100" end="120" time="400" easing="out" tween="cubic" reversible="false">Focus</animation>						
-					<visible>Container.Content(seasons)</visible>					
+					<visible>Container.Content(seasons) | Container.Content(episodes)</visible>					
 				</control>				
 				<control type="image">
 					<include>MultiplexIconDimensionsTVWrap</include>
