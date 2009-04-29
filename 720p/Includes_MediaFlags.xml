@@ -1072,7 +1072,7 @@
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/square_enix.png.png</texture>
+					<texture>flags/square_enix.png</texture>
 					<visible>substring(listitem.studio,Square Enix)</visible>
 				</control>
 			</control>
@@ -1888,7 +1888,7 @@
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/square_enix.png.png</texture>
+					<texture>flags/square_enix.png</texture>
 					<visible>substring(listitem.studio,Square Enix)</visible>
 				</control>
 			</control>
