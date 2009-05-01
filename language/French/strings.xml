@@ -47,6 +47,8 @@
 
 <!-- Media Window options -->
   
+	<string id="31042">THÈME: CLAIR</string>
+	<string id="31043">THÈME: SOMBRE</string>
 	<string id="31044">FANART</string>
 	<string id="31045">VIGNETTE</string>
 	<string id="31046">RÉSUMÉ</string>

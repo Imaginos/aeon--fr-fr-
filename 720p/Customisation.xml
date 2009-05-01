@@ -76,7 +76,7 @@
 		
 		<control type="radiobutton" id="406">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Déverouiller toutes les vues série TV</label>
+			<label>Déverouiller toutes les vues de séries TV</label>
 			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
 			<selected>Skin.HasSetting(unlockTVviews)</selected>
 		</control>		

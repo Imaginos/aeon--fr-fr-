@@ -1,5 +1,13 @@
 <includes>
 
+	<include name="ShowcaseMediaFlagLightShade">
+		<colordiffuse>74000000</colordiffuse>	
+	</include>
+	
+	<include name="ShowcaseMediaFlagNightShade">
+		<colordiffuse>FFe1e1e1</colordiffuse>	
+	</include>
+
 	<include name="Furniture_ShowcaseMediaFlagsVars">
 		<posy>647</posy>
 		<width>110</width>
@@ -7,7 +15,8 @@
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
 		<visible>Control.IsVisible(57)</visible>
-		<colordiffuse>74000000</colordiffuse>
+		<include condition="!Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagLightShade</include>
+		<include condition="Skin.HasSetting(darkshowcase)">ShowcaseMediaFlagNightShade</include>
 	</include>
 	
 	<include name="Furniture_ListMediaFlagsVars">
@@ -85,7 +94,8 @@
 		<posy>581</posy>		
 		<width>1</width>
 		<height>47</height>
-		<texture>info/info_flagupright.png</texture>	
+		<texture>info/info_flagupright.png</texture>
+		<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(lite)">Conditional</animation>	
 	</include>
 	
 	<include name="Furniture_MovieInfoMediaFlags">
@@ -317,13 +327,13 @@
 					<include>Furniture_ListMediaFlagsVars</include>
 					<texture>flags/mp3.png</texture>
 					<visible>substring(listitem.studio,mp3) | substring(listitem.studio,MPEG Audio)</visible>
-				</control>
+				</control>				
+			</control>
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
 					<texture>flags/aac.png</texture>
 					<visible>substring(listitem.studio,aac)</visible>
-				</control>			
-			</control>
+				</control>	
 			<control type="group">
 				<posx>855</posx>
 				<control type="image">
@@ -370,6 +380,7 @@
 				<height>151</height>
 				<texture>showcase/flagshade.png</texture>
 				<include>Animation_HideShowcase</include>
+				<visible>!Skin.HasSetting(darkshowcase)</visible>
 			</control>
 			<control type="image">
 				<posx>982</posx>
@@ -378,6 +389,7 @@
 				<height>151</height>
 				<texture flipx="true">showcase/flagshade.png</texture>
 				<include>Animation_HideShowcase</include>
+				<visible>!Skin.HasSetting(darkshowcase)</visible>				
 			</control>	
 		</control>
 		<control type="group">
@@ -483,7 +495,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/paramount.png</texture>
-					<visible>substring(listitem.studio,Paramount)</visible>
+					<visible>substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -767,11 +779,6 @@
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/lionsgate.png</texture>
-					<visible>substring(listitem.studio,Lionsgate)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/legendary.png</texture>
 					<visible>substring(listitem.studio,Legendary)</visible>
 				</control>
@@ -788,7 +795,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/jim_henson.png</texture>
-					<visible>listitem.studio,Jim Henson)</visible>
+					<visible>substring(listitem.studio,Jim Henson)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -934,11 +941,6 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/cartoon.png</texture>
 					<visible>substring(listitem.studio,Cartoon)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/carolco.png</texture>
-					<visible>substring(listitem.studio,Carolco)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -1150,12 +1152,7 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/mp3.png</texture>
 					<visible>substring(listitem.studio,mp3) | substring(listitem.studio,MPEG Audio)</visible>
-				</control>
-				<control type="image" id="188">
-					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/aac.png</texture>
-					<visible>substring(listitem.studio,aac)</visible>
-				</control>			
+				</control>				
 			</control>
 			<control type="group">
 				<posx>190</posx>
@@ -1299,7 +1296,7 @@
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/paramount.png</texture>
-					<visible>substring(listitem.studio,Paramount)</visible>
+					<visible>substring(listitem.studio,Paramount) | substring(listitem.studio,Comedy Central)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -1583,11 +1580,6 @@
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/lionsgate.png</texture>
-					<visible>substring(listitem.studio,Lionsgate)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/legendary.png</texture>
 					<visible>substring(listitem.studio,Legendary)</visible>
 				</control>
@@ -1750,11 +1742,6 @@
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/cartoon.png</texture>
 					<visible>substring(listitem.studio,Cartoon)</visible>
-				</control>
-				<control type="image" id="81">
-					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/carolco.png</texture>
-					<visible>substring(listitem.studio,Carolco)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>

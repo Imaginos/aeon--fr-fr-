@@ -428,7 +428,7 @@
 					<control type="label" id="623">
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>	
-						<label>Réalisateur: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>					
 					</control>
 					<control type="label" id="623">
@@ -540,7 +540,7 @@
 					<control type="label" id="623">
 						<include>ListLabel_Sub</include>
 						<include>subcolornofocus</include>
-						<label>Réalisateur: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
+						<label>DIRECTOR: $INFO[ListItem.Director] - $INFO[ListItem.Duration]</label>
 						<visible>!IsEmpty(ListItem.Director) + Container.Content(movies)</visible>
 						<include>Animation_ButtonFocusFade_fix</include>						
 					</control>
