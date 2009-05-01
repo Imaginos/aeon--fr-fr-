@@ -374,8 +374,7 @@
 				<height>453</height>
 				<texture>multiplex/lite/multiplex_full_infotv.png</texture>
 				<visible>!Skin.HasSetting(darkmultiplex)</visible>
-			</control>			
-
+			</control>
 			<control type="group">
 				<posx>60</posx>
 				<posy>21</posy>
@@ -602,7 +601,7 @@
 					<include>MultiplexTVLabel</include>
 					<visible>Container.Content(episodes)</visible>
 					<label>$INFO[Container(52).ListItem.Season].$INFO[Container(52).ListItem.Episode] $INFO[Container(52).ListItem.Title]</label>					
-				</control>				
+				</control> 
 				
 				<control type="label">
 					<posx>1216</posx>
@@ -624,8 +623,12 @@
 					<texture>multiplex/multiplex_gradienttv.png</texture>
 					<visible>Control.IsVisible(52) + Skin.HasSetting(darkmultiplex)</visible>
 				</control>
-			</control>	
-			
+			</control>
+<!-- mod ajout affichage HDTV DEBUT -->
+			<control type="group">
+				<include>Furniture_EpisodeMediaFlags</include>
+			</control>
+<!-- mod ajout affichage HDTV FIN -->
 		</control>	
 	</include>
 	
