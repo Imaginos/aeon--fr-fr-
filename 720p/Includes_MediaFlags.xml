@@ -373,141 +373,151 @@
 		<height>75</height>	
 		<visible>Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons)]</visible>
 		<include>Animation_CommonFade</include>
+		<control type="group">
+			<include>Animation_CommonFade</include>
 			<control type="group">
-				<include>Animation_CommonFade</include>
-				<control type="group">
-					<posx>659</posx>
+				<posx>659</posx>
+			<control type="image">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/defaultsound.png</texture>
+				<visible>!Control.IsVisible(188) + !Skin.HasSetting(nodefaultflags)</visible>
+			</control>					
+			<control type="image" id="188">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/dts.png</texture>
+				<visible>substring(listitem.director,dts) + !substring(listitem.director,ac-3)</visible>
+			</control>			
+			<control type="image" id="188">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/dolbydigital.png</texture>
+				<visible>substring(listitem.director,ac-3)</visible>
+			</control>
+			<control type="image" id="188">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/mp3.png</texture>
+				<visible>substring(listitem.director,mp3) | substring(listitem.director,MPEG Audio)</visible>
+			</control>
+			<control type="image" id="188">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/aac.png</texture>
+				<visible>substring(listitem.director,aac)</visible>
+			</control>	
+			</control>
+		</control>
+		<control type="group">
+			<posx>870</posx>
+			<control type="image">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/defaultscreen.png</texture>
+				<visible>!Control.IsVisible(187) + !Skin.HasSetting(nodefaultflags)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/sd.png</texture>
+				<visible>substring(listitem.director,sd)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/480p.png</texture>
+				<visible>substring(listitem.director,480p)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/576p.png</texture>
+				<visible>substring(listitem.director,576p)</visible>
+			</control>				
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/720p.png</texture>
+				<visible>substring(listitem.director,720p)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/1080p.png</texture>
+				<visible>substring(listitem.director,1080p)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/480i.png</texture>
+				<visible>substring(listitem.director,480i)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/576i.png</texture>
+				<visible>substring(listitem.director,576i)</visible>
+			</control>				
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/720i.png</texture>
+				<visible>substring(listitem.director,720i)</visible>
+			</control>
+			<control type="image" id="187">
+				<include>Furniture_EpisodeMediaFlags</include>
+				<texture>flags/1080i.png</texture>
+				<visible>substring(listitem.director,1080i)</visible>
+			</control>				
+		</control>
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<control type="group">
+				<posx>1067</posx>
 				<control type="image">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/defaultsound.png</texture>
-					<visible>!Control.IsVisible(188) + !Skin.HasSetting(nodefaultflags)</visible>
-				</control>					
-				<control type="image" id="188">
-					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/dts.png</texture>
-					<visible>substring(listitem.director,dts) + !substring(listitem.director,ac-3)</visible>
-				</control>			
-				<control type="image" id="188">
-					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/dolbydigital.png</texture>
-					<visible>substring(listitem.director,ac-3)</visible>
+					<texture>flags/default.png</texture>
+					<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>
-				<control type="image" id="188">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/mp3.png</texture>
-					<visible>substring(listitem.director,mp3) | substring(listitem.director,MPEG Audio)</visible>
+					<texture>flags/abc.png</texture>
+					<visible>substring(listitem.director,abc)</visible>
 				</control>
-				<control type="image" id="188">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/aac.png</texture>
-					<visible>substring(listitem.director,aac)</visible>
-				</control>	
+					<texture>flags/bbc_one.png</texture>
+					<visible>substring(listitem.director,netbbc-1)</visible>
 				</control>
-			</control>
-			<control type="group">
-				<posx>870</posx>
-				<control type="image">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/defaultscreen.png</texture>
-					<visible>!Control.IsVisible(187) + !Skin.HasSetting(nodefaultflags)</visible>
+					<texture>flags/cbs.png</texture>
+					<visible>substring(listitem.director,netCBS)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/sd.png</texture>
-					<visible>substring(listitem.director,sd)</visible>
+					<texture>flags/fox.png</texture>
+					<visible>substring(listitem.director,netFox)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/480p.png</texture>
-					<visible>substring(listitem.director,480p)</visible>
+					<texture>flags/hbo.png</texture>
+					<visible>substring(listitem.director,netHBO)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/576p.png</texture>
-					<visible>substring(listitem.director,576p)</visible>
-				</control>				
-				<control type="image" id="187">
-					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/720p.png</texture>
-					<visible>substring(listitem.director,720p)</visible>
+					<texture>flags/nbc.png</texture>
+					<visible>substring(listitem.director,netnbc)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/1080p.png</texture>
-					<visible>substring(listitem.director,1080p)</visible>
+					<texture>flags/scifi.png</texture>
+					<visible>substring(listitem.director,netSciFi)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/480i.png</texture>
-					<visible>substring(listitem.director,480i)</visible>
+					<texture>flags/showtime.png</texture>
+					<visible>substring(listitem.director,netshowtime)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/576i.png</texture>
-					<visible>substring(listitem.director,576i)</visible>
-				</control>				
-				<control type="image" id="187">
-					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/720i.png</texture>
-					<visible>substring(listitem.director,720i)</visible>
+					<texture>flags/usa_net.png</texture>
+					<visible>substring(listitem.director,netUSA)</visible>
 				</control>
-				<control type="image" id="187">
+				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/1080i.png</texture>
-					<visible>substring(listitem.director,1080i)</visible>
-				</control>				
-			</control>
-			<control type="group">
-				<include>Animation_CommonFade</include>
-				<control type="group">
-					<posx>1067</posx>
-					<control type="image">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/default.png</texture>
-						<visible>!Control.IsVisible(81) + !Skin.HasSetting(nodefaultflags)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/abc.png</texture>
-						<visible>substring(listitem.director,abc)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/bbc_one.png</texture>
-						<visible>substring(listitem.director,netbbc-1)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/cbs.png</texture>
-						<visible>substring(listitem.director,netCBS)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/fox.png</texture>
-						<visible>substring(listitem.director,netFox)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/nbc.png</texture>
-						<visible>substring(listitem.director,netnbc)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/scifi.png</texture>
-						<visible>substring(listitem.director,netSciFi)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/usa_net.png</texture>
-						<visible>substring(listitem.director,netUSA)</visible>
-					</control>
-					<control type="image" id="81">
-						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/babylonian.png</texture>
-						<visible>substring(listitem.director,netSyndicated)</visible>
-					</control>
+					<texture>flags/babylonian.png</texture>
+					<visible>substring(listitem.director,netSyndicated)</visible>
 				</control>
 			</control>
+		</control>
 	</include>
 	<include name="Furniture_ShowcaseMediaFlags">
 		<control type="group">
