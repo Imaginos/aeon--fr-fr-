@@ -474,7 +474,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/abc_hd.png</texture>
-					<visible>substring(listitem.director,netabc) + (substring(listitem.director,1080) | substring(listitem.director,720))</visible>
+					<visible>substring(listitem.director,netabc)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -489,7 +490,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/bbc_hd.png</texture>
-					<visible>substring(listitem.director,netbbc) + (substring(listitem.director,1080) | substring(listitem.director,720))</visible>
+					<visible>substring(listitem.director,netbbc)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -499,7 +501,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/cartoon_network_hd.png</texture>
-					<visible>substring(listitem.director,netCartoon) + (substring(listitem.director,1080) | substring(listitem.director,720))</visible>
+					<visible>substring(listitem.director,netCartoon)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -509,7 +512,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/cbs_hd.png</texture>
-					<visible>substring(listitem.director,netCBS) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+					<visible>substring(listitem.director,netCBS)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -519,7 +523,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/fox_hd.png</texture>
-					<visible>substring(listitem.director,netFox) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+					<visible>substring(listitem.director,netFox)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -529,7 +534,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/hbo_hd.png</texture>
-					<visible>substring(listitem.director,netHBO) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+					<visible>substring(listitem.director,netHBO)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -539,7 +545,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/nbc_hd.png</texture>
-					<visible>substring(listitem.director,netnbc) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+					<visible>substring(listitem.director,netnbc)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -549,7 +556,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/scifihd.png</texture>
-					<visible>substring(listitem.director,SciFi) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+					<visible>substring(listitem.director,SciFi)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -559,7 +567,8 @@
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
 					<texture>flags/tv/showtime_hd.png</texture>
-					<visible>substring(listitem.director,netshowtime) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+					<visible>substring(listitem.director,netshowtime)</visible>
+					<visible>substring(listitem.director,1080) | substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
