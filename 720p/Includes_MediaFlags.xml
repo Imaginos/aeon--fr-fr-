@@ -468,52 +468,107 @@
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/abc.png</texture>
-					<visible>substring(listitem.director,abc)</visible>
+					<texture>flags/tv/abc.png</texture>
+					<visible>substring(listitem.director,netabc) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/bbc_one.png</texture>
-					<visible>substring(listitem.director,netbbc-1)</visible>
+					<texture>flags/tv/abc_hd.png</texture>
+					<visible>substring(listitem.director,netabc) + (substring(listitem.director,1080) | substring(listitem.director,720))</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/cbs.png</texture>
-					<visible>substring(listitem.director,netCBS)</visible>
+					<texture>flags/tv/bbc_one.png</texture>
+					<visible>substring(listitem.director,netbbc-1) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/fox.png</texture>
-					<visible>substring(listitem.director,netFox)</visible>
+					<texture>flags/tv/bbc_three.png</texture>
+					<visible>substring(listitem.director,netbbc-3) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/hbo.png</texture>
-					<visible>substring(listitem.director,netHBO)</visible>
+					<texture>flags/tv/bbc_hd.png</texture>
+					<visible>substring(listitem.director,netbbc) + (substring(listitem.director,1080) | substring(listitem.director,720))</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/nbc.png</texture>
-					<visible>substring(listitem.director,netnbc)</visible>
+					<texture>flags/tv/cartoon_network.png</texture>
+					<visible>substring(listitem.director,netCartoon) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/scifi.png</texture>
-					<visible>substring(listitem.director,netSciFi)</visible>
+					<texture>flags/tv/cartoon_network_hd.png</texture>
+					<visible>substring(listitem.director,netCartoon) + (substring(listitem.director,1080) | substring(listitem.director,720))</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/showtime.png</texture>
-					<visible>substring(listitem.director,netshowtime)</visible>
+					<texture>flags/tv/cbs.png</texture>
+					<visible>substring(listitem.director,netCBS) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/usa_net.png</texture>
+					<texture>flags/tv/cbs_hd.png</texture>
+					<visible>substring(listitem.director,netCBS) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/fox.png</texture>
+					<visible>substring(listitem.director,netFox) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/fox_hd.png</texture>
+					<visible>substring(listitem.director,netFox) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/hbo.png</texture>
+					<visible>substring(listitem.director,netHBO) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/hbo_hd.png</texture>
+					<visible>substring(listitem.director,netHBO) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/nbc.png</texture>
+					<visible>substring(listitem.director,netnbc) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/nbc_hd.png</texture>
+					<visible>substring(listitem.director,netnbc) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/scifi.png</texture>
+					<visible>substring(listitem.director,SciFi) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/scifihd.png</texture>
+					<visible>substring(listitem.director,SciFi) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/showtime.png</texture>
+					<visible>substring(listitem.director,netshowtime) + !substring(listitem.director,1080) + !substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/showtime_hd.png</texture>
+					<visible>substring(listitem.director,netshowtime) + substring(listitem.director,1080) | substring(listitem.director,720)</visible>
+				</control>
+				<control type="image" id="81">
+					<include>Furniture_EpisodeMediaFlags</include>
+					<texture>flags/tv/usa_net.png</texture>
 					<visible>substring(listitem.director,netUSA)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/babylonian.png</texture>
+					<texture>flags/tv/babylonian.png</texture>
 					<visible>substring(listitem.director,netSyndicated)</visible>
 				</control>
 			</control>
