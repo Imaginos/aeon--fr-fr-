@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- $Revision: 204$ -->
-<!-- Date of translation : 2009-05-02 (13h13 UMT) -->
+<!-- Date of translation : 2009-05-03 (10h05 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -156,7 +156,7 @@
 	<string id="31155">INTERFACE ET AFFICHAGE</string>
 	<string id="31156">CUSTOMISER</string>
 	<string id="31157">PERSONALISER AEON</string>
-	<string id="31158">AVANCÉ</string>
+	<string id="31158">AVANCÉES</string>
 	<string id="31159">OPTIONS AEON ÉTENDUES</string>
 	<string id="31160">PROFILS</string>
 	<string id="31161">COMPTES UTILISATEURS</string>
