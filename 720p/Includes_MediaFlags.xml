@@ -1564,6 +1564,7 @@
 					<texture>flags/custom/xvid.png</texture>
 					<visible>substring(listitem.studio,XVID)+ !substring(listitem.filename,hdtv)+ !substring(listitem.filename,bluray)+ !substring(listitem.filename,hddvd)</visible>
 				</control>
+				<visible>false</visible>
 			</control>
 		</control>
 	</include>
