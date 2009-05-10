@@ -1,8 +1,6 @@
 Cette version complète et prête à l'emploi est exclusivement destinée à une utilisation Française
 
 -== mod ajouté ==-
-Affichage de flags (gérés par Media Info Plus) dans la vue multiplex d'épisodes de série
-
--== Flags ajoutés ==-
-109 flags vidéo ajoutés
-1 flag audio ajouté
+L'affichage des épisodes dans la vue multiplex présente les infos sur la norme audio, la résolution et la chaîne de diffusion
+Différenciation des logos de chaîne HD et non HD
+Options de positionnement des labels
