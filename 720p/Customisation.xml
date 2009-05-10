@@ -91,7 +91,7 @@
 		<visible>Control.HasFocus(11) | ControlGroup(21).HasFocus</visible>
 		<control type="radiobutton" id="407">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Manage Showcase Flags Order		>>></label>
+			<label>Ordre des labels Showcase		>>></label>
 			<onclick>Skin.ToggleSetting(settings_showcase_flags)</onclick>
 			<selected>Skin.HasSetting(settings_showcase_flags)</selected>
 		</control>
@@ -99,7 +99,7 @@
 			<onleft>SetFocus(407)</onleft>
 			<visible>Skin.HasSetting(settings_showcase_flags)</visible>
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>						studio, source, res, sound   (initial layout)</label>
+			<label>						studio, source, res, sound   (disposition originale)</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,res)</onclick>
@@ -146,7 +146,7 @@
 <!-- mod for flag options in multiplex view -->
 		<control type="radiobutton" id="412">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Manage Multiplex Flags Order		>>></label>
+			<label>Ordre des labels Multiplex		>>></label>
 			<onclick>Skin.ToggleSetting(settings_multiplex_flags)</onclick>
 			<selected>Skin.HasSetting(settings_multiplex_flags)</selected>
 		</control>
@@ -154,7 +154,7 @@
 			<onleft>SetFocus(412)</onleft>
 			<visible>Skin.HasSetting(settings_multiplex_flags)</visible>
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>						studio, source, res, sound   (initial layout)</label>
+			<label>						studio, source, res, sound   (disposition originale)</label>
 			<onclick>Skin.SetString(mutliplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(mutliplexmediaflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(mutliplexmediaflags_pos3,res)</onclick>
@@ -201,7 +201,7 @@
 <!-- mod for flag options in episode view -->
 		<control type="radiobutton" id="417">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Manage episode Flags Order		>>></label>
+			<label>Ordre des labels d'épisodes		>>></label>
 			<onclick>Skin.ToggleSetting(settings_episode_flags)</onclick>
 			<selected>Skin.HasSetting(settings_episode_flags)</selected>
 		</control>
@@ -209,7 +209,7 @@
 			<onleft>SetFocus(417)</onleft>
 			<visible>Skin.HasSetting(settings_episode_flags)</visible>
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>						network, source, res, sound   (initial layout)</label>
+			<label>						network, source, res, sound   (disposition originale)</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos3,res)</onclick>
@@ -242,7 +242,7 @@
 			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,codec) + Skin.String(episodemediaflags_pos3,res) + Skin.String(episodemediaflags_pos4,sound)</selected>
 		</control>
 		<control type="button" id="421">
-			<label>Set all flags to default</label>
+			<label>Tous les labels par défaut</label>
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
