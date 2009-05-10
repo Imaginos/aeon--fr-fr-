@@ -2658,33 +2658,7 @@
 					<scroll>false</scroll>
                     <include>ShowcaseMainLabel</include>
 					<visible>Window.IsActive(502) + stringcompare(container(57).numitems,0)</visible>
-                </control>
-<!-- Ajout pour l'affichage de la durée -->
-                <control type="label">
-                        <description>Runtime</description>
-                        <posx>240</posx>
-                        <posy>669</posy>
-                        <width>93</width>
-                        <height>20</height>
-                        <align>left</align>
-                        <font>Font_FSInfoPlot</font>
-                        <textcolor>d0FFFFFF</textcolor>
-                        <label>$INFO[ListItem.Duration]</label>
-                        <visible>Container.Content(movies) + !Skin.HasSetting(nomediaflags) + !Window.IsActive(24) + Skin.HasSetting(darkshowcase)</visible>			
-                </control>
-                <control type="label">
-                        <description>Runtime</description>
-                        <posx>240</posx>
-                        <posy>669</posy>
-                        <width>93</width>
-                        <height>20</height>
-                        <align>left</align>
-                        <font>Font_FSInfoPlot</font>
-                        <textcolor>b91a1a1c</textcolor>
-                        <label>$INFO[ListItem.Duration]</label>
-                        <visible>Container.Content(movies) + !Skin.HasSetting(nomediaflags) + !Window.IsActive(24) + !Skin.HasSetting(darkshowcase)</visible>			
-                </control>
-<!-- Fin de l'ajout pour l'affichage de la durée -->		
+                </control>				
                 <control type="label">
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
                     <include>ShowcaseMainLabel</include>

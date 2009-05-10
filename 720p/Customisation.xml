@@ -33,8 +33,8 @@
 	
 	<control type="grouplist" id="20">
 		<include>Objects_SettingsControlAreaVars</include>
-		<onup>10</onup>
-		<ondown>10</ondown>
+		<onup>20</onup>
+		<ondown>20</ondown>
 		<onleft>6</onleft>
 		<onright>6</onright>
 		<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
@@ -79,8 +79,188 @@
 			<label>Dévérouiller toutes les vues série TV</label>
 			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
 			<selected>Skin.HasSetting(unlockTVviews)</selected>
-		</control>		
-		
+		</control>
+	</control>
+<!-- mod for positioning flags in views -->
+	<control type="grouplist" id="21">
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>21</onup>
+		<ondown>21</ondown>
+		<onleft>11</onleft>
+		<onright>11</onright>
+		<visible>Control.HasFocus(11) | ControlGroup(21).HasFocus</visible>
+		<control type="radiobutton" id="407">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Manage Showcase Flags Order		>>></label>
+			<onclick>Skin.ToggleSetting(settings_showcase_flags)</onclick>
+			<selected>Skin.HasSetting(settings_showcase_flags)</selected>
+		</control>
+		<control type="radiobutton" id="408">
+			<onleft>SetFocus(407)</onleft>
+			<visible>Skin.HasSetting(settings_showcase_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, source, res, sound   (initial layout)</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,source) + Skin.String(movieshowcaseflags_pos3,res) + Skin.String(movieshowcaseflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="409">
+			<onleft>SetFocus(407)</onleft>
+			<visible>Skin.HasSetting(settings_showcase_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, duration, res, sound</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,duration) + Skin.String(movieshowcaseflags_pos3,res) + Skin.String(movieshowcaseflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="410">
+			<onleft>SetFocus(407)</onleft>
+			<visible>Skin.HasSetting(settings_showcase_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, duration, sound, codec</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,sound)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,codec)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,duration) + Skin.String(movieshowcaseflags_pos3,sound) + Skin.String(movieshowcaseflags_pos4,codec)</selected>
+		</control>
+		<control type="radiobutton" id="411">
+			<onleft>SetFocus(407)</onleft>
+			<visible>Skin.HasSetting(settings_showcase_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, imdb, sound, res</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,imdb)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,sound)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,res)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,imdb) + Skin.String(movieshowcaseflags_pos3,sound) + Skin.String(movieshowcaseflags_pos4,res)</selected>
+		</control>
+<!-- mod for flag options in multiplex view -->
+		<control type="radiobutton" id="412">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Manage Multiplex Flags Order		>>></label>
+			<onclick>Skin.ToggleSetting(settings_multiplex_flags)</onclick>
+			<selected>Skin.HasSetting(settings_multiplex_flags)</selected>
+		</control>
+		<control type="radiobutton" id="413">
+			<onleft>SetFocus(412)</onleft>
+			<visible>Skin.HasSetting(settings_multiplex_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, source, res, sound   (initial layout)</label>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(mutliplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(mutliplexmediaflags_pos1,studio) + Skin.String(mutliplexmediaflags_pos2,source) + Skin.String(mutliplexmediaflags_pos3,res) + Skin.String(mutliplexmediaflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="414">
+			<onleft>SetFocus(412)</onleft>
+			<visible>Skin.HasSetting(settings_multiplex_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, duration, res, sound</label>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(mutliplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(mutliplexmediaflags_pos1,studio) + Skin.String(mutliplexmediaflags_pos2,duration) + Skin.String(mutliplexmediaflags_pos3,res) + Skin.String(mutliplexmediaflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="415">
+			<onleft>SetFocus(412)</onleft>
+			<visible>Skin.HasSetting(settings_multiplex_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, codec, res, sound</label>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos2,codec)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(mutliplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(mutliplexmediaflags_pos1,studio) + Skin.String(mutliplexmediaflags_pos2,codec) + Skin.String(mutliplexmediaflags_pos3,res) + Skin.String(mutliplexmediaflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="416">
+			<onleft>SetFocus(412)</onleft>
+			<visible>Skin.HasSetting(settings_multiplex_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						studio, imdb, sound, res</label>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos2,imdb)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos3,sound)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos4,res)</onclick>
+			<onclick>Skin.SetBool(mutliplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(mutliplexmediaflags_pos1,studio) + Skin.String(mutliplexmediaflags_pos2,imdb) + Skin.String(mutliplexmediaflags_pos3,sound) + Skin.String(mutliplexmediaflags_pos4,res)</selected>
+		</control>
+<!-- mod for flag options in episode view -->
+		<control type="radiobutton" id="417">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Manage episode Flags Order		>>></label>
+			<onclick>Skin.ToggleSetting(settings_episode_flags)</onclick>
+			<selected>Skin.HasSetting(settings_episode_flags)</selected>
+		</control>
+		<control type="radiobutton" id="418">
+			<onleft>SetFocus(417)</onleft>
+			<visible>Skin.HasSetting(settings_episode_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						network, source, res, sound   (initial layout)</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,source) + Skin.String(episodemediaflags_pos3,res) + Skin.String(episodemediaflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="419">
+			<onleft>SetFocus(417)</onleft>
+			<visible>Skin.HasSetting(settings_episode_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						network, source, rating, sound</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,rating)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,source) + Skin.String(episodemediaflags_pos3,rating) + Skin.String(episodemediaflags_pos4,sound)</selected>
+		</control>
+		<control type="radiobutton" id="420">
+			<onleft>SetFocus(417)</onleft>
+			<visible>Skin.HasSetting(settings_episode_flags)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>						network, codec, res, sound</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,codec)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,codec) + Skin.String(episodemediaflags_pos3,res) + Skin.String(episodemediaflags_pos4,sound)</selected>
+		</control>
+		<control type="button" id="421">
+			<label>Set all flags to default</label>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,sound)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(mutliplexmediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,sound)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<onclick>Skin.SetBool(mutliplexmediaflags_pos_set)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+		</control>
+<!-- END of position mod -->
 	</control>
 
 	<control type="grouplist" id="11">

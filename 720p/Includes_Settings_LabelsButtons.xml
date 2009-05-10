@@ -775,7 +775,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>10</onup>
+				<onup>11</onup>
 				<ondown>7</ondown>
 				<visible allowhiddenfocus="true">![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
 			</control>
@@ -787,7 +787,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>10</onup>
+				<onup>11</onup>
 				<ondown>7</ondown>
 				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
 			</control>
@@ -956,6 +956,48 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
 			</control>
+<!-- mod for flag options in showcase view -->
+			<control type="button" id="11">
+				<description>flags management</description>
+				<posy>290</posy>
+				<label>MANAGE FLAGS</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onclick>SetFocus(407)</onclick>
+				<onleft>407</onleft>
+				<onright>407</onright>
+				<onup>10</onup>
+				<ondown>6</ondown>
+				<visible allowhiddenfocus="true">![Control.HasFocus(11) | ControlGroup(21).HasFocus]</visible>
+			</control>
+			<control type="button" id="11">
+				<description>management</description>
+				<posy>290</posy>
+				<label>MANAGE FLAGS</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onclick>SetFocus(407)</onclick>
+				<onleft>407</onleft>
+				<onright>407</onright>
+				<onup>10</onup>
+				<ondown>6</ondown>
+				<visible>Control.HasFocus(11) | ControlGroup(21).HasFocus</visible>
+			</control>
+			<control type="label">
+				<description>Backdrops Unfocused</description>
+				<posy>322</posy>
+				<label>Select flags orders</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>![Control.HasFocus(11) | ControlGroup(21).HasFocus]</visible>
+			</control>
+			<control type="label">
+				<description>Backdrops Focused</description>
+				<posy>322</posy>
+				<label>Select flags orders</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(11) | ControlGroup(21).HasFocus</visible>
+			</control>
+<!-- mod for flag options in showcase view -->
 		</control>
 	</include>
 
