@@ -233,13 +233,13 @@
 			<onleft>SetFocus(417)</onleft>
 			<visible>Skin.HasSetting(settings_episode_flags)</visible>
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>						network, codec, res, sound</label>
+			<label>						network, rating, codec, sound</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
-			<onclick>Skin.SetString(episodemediaflags_pos2,codec)</onclick>
-			<onclick>Skin.SetString(episodemediaflags_pos3,res)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,codec)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos4,sound)</onclick>
 			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
-			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,codec) + Skin.String(episodemediaflags_pos3,res) + Skin.String(episodemediaflags_pos4,sound)</selected>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,codec) + Skin.String(episodemediaflags_pos4,sound)</selected>
 		</control>
 		<control type="button" id="421">
 			<label>Tous les labels par défaut</label>
