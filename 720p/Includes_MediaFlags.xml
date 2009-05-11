@@ -496,7 +496,7 @@
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>Set flags in Advanced Settings</label>
+					<label>Choisir les labels dans les options</label>
 					<visible>Skin.HasSetting(darkshowcase)</visible>			
                 </control>
                 <control type="label">
@@ -3119,7 +3119,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>Set flags in Advanced Settings</label>
+					<label>Choisir les labels dans les options</label>
 					<visible>Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
                 <control type="label">
@@ -3128,7 +3128,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>b91a1a1c</textcolor>
-					<label>Set flags in Advanced Settings</label>
+					<label>Choisir les labels dans les options</label>
 					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
 			</control>
@@ -3709,7 +3709,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>Set flags in Advanced Settings</label>
+					<label>Choisir les labels dans les options</label>
 					<visible>Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
                 <control type="label">
@@ -3718,7 +3718,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>b91a1a1c</textcolor>
-					<label>Set flags in Advanced Settings</label>
+					<label>Choisir les labels dans les options</label>
 					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
 			</control>
