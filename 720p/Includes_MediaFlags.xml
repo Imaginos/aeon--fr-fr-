@@ -3179,7 +3179,7 @@ moved xvid and divx lines
 				</control>
 				<control type="image" id="85">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/x.264.png</texture>
+					<texture>flags/custom/x264.png</texture>
 					<visible>substring(listitem.studio,AVC)</visible>
 				</control>
 			</control>
@@ -3746,7 +3746,7 @@ moved xvid and divx lines
 					</control>
 					<control type="image" id="85">
 						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/custom/x.264.png</texture>
+						<texture>flags/custom/x264.png</texture>
 						<visible>substring(listitem.director,AVC)</visible>
 					</control>
 				</control>
