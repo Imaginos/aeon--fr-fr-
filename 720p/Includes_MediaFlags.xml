@@ -496,7 +496,7 @@
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>Choisir les labels dans les options</label>
+					<label>Set flags in Advanced Settings</label>
 					<visible>Skin.HasSetting(darkshowcase)</visible>			
                 </control>
                 <control type="label">
@@ -513,7 +513,7 @@
 <!-- duration display -->
 		<control type="group">
 			<include>Animation_CommonFade</include>
-			<visible>Container.Content(movies) + !Window.IsActive(24)</visible>
+			<visible>Container.Content(movies) + !Window.IsActive(24) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<control type="group">
 				<visible>Skin.String(movieshowcaseflags_pos1,duration) | Skin.String(movieshowcaseflags_pos2,duration) | Skin.String(movieshowcaseflags_pos3,duration) | Skin.String(movieshowcaseflags_pos4,duration)</visible>
 				<include condition="Skin.String(movieshowcaseflags_pos1,duration)">Furniture_ShowcaseMediaFlags_Position1</include>
@@ -3119,7 +3119,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>Choisir les labels dans les options</label>
+					<label>Set flags in Advanced Settings</label>
 					<visible>Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
                 <control type="label">
@@ -3128,7 +3128,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>b91a1a1c</textcolor>
-					<label>Choisir les labels dans les options</label>
+					<label>Set flags in Advanced Settings</label>
 					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
 			</control>
@@ -3179,7 +3179,7 @@ moved xvid and divx lines
 				</control>
 				<control type="image" id="85">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/x264.png</texture>
+					<texture>flags/custom/x.264.png</texture>
 					<visible>substring(listitem.studio,AVC)</visible>
 				</control>
 			</control>
@@ -3709,7 +3709,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>Choisir les labels dans les options</label>
+					<label>Set flags in Advanced Settings</label>
 					<visible>Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
                 <control type="label">
@@ -3718,7 +3718,7 @@ moved xvid and divx lines
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>b91a1a1c</textcolor>
-					<label>Choisir les labels dans les options</label>
+					<label>Set flags in Advanced Settings</label>
 					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
 			</control>
@@ -3746,7 +3746,7 @@ moved xvid and divx lines
 					</control>
 					<control type="image" id="85">
 						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/custom/x264.png</texture>
+						<texture>flags/custom/x.264.png</texture>
 						<visible>substring(listitem.director,AVC)</visible>
 					</control>
 				</control>
@@ -3762,7 +3762,7 @@ moved xvid and divx lines
 				<description>rating</description>
 				<control type="image">
 					<posy>112</posy>
-					<posx>8</posx>
+					<posx>2</posx>
 					<width>65</width>
 					<height>13</height>
 					<info>ListItem.StarRating</info>
@@ -3771,7 +3771,7 @@ moved xvid and divx lines
 				</control>
 				<control type="image">
 					<posy>112</posy>
-					<posx>8</posx>
+					<posx>2</posx>
 					<width>65</width>
 					<height>13</height>
 					<info>ListItem.StarRating</info>
