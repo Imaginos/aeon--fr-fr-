@@ -201,109 +201,91 @@
 			<texture>flags/info/bluray.png</texture>
 			<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,brrip)</visible>
 		</control>
-		
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
 			<texture>flags/info/dvd.png</texture>
-			<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,dvdrip)</visible>
+			<visible>substring(listitem.filename,sddvd) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3) | substring(listitem.filename,dvdrip) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3)</visible>
 		</control>
-
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
 			<texture>flags/info/hdtv.png</texture>
 			<visible>substring(listitem.filename,hdtv)</visible>
 		</control>
-
 		<control type="image" id="91">
 			<include>Furniture_MovieInfoFlagSource</include>
 			<texture>flags/info/hddvd.png</texture>
 			<visible>substring(listitem.filename,hddvd)</visible>
-		</control>		
-
+		</control>
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<texture>flags/info/dd51.png</texture>
 			<visible>substring(listitem.studio,6ch) + substring(listitem.studio,ac-3)</visible>
 		</control>
-
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<texture>flags/info/dd71.png</texture>
 			<visible>substring(listitem.studio,8ch) + substring(listitem.studio,ac-3)</visible>
 		</control>
-
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<texture>flags/info/dts51.png</texture>
 			<visible>substring(listitem.studio,6ch) + substring(listitem.studio,dts)</visible>
 		</control>
-
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<texture>flags/info/dts71.png</texture>
 			<visible>substring(listitem.studio,8ch) + substring(listitem.studio,dts)</visible>
 		</control>
-
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<texture>flags/info/dolby20.png</texture>
 			<visible>substring(listitem.studio,2ch)</visible>
 		</control>
-
 		<control type="image" id="92">
 			<include>Furniture_MovieInfoFlagSound</include>
 			<texture>flags/info/mono.png</texture>
 			<visible>substring(listitem.studio,mono)</visible>
 		</control>
-
 		<control type="image" id="93">
 			<include>Furniture_MovieInfoFlagSubs</include>
 			<texture>flags/info/cc.png</texture>
 			<visible>substring(listitem.studio,sub)</visible>
 		</control>
-
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/480i.png</texture>
 			<visible>substring(listitem.studio,480i)</visible>
 		</control>
-
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/576i.png</texture>
 			<visible>substring(listitem.studio,576i)</visible>
-		</control>	
-
+		</control>
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/720i.png</texture>
 			<visible>substring(listitem.studio,720i)</visible>
 		</control>
-
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/1080i.png</texture>
 			<visible>substring(listitem.studio,1080i)</visible>
 		</control>
-
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/480p.png</texture>
 			<visible>substring(listitem.studio,480p)</visible>
 		</control>
-
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/576p.png</texture>
 			<visible>substring(listitem.studio,576p)</visible>
-		</control>	
-
+		</control>
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/720p.png</texture>
 			<visible>substring(listitem.studio,720p)</visible>
 		</control>
-
 		<control type="image" id="94">
 			<include>Furniture_MovieInfoFlagRes</include>
 			<texture>flags/info/1080p.png</texture>
@@ -323,47 +305,47 @@
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/sd.png</texture>
+					<texture>flags/resolution/sd.png</texture>
 					<visible>substring(listitem.studio,sd)</visible>
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/480p.png</texture>
+					<texture>flags/resolution/480p.png</texture>
 					<visible>substring(listitem.studio,480p)</visible>
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/576p.png</texture>
+					<texture>flags/resolution/576p.png</texture>
 					<visible>substring(listitem.studio,576p)</visible>
 				</control>				
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/720p.png</texture>
+					<texture>flags/resolution/720p.png</texture>
 					<visible>substring(listitem.studio,720p)</visible>
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/1080p.png</texture>
+					<texture>flags/resolution/1080p.png</texture>
 					<visible>substring(listitem.studio,1080p)</visible>
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/480i.png</texture>
+					<texture>flags/resolution/480i.png</texture>
 					<visible>substring(listitem.studio,480i)</visible>
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/576i.png</texture>
+					<texture>flags/resolution/576i.png</texture>
 					<visible>substring(listitem.studio,576i)</visible>
 				</control>				
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/720i.png</texture>
+					<texture>flags/resolution/720i.png</texture>
 					<visible>substring(listitem.studio,720i)</visible>
 				</control>
 				<control type="image" id="187">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/1080i.png</texture>
+					<texture>flags/resolution/1080i.png</texture>
 					<visible>substring(listitem.studio,1080i)</visible>
 				</control>				
 			</control>
@@ -376,42 +358,42 @@
 				</control>					
 					<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/dtsma.png</texture>
+					<texture>flags/sound/dtsma.png</texture>
 					<visible>substring(listitem.studio,dtsma) | substring(listitem.studio,master audio) + !substring(listitem.studio,ac-3)</visible>
 				</control>					
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/dts.png</texture>
+					<texture>flags/sound/dts.png</texture>
 					<visible>substring(listitem.studio,dts) + !substring(listitem.studio,ac-3) + !substring(listitem.studio,dtsma) | substring(listitem.studio,master audio)</visible>
 				</control>			
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/dolbytruehd.png</texture>
+					<texture>flags/sound/dolbytruehd.png</texture>
 					<visible>substring(listitem.studio,truehd) | substring(listitem.studio,true hd)</visible>
 				</control>	
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/dolbydigital.png</texture>
+					<texture>flags/sound/dolbydigital.png</texture>
 					<visible>substring(listitem.studio,ac-3)</visible>
 				</control>
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/mp3.png</texture>
+					<texture>flags/sound/mp3.png</texture>
 					<visible>substring(listitem.studio,MPEG Audio)</visible>
 				</control>
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/flac.png</texture>
+					<texture>flags/sound/flac.png</texture>
 					<visible>substring(listitem.studio,flac)</visible>
 				</control>
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/ogg.png</texture>
+					<texture>flags/sound/ogg.png</texture>
 					<visible>substring(listitem.studio,vorbis)</visible>
 				</control>				
 				<control type="image" id="188">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/aac.png</texture>
+					<texture>flags/sound/aac.png</texture>
 					<visible>substring(listitem.studio,aac)</visible>
 				</control>				
 			</control>
@@ -424,39 +406,29 @@
 				</control>				
 				<control type="image" id="189">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/hddvd.png</texture>
+					<texture>flags/source/hddvd.png</texture>
 					<visible>substring(listitem.filename,hddvd)</visible>
 				</control>
 				<control type="image" id="189">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/bluray.png</texture>
+					<texture>flags/source/bluray.png</texture>
 					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,BRRip)</visible>
 				</control>
 				<!-- <control type="image" id="189">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/dvd.png</texture>
+					<texture>flags/source/dvd.png</texture>
 					<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,dvdrip)+ !substring(listitem.studio,xvid)+ !substring(listitem.studio,DX50)+ !substring(listitem.studio,divx)+ !substring(listitem.studio,div3)</visible>
 				</control> -->
 				<control type="image" id="189">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/dvd.png</texture>
+					<texture>flags/source/dvd.png</texture>
 					<visible>substring(listitem.filename,sddvd) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3) | substring(listitem.filename,dvdrip) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3)</visible>
 				</control>
 				<control type="image" id="189">
 					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/hdtv.png</texture>
+					<texture>flags/source/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv)</visible>
-				</control>
-				<control type="image" id="189">
-					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/divx.png</texture>
-					<visible>substring(listitem.studio,DX50) | substring(listitem.studio,divx) | substring(listitem.studio,DIV3)</visible>
-				</control>
-				<control type="image" id="189">
-					<include>Furniture_ListMediaFlagsVars</include>
-					<texture>flags/custom/xvid.png</texture>
-					<visible>substring(listitem.studio,XVID)+ !substring(listitem.filename,hdtv)+ !substring(listitem.filename,bluray)+ !substring(listitem.filename,hddvd) + !substring(listitem.filename,BRRip)</visible>
-				</control>				
+				</control>	
 			</control>			
 	</include>
 	
@@ -553,18 +525,23 @@
 				<include condition="Skin.String(movieshowcaseflags_pos4,codec)">Furniture_ShowcaseMediaFlags_Position4</include>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/divx3.png</texture>
+					<texture>flags/codecs/divx3.png</texture>
 					<visible>substring(listitem.studio,DX50) | substring(listitem.studio,divx) | substring(listitem.studio,DIV3)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/xvid.png</texture>
+					<texture>flags/codecs/xvid.png</texture>
 					<visible>substring(listitem.studio,XVID) + !substring(listitem.filename,hdtv) + !substring(listitem.filename,bluray) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,BRRip)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/x264.png</texture>
+					<texture>flags/codecs/x264.png</texture>
 					<visible>substring(listitem.studio,V_MPEG4) + !substring(listitem.filename,hdtv) + !substring(listitem.filename,bluray) + !substring(listitem.filename,hddvd) + !substring(listitem.filename,BRRip)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/codecs/wmvhd.png</texture>
+					<visible>substring(listitem.studio,WVC1)</visible>
 				</control>
 			</control>
 		</control>
@@ -1710,47 +1687,47 @@
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/sd.png</texture>
+					<texture>flags/resolution/sd.png</texture>
 					<visible>substring(listitem.studio,sdi) | substring(listitem.studio,sdp)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/480p.png</texture>
+					<texture>flags/resolution/480p.png</texture>
 					<visible>substring(listitem.studio,480p)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/576p.png</texture>
+					<texture>flags/resolution/576p.png</texture>
 					<visible>substring(listitem.studio,576p)</visible>
 				</control>				
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/720p.png</texture>
+					<texture>flags/resolution/720p.png</texture>
 					<visible>substring(listitem.studio,720p)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/1080p.png</texture>
+					<texture>flags/resolution/1080p.png</texture>
 					<visible>substring(listitem.studio,1080p)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/480i.png</texture>
+					<texture>flags/resolution/480i.png</texture>
 					<visible>substring(listitem.studio,480i)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/576i.png</texture>
+					<texture>flags/resolution/576i.png</texture>
 					<visible>substring(listitem.studio,576i)</visible>
 				</control>				
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/720i.png</texture>
+					<texture>flags/resolution/720i.png</texture>
 					<visible>substring(listitem.studio,720i)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/1080i.png</texture>
+					<texture>flags/resolution/1080i.png</texture>
 					<visible>substring(listitem.studio,1080i)</visible>
 				</control>				
 			</control>
@@ -1770,48 +1747,52 @@
 				</control>			
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/dtsma.png</texture>
+					<texture>flags/sound/dtsma.png</texture>
 					<visible>substring(listitem.studio,dtsma) | substring(listitem.studio,master audio) + !substring(listitem.studio,ac-3)</visible>
 				</control>					
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/dts.png</texture>
+					<texture>flags/sound/dts.png</texture>
 					<visible>substring(listitem.studio,dts) + !substring(listitem.studio,ac-3) + !substring(listitem.studio,dtsma) | substring(listitem.studio,master audio)</visible>
 				</control>			
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/dolbytruehd.png</texture>
+					<texture>flags/sound/dolbytruehd.png</texture>
 					<visible>substring(listitem.studio,truehd) | substring(listitem.studio,true hd)</visible>
 				</control>	
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/dolbydigital.png</texture>
+					<texture>flags/sound/dolbydigital.png</texture>
 					<visible>substring(listitem.studio,ac-3)</visible>
 				</control>
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/mp3.png</texture>
+					<texture>flags/sound/mp3.png</texture>
 					<visible>substring(listitem.studio,MPEG Audio)</visible>
 				</control>
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/flac.png</texture>
+					<texture>flags/sound/flac.png</texture>
 					<visible>substring(listitem.studio,flac)</visible>
 				</control>
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/ogg.png</texture>
+					<texture>flags/sound/ogg.png</texture>
 					<visible>substring(listitem.studio,vorbis)</visible>
 				</control>				
 				<control type="image" id="84">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/aac.png</texture>
+					<texture>flags/sound/aac.png</texture>
 					<visible>substring(listitem.studio,aac)</visible>
-				</control>				
+				</control>
+				<control type="image" id="82">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/sound/wmahd.png</texture>
+					<visible>substring(listitem.studio,WMA3)</visible>
+				</control>					
 			</control>
 			<control type="group">
 <!-- mod for flag options in showcase view -->
-<!--					<posx>190</posx> -->
 				<visible>Skin.String(movieshowcaseflags_pos1,source) | Skin.String(movieshowcaseflags_pos2,source) | Skin.String(movieshowcaseflags_pos3,source) | Skin.String(movieshowcaseflags_pos4,source)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
 				<include condition="skin.string(movieshowcaseflags_pos1,source)">Furniture_ShowcaseMediaFlags_Position1</include>
@@ -1826,31 +1807,24 @@
 				</control>				
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/hddvd.png</texture>
+					<texture>flags/source/hddvd.png</texture>
 					<visible>substring(listitem.filename,hddvd)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/bluray.png</texture>
+					<texture>flags/source/bluray.png</texture>
 					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,BRRip)</visible>
 				</control>
-				<!-- <control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/dvd.png</texture>
-					<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,dvdrip) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3)</visible>
-				</control> -->
-				<!--<control type="image" id="82">
-					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/custom/dvd.png</texture>
-					<visible>substring(listitem.filename,sddvd) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3) | substring(listitem.filename,dvdrip) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3)</visible>
-				</control>-->
 				<control type="image" id="82">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
-					<texture>flags/hdtv.png</texture>
+					<texture>flags/source/dvd.png</texture>
+					<visible>substring(listitem.filename,sddvd) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3) | substring(listitem.filename,dvdrip) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3)</visible>
+				</control>
+				<control type="image" id="82">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<texture>flags/source/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv)</visible>
 				</control>
-<!-- mod for flag options in showcase view
-moved xvid and divx lines
 <!-- END of position mod -->
 			</control>
 		</control>
@@ -2969,47 +2943,47 @@ moved xvid and divx lines
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/sd.png</texture>
+					<texture>flags/resolution/sd.png</texture>
 					<visible>substring(listitem.studio,sd)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/480p.png</texture>
+					<texture>flags/resolution/480p.png</texture>
 					<visible>substring(listitem.studio,480p)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/576p.png</texture>
+					<texture>flags/resolution/576p.png</texture>
 					<visible>substring(listitem.studio,576p)</visible>
 				</control>				
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/720p.png</texture>
+					<texture>flags/resolution/720p.png</texture>
 					<visible>substring(listitem.studio,720p)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/1080p.png</texture>
+					<texture>flags/resolution/1080p.png</texture>
 					<visible>substring(listitem.studio,1080p)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/480i.png</texture>
+					<texture>flags/resolution/480i.png</texture>
 					<visible>substring(listitem.studio,480i)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/576i.png</texture>
+					<texture>flags/resolution/576i.png</texture>
 					<visible>substring(listitem.studio,576i)</visible>
 				</control>				
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/720i.png</texture>
+					<texture>flags/resolution/720i.png</texture>
 					<visible>substring(listitem.studio,720i)</visible>
 				</control>
 				<control type="image" id="83">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/1080i.png</texture>
+					<texture>flags/resolution/1080i.png</texture>
 					<visible>substring(listitem.studio,1080i)</visible>
 				</control>
 			</control>
@@ -3029,43 +3003,48 @@ moved xvid and divx lines
 				</control>					
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/dtsma.png</texture>
+					<texture>flags/sound/dtsma.png</texture>
 					<visible>substring(listitem.studio,dtsma) | substring(listitem.studio,master audio) + !substring(listitem.studio,ac-3)</visible>
 				</control>					
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/dts.png</texture>
+					<texture>flags/sound/dts.png</texture>
 					<visible>substring(listitem.studio,dts) + !substring(listitem.studio,ac-3) + !substring(listitem.studio,dtsma) | substring(listitem.studio,master audio)</visible>
 				</control>			
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/dolbyruehd.png</texture>
+					<texture>flags/sound/dolbyruehd.png</texture>
 					<visible>substring(listitem.studio,truehd) | substring(listitem.studio,true hd)</visible>
 				</control>	
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/dolbydigital.png</texture>
+					<texture>flags/sound/dolbydigital.png</texture>
 					<visible>substring(listitem.studio,ac-3)</visible>
 				</control>
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/mp3.png</texture>
+					<texture>flags/sound/mp3.png</texture>
 					<visible>substring(listitem.studio,MPEG Audio)</visible>
 				</control>
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/flac.png</texture>
+					<texture>flags/sound/flac.png</texture>
 					<visible>substring(listitem.studio,flac)</visible>
 				</control>
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/ogg.png</texture>
+					<texture>flags/sound/ogg.png</texture>
 					<visible>substring(listitem.studio,vorbis)</visible>
 				</control>				
 				<control type="image" id="84">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/aac.png</texture>
+					<texture>flags/sound/aac.png</texture>
 					<visible>substring(listitem.studio,aac)</visible>
+				</control>
+				<control type="image" id="84">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/sound/wmahd.png</texture>
+					<visible>substring(listitem.studio,WMA3)</visible>
 				</control>	
 			</control>
 			<control type="group">
@@ -3084,27 +3063,27 @@ moved xvid and divx lines
 				</control>				
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/hddvd.png</texture>
+					<texture>flags/source/hddvd.png</texture>
 					<visible>substring(listitem.filename,hddvd)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/bluray.png</texture>
+					<texture>flags/source/bluray.png</texture>
 					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,BRRip)</visible>
 				</control>
 				<!-- <control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/dvd.png</texture>
+					<texture>flags/source/dvd.png</texture>
 					<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,dvdrip)+ !substring(listitem.studio,xvid)+ !substring(listitem.studio,DX50)+ !substring(listitem.studio,divx)+ !substring(listitem.studio,div3)</visible>
 				</control> -->
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/dvd.png</texture>
+					<texture>flags/source/dvd.png</texture>
 					<visible>substring(listitem.filename,sddvd) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3) | substring(listitem.filename,dvdrip) + !substring(listitem.studio,xvid) + !substring(listitem.studio,DX50) + !substring(listitem.studio,divx) + !substring(listitem.studio,div3)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/hdtv.png</texture>
+					<texture>flags/source/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv)</visible>
 				</control>
 			</control>
@@ -3169,19 +3148,25 @@ moved xvid and divx lines
 				<include condition="Skin.String(mutliplexmediaflags_pos4,codec)">Furniture_MultiplexMediaFlags_Position4</include>
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/divx.png</texture>
+					<texture>flags/codecs/divx.png</texture>
 					<visible>substring(listitem.studio,DX50) | substring(listitem.studio,divx) | substring(listitem.studio,DIV3)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/xvid.png</texture>
+					<texture>flags/codecs/xvid.png</texture>
 					<visible>substring(listitem.studio,XVID)+ !substring(listitem.filename,hdtv)+ !substring(listitem.filename,bluray)+ !substring(listitem.filename,hddvd) + !substring(listitem.filename,BRRip)</visible>
 				</control>
-				<control type="image" id="85">
+				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
-					<texture>flags/custom/x264.png</texture>
+					<texture>flags/codecs/x264.png</texture>
 					<visible>substring(listitem.studio,AVC)</visible>
 				</control>
+				<control type="image" id="82">
+					<include>Furniture_PanelMediaFlagsVars</include>
+					<texture>flags/codecs/wmvhd.png</texture>
+					<visible>substring(listitem.studio,WVC1)</visible>
+				</control>
+
 			</control>
 <!-- IMDB rating display -->
 			<control type="group">
@@ -3555,27 +3540,27 @@ moved xvid and divx lines
 				</control>				
 				<control type="image" id="82">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/hddvd.png</texture>
+					<texture>flags/source/hddvd.png</texture>
 					<visible>substring(listitem.filename,hddvd)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/bluray.png</texture>
+					<texture>flags/source/bluray.png</texture>
 					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,BRRip)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/dvd.png</texture>
+					<texture>flags/source/dvd.png</texture>
 					<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,dvdrip)</visible>
 				</control>
 				<control type="image" id="82">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/hdtv.png</texture>
+					<texture>flags/source/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv) | substring(listitem.filename,pdtv)</visible>
 				</control>	
 				<control type="image" id="82">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/sdtv.png</texture>
+					<texture>flags/source/sdtv.png</texture>
 					<visible>substring(listitem.filename,sdtv) | substring(listitem.filename,tvrip)</visible>
 				</control>				
 			</control>
@@ -3597,47 +3582,47 @@ moved xvid and divx lines
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/sd.png</texture>
+                    <texture>flags/resolution/sd.png</texture>
                     <visible>substring(listitem.director,sd)</visible>
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/480p.png</texture>
+                    <texture>flags/resolution/480p.png</texture>
                     <visible>substring(listitem.director,480p)</visible>
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/custom/576p.png</texture>
+                    <texture>flags/resolution/576p.png</texture>
                     <visible>substring(listitem.director,576p)</visible>
                 </control>				
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/720p.png</texture>
+                    <texture>flags/resolution/720p.png</texture>
                     <visible>substring(listitem.director,720p)</visible>
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/1080p.png</texture>
+                    <texture>flags/resolution/1080p.png</texture>
                     <visible>substring(listitem.director,1080p)</visible>
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/480i.png</texture>
+                    <texture>flags/resolution/480i.png</texture>
                     <visible>substring(listitem.director,480i)</visible>
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/576i.png</texture>
+                    <texture>flags/resolution/576i.png</texture>
                     <visible>substring(listitem.director,576i)</visible>
                 </control>				
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/720i.png</texture>
+                    <texture>flags/resolution/720i.png</texture>
                     <visible>substring(listitem.director,720i)</visible>
                 </control>
                 <control type="image" id="187">
                     <include>Furniture_EpisodeMediaFlags</include>
-                    <texture>flags/1080i.png</texture>
+                    <texture>flags/resolution/1080i.png</texture>
                     <visible>substring(listitem.director,1080i)</visible>
                 </control>				
             </control>
@@ -3659,42 +3644,42 @@ moved xvid and divx lines
                 </control>					
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/dtsma.png</texture>
+					<texture>flags/sound/dtsma.png</texture>
 					<visible>substring(listitem.director,dtsma) | substring(listitem.studio,master audio) + !substring(listitem.studio,ac-3)</visible>
 				</control>					
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/dts.png</texture>
+					<texture>flags/sound/dts.png</texture>
 					<visible>substring(listitem.director,dts) + !substring(listitem.studio,ac-3) + !substring(listitem.studio,dtsma) | substring(listitem.studio,master audio)</visible>
 				</control>			
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/dolbytruehd.png</texture>
+					<texture>flags/sound/dolbytruehd.png</texture>
 					<visible>substring(listitem.director,truehd) | substring(listitem.studio,true hd)</visible>
 				</control>	
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/dolbydigital.png</texture>
+					<texture>flags/sound/dolbydigital.png</texture>
 					<visible>substring(listitem.director,ac-3)</visible>
 				</control>
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/mp3.png</texture>
+					<texture>flags/sound/mp3.png</texture>
 					<visible>substring(listitem.director,MPEG Audio)</visible>
 				</control>
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/flac.png</texture>
+					<texture>flags/sound/flac.png</texture>
 					<visible>substring(listitem.director,flac)</visible>
 				</control>
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/ogg.png</texture>
+					<texture>flags/sound/ogg.png</texture>
 					<visible>substring(listitem.director,vorbis)</visible>
 				</control>				
 				<control type="image" id="188">
 					<include>Furniture_EpisodeMediaFlags</include>
-					<texture>flags/custom/aac.png</texture>
+					<texture>flags/sound/aac.png</texture>
 					<visible>substring(listitem.director,aac)</visible>
 				</control>				
             </control>
@@ -3736,18 +3721,23 @@ moved xvid and divx lines
 					<include condition="Skin.String(episodemediaflags_pos4,codec)">Furniture_EpisodeMediaFlags_Position4</include>
 					<control type="image" id="85">
 						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/custom/divx.png</texture>
+						<texture>flags/codecs/divx.png</texture>
 						<visible>substring(listitem.director,DX50) | substring(listitem.director,divx) | substring(listitem.director,DIV3)</visible>
 					</control>
 					<control type="image" id="85">
 						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/custom/xvid.png</texture>
+						<texture>flags/codecs/xvid.png</texture>
 						<visible>substring(listitem.director,XVID)</visible>
 					</control>
 					<control type="image" id="85">
 						<include>Furniture_EpisodeMediaFlags</include>
-						<texture>flags/custom/x264.png</texture>
+						<texture>flags/codecs/x264.png</texture>
 						<visible>substring(listitem.director,AVC)</visible>
+					</control>
+					<control type="image" id="85">
+						<include>Furniture_EpisodeMediaFlags</include>
+						<texture>flags/codecs/wmvhd.png</texture>
+						<visible>substring(listitem.studio,WVC1)</visible>
 					</control>
 				</control>
 			</control>

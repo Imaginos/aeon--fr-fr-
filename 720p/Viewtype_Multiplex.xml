@@ -390,7 +390,7 @@
 					<control type="label">
 						<include>MultiplexInfoValue</include>				
 						<label fallback="31425">$INFO[Container(52).ListItem.Director]</label>
-					</control>			
+					</control>
 				</control>
 				
 				<control type="group">
