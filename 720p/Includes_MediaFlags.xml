@@ -3216,7 +3216,6 @@
 				<include condition="Skin.String(episodemediaflags_pos2,network)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,network)">Furniture_EpisodeMediaFlags_Position3</include>
 				<include condition="Skin.String(episodemediaflags_pos4,network)">Furniture_EpisodeMediaFlags_Position4</include>
-<!--                <posx>339</posx> -->
 <!-- END of position mod -->
                 <control type="image">
                     <include>Furniture_EpisodeMediaFlags</include>
@@ -3531,7 +3530,6 @@
 				<include condition="Skin.String(episodemediaflags_pos2,source)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,source)">Furniture_EpisodeMediaFlags_Position3</include>
 				<include condition="Skin.String(episodemediaflags_pos4,source)">Furniture_EpisodeMediaFlags_Position4</include>
-<!--				<posx>418</posx> -->
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -3573,7 +3571,6 @@
 				<include condition="Skin.String(episodemediaflags_pos2,res)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,res)">Furniture_EpisodeMediaFlags_Position3</include>
 				<include condition="Skin.String(episodemediaflags_pos4,res)">Furniture_EpisodeMediaFlags_Position4</include>
-<!--                <posx>497</posx> -->
 <!-- END of position mod -->
                 <control type="image">
                     <include>Furniture_EpisodeMediaFlags</include>
@@ -3635,7 +3632,6 @@
 				<include condition="Skin.String(episodemediaflags_pos2,sound)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,sound)">Furniture_EpisodeMediaFlags_Position3</include>
 				<include condition="Skin.String(episodemediaflags_pos4,sound)">Furniture_EpisodeMediaFlags_Position4</include>
-<!--				<posx>576</posx> -->
 <!-- END of position mod -->
 				<control type="image">
                     <include>Furniture_EpisodeMediaFlags</include>

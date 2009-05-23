@@ -131,14 +131,7 @@
 				<label>31208</label>
 				<include>Objects_ContextMenuButton</include>
 				<onclick>Shutdown</onclick>
-			</control>
-			<control type="button" id="810">
-				<description>Flags Settings</description>
-				<label>31202</label>
-				<include>Objects_ContextMenuButton</include>
-				<onclick>Skin.SetBool(bmtransit)</onclick>				
-				<onclick>XBMC.ActivateWindow(606)</onclick>
-			</control>			
+			</control>				
 
 		</control>
 	</control>
