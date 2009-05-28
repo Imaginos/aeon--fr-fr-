@@ -57,8 +57,8 @@
 	<string id="31049">AUTO</string>
 	<string id="31050">VUE: </string> 
 	<string id="31051">ALÉATOIRE</string>
-	<string id="31052">ÉPAIS</string>
-	<string id="31053">FIN</string>
+	<string id="31052">OPAQUE</string>
+	<string id="31053">TRANSLUCIDE</string>
 	<string id="31054">PARAMÈTRES</string>
 	<string id="31055">EMPILER</string>
 	<string id="31056">VIGNETTES: CARRÉS</string>
@@ -70,7 +70,7 @@
 	<string id="31062">SAISON</string>
 	<string id="31063">ÉPISODE</string>
 	<string id="31064">FANART</string>
-	<string id="31065">BANDEAU</string>
+	<string id="31065">SUPPORT</string>
 	<string id="31066">RECOUVREMENT</string>
 	<string id="31067">ARRIÈRE-PLAN</string>
 	<string id="31068">BIBLIOTHÈQUE</string>
@@ -224,8 +224,8 @@
 	<string id="31266">IMAGE CONTEXTUELLE POUR IMAGES</string>
 	<string id="31268">RÉDUIRE LA TRANSPARENCE DE LA VUE PANNEAU/LISTE</string>
 	<string id="31270">ANIMATIONS ZOOM</string>
-	<string id="31271">ATTENUER LE MENU DE LA VUE PANNEAU/LISTE QUAND INACTIF</string>
-	<string id="31278">DEFILLEMENT AUTO. DANS LES RESUMES, BIOS ET CRITIQUES</string>
+	<string id="31271">ATTÉNUER LE MENU DE LA VUE PANNEAU/LISTE QUAND INACTIF</string>
+	<string id="31278">DÉFILLEMENT AUTO. DANS LES RÉSUMÉS, BIOS ET CRITIQUES</string>
 	<string id="31279">IMAGE CONTEXTUELLE (FANART) POUR LES PAGES INFOS PLEIN ÉCRAN</string>
 	<string id="31280">MODE DÉVELOPPEUR</string>
 	<string id="31281">LABELS MÉDIA (ICONES STUDIO, INFO SOURCE, ETC.)</string>

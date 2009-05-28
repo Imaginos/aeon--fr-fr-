@@ -467,7 +467,6 @@
 					<posx>0</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<textcolor>d0FFFFFF</textcolor>
 					<label>Choisir les labels dans les options</label>
 					<visible>Skin.HasSetting(darkshowcase)</visible>			
                 </control>
@@ -477,7 +476,7 @@
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>b91a1a1c</textcolor>
-					<label>$INFO[ListItem.Duration]</label>
+					<label>Choisir les labels dans les options</label>
 					<visible>!Skin.HasSetting(darkshowcase)</visible>			
                 </control>
 			</control>
@@ -550,11 +549,11 @@
 			<visible>Window.IsActive(25) + Control.IsVisible(57) + !Skin.HasSetting(nomediaflags) + Container.Content(movies) + ![Control.HasFocus(60) | Control.HasFocus(94)]</visible>
 			<include>Animation_CommonFade</include>
 			<control type="group">
-				<visible>Skin.String(movieshowcaseflags_pos1,imdb) | Skin.String(movieshowcaseflags_pos2,imdb) | Skin.String(movieshowcaseflags_pos3,imdb) | Skin.String(movieshowcaseflags_pos4,imdb)</visible>
-				<include condition="Skin.String(movieshowcaseflags_pos1,imdb)">Furniture_ShowcaseMediaFlags_Position1</include>
-				<include condition="Skin.String(movieshowcaseflags_pos2,imdb)">Furniture_ShowcaseMediaFlags_Position2</include>
-				<include condition="Skin.String(movieshowcaseflags_pos3,imdb)">Furniture_ShowcaseMediaFlags_Position3</include>
-				<include condition="Skin.String(movieshowcaseflags_pos4,imdb)">Furniture_ShowcaseMediaFlags_Position4</include>
+				<visible>Skin.String(movieshowcaseflags_pos1,rating) | Skin.String(movieshowcaseflags_pos2,rating) | Skin.String(movieshowcaseflags_pos3,rating) | Skin.String(movieshowcaseflags_pos4,rating)</visible>
+				<include condition="Skin.String(movieshowcaseflags_pos1,rating)">Furniture_ShowcaseMediaFlags_Position1</include>
+				<include condition="Skin.String(movieshowcaseflags_pos2,rating)">Furniture_ShowcaseMediaFlags_Position2</include>
+				<include condition="Skin.String(movieshowcaseflags_pos3,rating)">Furniture_ShowcaseMediaFlags_Position3</include>
+				<include condition="Skin.String(movieshowcaseflags_pos4,rating)">Furniture_ShowcaseMediaFlags_Position4</include>
 				<description>IMDB rating</description>
 				<control type="label">
 					<posy>669</posy>
@@ -683,7 +682,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/studios/fox_searchlight.png</texture>
-					<visible>substring(listitem.studio,Fox Searchlight Pictures)</visible>
+					<visible>substring(listitem.studio,Fox Searchlight Picturesolution)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -828,7 +827,7 @@
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<texture>flags/studios/mandate.png</texture>
-					<visible>substring(listitem.studio,Mandate Pictures)</visible>
+					<visible>substring(listitem.studio,Mandate Picturesolution)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -1674,11 +1673,11 @@
 			<control type="group">
 <!-- mod for flag position in showcase view -->
 <!--				<posx>975</posx> -->
-				<visible>Skin.String(movieshowcaseflags_pos1,res) | Skin.String(movieshowcaseflags_pos2,res) | Skin.String(movieshowcaseflags_pos3,res) | Skin.String(movieshowcaseflags_pos4,res)</visible>
-				<include condition="skin.string(movieshowcaseflags_pos1,res)">Furniture_ShowcaseMediaFlags_Position1</include>
-				<include condition="skin.string(movieshowcaseflags_pos2,res)">Furniture_ShowcaseMediaFlags_Position2</include>
-				<include condition="skin.string(movieshowcaseflags_pos3,res)">Furniture_ShowcaseMediaFlags_Position3</include>
-				<include condition="skin.string(movieshowcaseflags_pos4,res)">Furniture_ShowcaseMediaFlags_Position4</include>
+				<visible>Skin.String(movieshowcaseflags_pos1,resolution) | Skin.String(movieshowcaseflags_pos2,resolution) | Skin.String(movieshowcaseflags_pos3,resolution) | Skin.String(movieshowcaseflags_pos4,resolution)</visible>
+				<include condition="skin.string(movieshowcaseflags_pos1,resolution)">Furniture_ShowcaseMediaFlags_Position1</include>
+				<include condition="skin.string(movieshowcaseflags_pos2,resolution)">Furniture_ShowcaseMediaFlags_Position2</include>
+				<include condition="skin.string(movieshowcaseflags_pos3,resolution)">Furniture_ShowcaseMediaFlags_Position3</include>
+				<include condition="skin.string(movieshowcaseflags_pos4,resolution)">Furniture_ShowcaseMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -1734,11 +1733,11 @@
 			<control type="group">
 <!-- mod for flag options in showcase view -->
 <!--				<posx>1085</posx> -->
-				<visible>Skin.String(movieshowcaseflags_pos1,sound) | Skin.String(movieshowcaseflags_pos2,sound) | Skin.String(movieshowcaseflags_pos3,sound) | Skin.String(movieshowcaseflags_pos4,sound)</visible>
-				<include condition="skin.string(movieshowcaseflags_pos1,sound)">Furniture_ShowcaseMediaFlags_Position1</include>
-				<include condition="skin.string(movieshowcaseflags_pos2,sound)">Furniture_ShowcaseMediaFlags_Position2</include>
-				<include condition="skin.string(movieshowcaseflags_pos3,sound)">Furniture_ShowcaseMediaFlags_Position3</include>
-				<include condition="skin.string(movieshowcaseflags_pos4,sound)">Furniture_ShowcaseMediaFlags_Position4</include>
+				<visible>Skin.String(movieshowcaseflags_pos1,audio) | Skin.String(movieshowcaseflags_pos2,audio) | Skin.String(movieshowcaseflags_pos3,audio) | Skin.String(movieshowcaseflags_pos4,audio)</visible>
+				<include condition="skin.string(movieshowcaseflags_pos1,audio)">Furniture_ShowcaseMediaFlags_Position1</include>
+				<include condition="skin.string(movieshowcaseflags_pos2,audio)">Furniture_ShowcaseMediaFlags_Position2</include>
+				<include condition="skin.string(movieshowcaseflags_pos3,audio)">Furniture_ShowcaseMediaFlags_Position3</include>
+				<include condition="skin.string(movieshowcaseflags_pos4,audio)">Furniture_ShowcaseMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
@@ -1836,11 +1835,11 @@
 			<include>Animation_CommonFade</include>
 			<include>Animation_HideMultiplex</include>
 			<control type="group">
-				<visible>Skin.String(mutliplexmediaflags_pos1,studio) | Skin.String(mutliplexmediaflags_pos2,studio) | Skin.String(mutliplexmediaflags_pos3,studio) | Skin.String(mutliplexmediaflags_pos4,studio)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,studio)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,studio)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,studio)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,studio)">Furniture_MultiplexMediaFlags_Position4</include>	
+				<visible>Skin.String(multiplexmediaflags_pos1,studio) | Skin.String(multiplexmediaflags_pos2,studio) | Skin.String(multiplexmediaflags_pos3,studio) | Skin.String(multiplexmediaflags_pos4,studio)</visible>
+				<include condition="Skin.String(multiplexmediaflags_pos1,studio)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,studio)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,studio)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,studio)">Furniture_MultiplexMediaFlags_Position4</include>	
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/default.png</texture>
@@ -1939,7 +1938,7 @@
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/studios/fox_searchlight.png</texture>
-					<visible>substring(listitem.studio,Fox Searchlight Pictures)</visible>
+					<visible>substring(listitem.studio,Fox Searchlight Picturesolution)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -2084,7 +2083,7 @@
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/studios/mandate.png</texture>
-					<visible>substring(listitem.studio,Mandate Pictures)</visible>
+					<visible>substring(listitem.studio,Mandate Picturesolution)</visible>
 				</control>
 				<control type="image" id="81">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -2929,12 +2928,12 @@
 			</control>
 			<control type="group">
 <!-- position mod -->
-				<visible>Skin.String(mutliplexmediaflags_pos1,res) | Skin.String(mutliplexmediaflags_pos2,res) | Skin.String(mutliplexmediaflags_pos3,res) | Skin.String(mutliplexmediaflags_pos4,res)</visible>
+				<visible>Skin.String(multiplexmediaflags_pos1,resolution) | Skin.String(multiplexmediaflags_pos2,resolution) | Skin.String(multiplexmediaflags_pos3,resolution) | Skin.String(multiplexmediaflags_pos4,resolution)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,res)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,res)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,res)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,res)">Furniture_MultiplexMediaFlags_Position4</include>
+				<include condition="Skin.String(multiplexmediaflags_pos1,resolution)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,resolution)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,resolution)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,resolution)">Furniture_MultiplexMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -2989,12 +2988,12 @@
 			</control>
 			<control type="group">
 <!-- position mod -->
-				<visible>Skin.String(mutliplexmediaflags_pos1,sound) | Skin.String(mutliplexmediaflags_pos2,sound) | Skin.String(mutliplexmediaflags_pos3,sound) | Skin.String(mutliplexmediaflags_pos4,sound)</visible>
+				<visible>Skin.String(multiplexmediaflags_pos1,audio) | Skin.String(multiplexmediaflags_pos2,audio) | Skin.String(multiplexmediaflags_pos3,audio) | Skin.String(multiplexmediaflags_pos4,audio)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,sound)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,sound)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,sound)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,sound)">Furniture_MultiplexMediaFlags_Position4</include>
+				<include condition="Skin.String(multiplexmediaflags_pos1,audio)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,audio)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,audio)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,audio)">Furniture_MultiplexMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -3049,12 +3048,12 @@
 			</control>
 			<control type="group">
 <!-- position mod -->
-				<visible>Skin.String(mutliplexmediaflags_pos1,source) | Skin.String(mutliplexmediaflags_pos2,source) | Skin.String(mutliplexmediaflags_pos3,source) | Skin.String(mutliplexmediaflags_pos4,source)</visible>
+				<visible>Skin.String(multiplexmediaflags_pos1,source) | Skin.String(multiplexmediaflags_pos2,source) | Skin.String(multiplexmediaflags_pos3,source) | Skin.String(multiplexmediaflags_pos4,source)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,source)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,source)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,source)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,source)">Furniture_MultiplexMediaFlags_Position4</include>
+				<include condition="Skin.String(multiplexmediaflags_pos1,source)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,source)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,source)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,source)">Furniture_MultiplexMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_PanelMediaFlagsVars</include>
@@ -3089,7 +3088,7 @@
 			</control>
 <!-- Multiplex flags not managed alert -->
 			<control type="group">
-				<visible>!Skin.HasSetting(nomediaflags) + !Skin.HasSetting(mutliplexmediaflags_pos_set)</visible>
+				<visible>!Skin.HasSetting(nomediaflags) + !Skin.HasSetting(multiplexmediaflags_pos_set)</visible>
 				<include>Animation_CommonFade</include>
 				<include>Furniture_ShowcaseMediaFlags_Position1</include>
                 <control type="label">
@@ -3097,7 +3096,6 @@
 					<posx>-40</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<textcolor>d0FFFFFF</textcolor>
 					<label>Choisir les labels dans les options</label>
 					<visible>Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
@@ -3106,19 +3104,18 @@
 					<posx>-40</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<textcolor>b91a1a1c</textcolor>
 					<label>Choisir les labels dans les options</label>
 					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
 			</control>
 <!-- duration display -->
 			<control type="group">
-				<visible>Skin.String(mutliplexmediaflags_pos1,duration) | Skin.String(mutliplexmediaflags_pos2,duration) | Skin.String(mutliplexmediaflags_pos3,duration) | Skin.String(mutliplexmediaflags_pos4,duration)</visible>
+				<visible>Skin.String(multiplexmediaflags_pos1,duration) | Skin.String(multiplexmediaflags_pos2,duration) | Skin.String(multiplexmediaflags_pos3,duration) | Skin.String(multiplexmediaflags_pos4,duration)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,duration)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,duration)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,duration)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,duration)">Furniture_MultiplexMediaFlags_Position4</include>
+				<include condition="Skin.String(multiplexmediaflags_pos1,duration)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,duration)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,duration)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,duration)">Furniture_MultiplexMediaFlags_Position4</include>
                 <control type="label">
 					<posy>469</posy>
 					<posx>10</posx>
@@ -3140,12 +3137,12 @@
 			</control>
 <!-- video codec display -->
 			<control type="group">
-				<visible>Skin.String(mutliplexmediaflags_pos1,codec) | Skin.String(mutliplexmediaflags_pos2,codec) | Skin.String(mutliplexmediaflags_pos3,codec) | Skin.String(mutliplexmediaflags_pos4,codec)</visible>
+				<visible>Skin.String(multiplexmediaflags_pos1,codec) | Skin.String(multiplexmediaflags_pos2,codec) | Skin.String(multiplexmediaflags_pos3,codec) | Skin.String(multiplexmediaflags_pos4,codec)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,codec)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,codec)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,codec)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,codec)">Furniture_MultiplexMediaFlags_Position4</include>
+				<include condition="Skin.String(multiplexmediaflags_pos1,codec)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,codec)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,codec)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,codec)">Furniture_MultiplexMediaFlags_Position4</include>
 				<control type="image" id="82">
 					<include>Furniture_PanelMediaFlagsVars</include>
 					<texture>flags/codecs/divx.png</texture>
@@ -3170,12 +3167,12 @@
 			</control>
 <!-- IMDB rating display -->
 			<control type="group">
-				<visible>Skin.String(mutliplexmediaflags_pos1,imdb) | Skin.String(mutliplexmediaflags_pos2,imdb) | Skin.String(mutliplexmediaflags_pos3,imdb) | Skin.String(mutliplexmediaflags_pos4,imdb)</visible>
+				<visible>Skin.String(multiplexmediaflags_pos1,rating) | Skin.String(multiplexmediaflags_pos2,rating) | Skin.String(multiplexmediaflags_pos3,rating) | Skin.String(multiplexmediaflags_pos4,rating)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(mutliplexmediaflags_pos1,imdb)">Furniture_MultiplexMediaFlags_Position1</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos2,imdb)">Furniture_MultiplexMediaFlags_Position2</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos3,imdb)">Furniture_MultiplexMediaFlags_Position3</include>
-				<include condition="Skin.String(mutliplexmediaflags_pos4,imdb)">Furniture_MultiplexMediaFlags_Position4</include>
+				<include condition="Skin.String(multiplexmediaflags_pos1,rating)">Furniture_MultiplexMediaFlags_Position1</include>
+				<include condition="Skin.String(multiplexmediaflags_pos2,rating)">Furniture_MultiplexMediaFlags_Position2</include>
+				<include condition="Skin.String(multiplexmediaflags_pos3,rating)">Furniture_MultiplexMediaFlags_Position3</include>
+				<include condition="Skin.String(multiplexmediaflags_pos4,rating)">Furniture_MultiplexMediaFlags_Position4</include>
 				<description>IMDB rating</description>
 				<control type="label">
 					<posy>469</posy>
@@ -3565,12 +3562,12 @@
 
             <control type="group">
 <!-- position mod -->
-				<visible>Skin.String(episodemediaflags_pos1,res) | Skin.String(episodemediaflags_pos2,res) | Skin.String(episodemediaflags_pos3,res) | Skin.String(episodemediaflags_pos4,res)</visible>
+				<visible>Skin.String(episodemediaflags_pos1,resolution) | Skin.String(episodemediaflags_pos2,resolution) | Skin.String(episodemediaflags_pos3,resolution) | Skin.String(episodemediaflags_pos4,resolution)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,res)">Furniture_EpisodeMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,res)">Furniture_EpisodeMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,res)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,res)">Furniture_EpisodeMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos1,resolution)">Furniture_EpisodeMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,resolution)">Furniture_EpisodeMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,resolution)">Furniture_EpisodeMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,resolution)">Furniture_EpisodeMediaFlags_Position4</include>
 <!-- END of position mod -->
                 <control type="image">
                     <include>Furniture_EpisodeMediaFlags</include>
@@ -3626,12 +3623,12 @@
 
 			<control type="group">
 <!-- position mod -->
-				<visible>Skin.String(episodemediaflags_pos1,sound) | Skin.String(episodemediaflags_pos2,sound) | Skin.String(episodemediaflags_pos3,sound) | Skin.String(episodemediaflags_pos4,sound)</visible>
+				<visible>Skin.String(episodemediaflags_pos1,audio) | Skin.String(episodemediaflags_pos2,audio) | Skin.String(episodemediaflags_pos3,audio) | Skin.String(episodemediaflags_pos4,audio)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,sound)">Furniture_EpisodeMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,sound)">Furniture_EpisodeMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,sound)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,sound)">Furniture_EpisodeMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos1,audio)">Furniture_EpisodeMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,audio)">Furniture_EpisodeMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,audio)">Furniture_EpisodeMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,audio)">Furniture_EpisodeMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
                     <include>Furniture_EpisodeMediaFlags</include>
@@ -3689,16 +3686,14 @@
 					<posx>0</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<textcolor>d0FFFFFF</textcolor>
 					<label>Choisir les labels dans les options</label>
 					<visible>Skin.HasSetting(darkmultiplex)</visible>			
                 </control>
                 <control type="label">
-					<posy>469</posy>
-					<posx>-40</posx>
+					<posy>107</posy>
+					<posx>0</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<textcolor>b91a1a1c</textcolor>
 					<label>Choisir les labels dans les options</label>
 					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
                 </control>

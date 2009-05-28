@@ -21,6 +21,7 @@
 <include file="Viewtype_Multiplex.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_Wall.xml" />
+<include file="Includes_moviegenre.xml" />
 
 <!-- Text colours ================================== -->
 

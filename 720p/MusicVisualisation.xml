@@ -172,6 +172,25 @@
 			<texture>osd/fullscreen_bottom.png</texture>
 			<visible>Player.HasAudio</visible>
 		</control>
+		
+		<control type="image">
+			<posx>16</posx>
+			<posy>16</posy>
+			<width>120</width>
+			<height>120</height>
+			<info>MusicPlayer.Cover</info>
+			<bordertexture border="-1">osd/osd_musicthumbframe.png</bordertexture>				
+		</control>
+
+		<control type="image" id="1">
+			<description>Rating image</description>
+			<posx>1125</posx>
+			<posy>63</posy>
+			<width>125</width>
+			<height>25</height>
+			<info>Player.StarRating</info>
+			<aspectratio align="right">keep</aspectratio>
+		</control>
 
 		<control type="label">
 			<posx>0</posx>

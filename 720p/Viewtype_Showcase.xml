@@ -1,5 +1,4 @@
 <includes>
-
     <include name="ShowcaseVisible">
         <visible>Control.IsVisible(57)</visible>
     </include>
@@ -11,7 +10,11 @@
 	<include name="ShowcaseSpotLight">
 	    <texture>showcase/lite/showcase_spot.png</texture>
 	</include>	
-	
+
+    <include name="ShowcaseVisible">
+        <visible>Control.IsVisible(57)</visible>
+    </include>
+
 	<include name="MovieShowcaseGroupVars">
 		<posx>-83</posx>
 		<posy>380</posy>
@@ -45,32 +48,35 @@
     <include name="MovieShowcaseThumb">
         <include>MovieShowcaseThumbDimensions</include>
         <align>center</align>
-        <texture diffuse="thumbs/movieposter_mask.png">defaultvideobigposter.png</texture>
-        <aspectratio scalediffuse="false">stretch</aspectratio>
-    </include>
+        <texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+	<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+</include>
 	
     <include name="MovieShowcaseThumbMain">
         <include>MovieShowcaseThumbDimensions</include>
         <align>center</align>
-        <texture diffuse="thumbs/movieposter_mask.png">defaultvideobigposter.png</texture>
-        <aspectratio scalediffuse="false">stretch</aspectratio>
-    </include>
+        <texture diffuse="thumbs/movieposter_mask.png">defaultvideobig.png</texture>
+        <aspectratio scalediffuse="false">scale</aspectratio>
+	<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+</include>
 	
-    <include name="MovieShowcaseThumbReflectionMain">
-        <include>MovieShowcaseThumbReflectionDimensions</include>
-        <colordiffuse>52FFFFFF</colordiffuse>
-        <texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobigposter.png</texture>
-        <aspectratio scalediffuse="false">stretch</aspectratio>
-    </include>
+<include name="MovieShowcaseThumbReflectionMain">
+	<include>MovieShowcaseThumbReflectionDimensions</include>
+	<colordiffuse>52FFFFFF</colordiffuse>
+	<texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobig.png</texture>
+	<aspectratio scalediffuse="false">scale</aspectratio>
+	<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+</include>
 	
-    <include name="MovieShowcaseThumbReflection">
-        <include>MovieShowcaseThumbReflectionDimensions</include>
-        <colordiffuse>d0FFFFFF</colordiffuse>
-        <texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobigposter.png</texture>
-        <aspectratio scalediffuse="false">stretch</aspectratio>
-		<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>			
-    </include>
-	
+<include name="MovieShowcaseThumbReflection">
+	<include>MovieShowcaseThumbReflectionDimensions</include>
+	<colordiffuse>d0FFFFFF</colordiffuse>
+	<texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobig.png</texture>
+	<aspectratio scalediffuse="false">scale</aspectratio>
+	<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+</include>
+
 <!-- Movie Showcase Variables: Thumb glass overlays -->
 
     <include name="MovieShowcaseGlassOverlay">
@@ -98,65 +104,35 @@
 	
     <include name="MusicShowcaseThumbReflectionDimensions">
         <posx>18</posx>
-        <posy>252</posy>
+        <posy>245</posy>
         <width>234</width>
         <height>234</height>
     </include>
-	
-	<include name="MusicShowcaseThumbKeep">
-        <aspectratio scalediffuse="false">keep</aspectratio>	
-	</include>
-	
-	<include name="MusicShowcaseThumbStretch">
-        <aspectratio scalediffuse="false">stretch</aspectratio>	
-	</include>	
 
     <include name="MusicShowcaseThumb">
         <include>MusicShowcaseThumbDimensions</include>
         <texture diffuse="thumbs/cdcover_mask.png">defaultaudiobig.png</texture>
-		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
-		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>		
+        <aspectratio scalediffuse="false">scale</aspectratio>
     </include>
-	
-    <include name="MusicShowcaseBlack">
-		<control type="image">
-			<include>MusicShowcaseThumbDimensions</include>
-			<texture diffuse="thumbs/cdcover_mask.png">common/black.png</texture>
-		</control>
-    </include>
-
-    <include name="MusicShowcaseBlackReflection">
-		<control type="image">
-			<include>MusicShowcaseThumbReflectionDimensions</include>
-			<colordiffuse>d0FFFFFF</colordiffuse>
-			<texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">common/black.png</texture>
-			<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>		
-		</control>
-    </include>	
 	
     <include name="MusicShowcaseThumbMain">
         <include>MusicShowcaseThumbDimensions</include>
         <texture diffuse="thumbs/cdcover_mask.png">defaultaudiobig.png</texture>
-		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
-		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>	
+        <aspectratio scalediffuse="false">scale</aspectratio>
     </include>
 	
     <include name="MusicShowcaseThumbReflection">
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>d0FFFFFF</colordiffuse>
         <texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudiobig.png</texture>
-		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
-		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>	
-		<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>		
+        <aspectratio>scale</aspectratio>
     </include>
 	
     <include name="MusicShowcaseThumbReflectionMain">
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>52FFFFFF</colordiffuse>
         <texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudiobig.png</texture>
-		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
-		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>	
-		<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>	
+        <aspectratio>scale</aspectratio>
     </include>
 	
 <!-- Music Showcase Variables: Thumb glass overlays -->
@@ -216,8 +192,8 @@
         <width>600</width>
         <font>Font_ShowcaseMainLabel</font>
         <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
-        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
-		<visible>!ControlGroup(7000).HasFocus()</visible>		
+        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>		
+		<visible>!ControlGroup(7000).HasFocus()</visible>
         <animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
     </include>
 	
@@ -228,8 +204,8 @@
         <width>880</width>
         <font>Font_ShowcaseMainLabel</font>
         <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
-        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>		
-		<visible>!ControlGroup(7000).HasFocus()</visible>
+        <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
+	  <visible>!ControlGroup(7000).HasFocus()</visible>	
         <animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
     </include>
 
@@ -238,11 +214,11 @@
         <posx>340</posx>
         <posy>685</posy>
         <width>600</width>
-        <font>Font_ShowcaseMainLabel</font>
+	        <font>Font_ShowcaseMainLabel</font>
         <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
         <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
 		<visible>ControlGroup(7000).HasFocus()</visible>		
-    </include>	
+    </include>
 	
     <include name="ShowcaseDetailLabel">
 		<include>ShowcaseLabelVars</include>
@@ -267,17 +243,6 @@
         <visible>Control.IsVisible(57)</visible>
     </include>
 	
-    <include name="ShowcaseSpot">
-        <posx>144</posx>
-        <posy>583</posy>
-        <width>993</width>
-        <height>137</height>
-        <include>ShowcaseSpotLight</include>
-        <include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-        <visible>Control.IsVisible(50)</visible>
-    </include>	
-	
     <control type="image" id="82">
         <texture>-</texture>
         <visible>Container(57).OnNext | Container(57).OnPrevious</visible>
@@ -287,7 +252,7 @@
     <include name="ShowcaseSquare">
         <control type="group" id="7001">
             <posy>387</posy>
-            <camera x="640" y="540" />
+            <camera x="640" y="540"/>
             <visible>Control.IsVisible(57) + Container.OnNext + ![Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]</visible>
             <animation effect="slide" end="-100,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
@@ -296,19 +261,21 @@
                 <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
                 <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>					
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
                     </control>
                 </control>
             </control>
@@ -316,19 +283,21 @@
                 <posx>150</posx>
                 <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
                     </control>
                 </control>
             </control>
@@ -336,19 +305,21 @@
                 <posx>250</posx>
                 <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
                     </control>
                 </control>
             </control>
@@ -356,19 +327,21 @@
                 <posx>350</posx>
                 <animation effect="rotatey" center="250" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
                     </control>
                 </control>
             </control>
@@ -376,19 +349,21 @@
                 <posx>450</posx>
                 <animation effect="rotatey" center="350" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
                     </control>
                 </control>
             </control>
@@ -398,19 +373,21 @@
                 <animation effect="fade" start="0" end="100" delay="0" time="250" reversible="false">Visible</animation>
                 <animation effect="rotatey" center="1430" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
                     </control>
                 </control>
             </control>
@@ -418,19 +395,21 @@
                 <posx>960</posx>
                 <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
                     </control>
                 </control>
             </control>
@@ -438,19 +417,21 @@
                 <posx>860</posx>
                 <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
                     </control>
                 </control>
             </control>
@@ -458,19 +439,21 @@
                 <posx>760</posx>
                 <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
                     </control>
                 </control>
             </control>
@@ -478,19 +461,21 @@
                 <posx>660</posx>
                 <animation effect="rotatey" center="1030" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
                     </control>
                 </control>
             </control>
@@ -503,19 +488,21 @@
                     <animation effect="rotatey" center="930" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                     <animation effect="rotatey" center="930" start="65" end="65" time="0" condition="true">Conditional</animation>
                     <control type="group">
-						<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>					
                         <control type="image">
                             <include>MusicShowcaseThumb</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
                         </control>
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                         </control>
-						<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>							
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MusicShowcaseOverlay</include>
+                        </control>
                         <control type="image">
                             <include>MusicShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
                         </control>
                     </control>
                 </control>
@@ -524,19 +511,21 @@
                     <visible>Container.OnNext</visible>
                     <animation effect="rotatey" center="405" start="0" end="-65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
                     <control type="group">
-						<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>					
                         <control type="image">
                             <include>MusicShowcaseThumb</include>
-                            <info>Container(57).ListItem(-1).Thumb</info>
+                            <info>Container(57).ListItem(-1).Icon</info>
                         </control>
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                         </control>
-						<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>							
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MusicShowcaseOverlay</include>
+                        </control>
                         <control type="image">
                             <include>MusicShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(-1).Thumb</info>
+                            <info>Container(57).ListItem(-1).Icon</info>
                         </control>
                     </control>
                 </control>
@@ -544,7 +533,7 @@
         </control>
         <control type="group" id="7002">
             <posy>387</posy>
-            <camera x="640" y="540" />
+            <camera x="640" y="540"/>
             <visible>Control.IsVisible(57) + Container.OnPrevious + ![Skin.HasSetting(flattenshowcase) | Container.Content(episodes)]</visible>
             <animation effect="slide" end="100,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
@@ -553,19 +542,21 @@
                 <animation effect="fade" start="100" end="0" time="250" reversible="false">Hidden</animation>
                 <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
                     </control>
                 </control>
             </control>
@@ -573,19 +564,21 @@
                 <posx>860</posx>
                 <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
                     </control>
                 </control>
             </control>
@@ -593,19 +586,21 @@
                 <posx>760</posx>
                 <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
                     </control>
                 </control>
             </control>
@@ -613,19 +608,21 @@
                 <posx>660</posx>
                 <animation effect="rotatey" center="1030" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
                     </control>
                 </control>
             </control>
@@ -633,19 +630,21 @@
                 <posx>560</posx>
                 <animation effect="rotatey" center="930" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
                     </control>
                 </control>
             </control>
@@ -655,19 +654,21 @@
                 <animation effect="fade" start="0" end="100" time="250" reversible="false">Visible</animation>
                 <animation effect="rotatey" center="-150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
                     </control>
                 </control>
             </control>
@@ -675,19 +676,21 @@
                 <posx>50</posx>
                 <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
                     </control>
                 </control>
             </control>
@@ -695,19 +698,21 @@
                 <posx>150</posx>
                 <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
                     </control>
                 </control>
             </control>
@@ -715,19 +720,21 @@
                 <posx>250</posx>
                 <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
                     </control>
                 </control>
             </control>
@@ -735,19 +742,21 @@
                 <posx>350</posx>
                 <animation effect="rotatey" center="250" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
                     </control>
                 </control>
             </control>
@@ -760,19 +769,21 @@
                     <animation effect="rotatey" center="350" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                     <animation effect="rotatey" center="350" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                     <control type="group">
-						<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>					
                         <control type="image">
                             <include>MusicShowcaseThumb</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
                         </control>
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                         </control>
-						<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>							
                         <control type="image">
-                            <include>MusicShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <description>Black overlay</description>
+                            <include>MusicShowcaseOverlay</include>
+                        </control>
+                        <control type="image">
+                            <include>MusicShowcaseThumbReflectionMain</include>
+                            <info>Container(57).ListItem(0).Icon</info>
                         </control>
                     </control>
                 </control>
@@ -781,19 +792,21 @@
                     <visible>Container.OnPrevious</visible>
                     <animation effect="rotatey" center="875" start="0" end="65" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
                     <control type="group">
-						<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>					
                         <control type="image">
                             <include>MusicShowcaseThumb</include>
-                            <info>Container(57).ListItem(1).Thumb</info>
+                            <info>Container(57).ListItem(1).Icon</info>
                         </control>
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MusicShowcaseGlassOverlayAngled</include>
                         </control>
-						<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>								
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MusicShowcaseOverlay</include>
+                        </control>
                         <control type="image">
                             <include>MusicShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(1).Thumb</info>
+                            <info>Container(57).ListItem(1).Icon</info>
                         </control>
                     </control>
                 </control>
@@ -806,7 +819,7 @@
 		</control>
         <control type="group" id="7000">
             <posy>387</posy>
-            <camera x="640" y="540" />
+            <camera x="640" y="540"/>
             <animation effect="fade" time="500">WindowOpen</animation>
             <animation effect="fade" time="200">WindowClose</animation>
             <visible>Control.IsVisible(57) + !Control.IsVisible(7001) + !Control.IsVisible(7002) + [Control.IsVisible(970) + !Container.Content(episodes)]</visible>
@@ -814,23 +827,25 @@
                 <posx>50</posx>
                 <animation effect="rotatey" center="-50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="-50" start="0" end="65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-795" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="-50" start="0" end="65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-795" time="800" tween="cubic" easing="inout"/>
 				</animation>				
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
                     </control>
                 </control>
             </control>
@@ -838,23 +853,25 @@
                 <posx>150</posx>
                 <animation effect="rotatey" center="50" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="50" start="0" end="65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-645" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="50" start="0" end="65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-645" time="800" tween="cubic" easing="inout"/>
 				</animation>				
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
                     </control>
                 </control>
             </control>
@@ -862,23 +879,25 @@
                 <posx>250</posx>
                 <animation effect="rotatey" center="150" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="150" start="0" end="65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-495" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="150" start="0" end="65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-495" time="800" tween="cubic" easing="inout"/>
 				</animation>				
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
                     </control>
                 </control>
             </control>
@@ -886,23 +905,25 @@
                 <posx>350</posx>
                 <animation effect="rotatey" center="250" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="250" start="0" end="65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-345" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="250" start="0" end="65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-345" time="800" tween="cubic" easing="inout"/>
 				</animation>	
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
                     </control>
                 </control>
             </control>
@@ -910,23 +931,25 @@
                 <posx>450</posx>
                 <animation effect="rotatey" center="350" start="-65" end="-65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="350" start="0" end="65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-195" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="350" start="0" end="65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-195" time="800" tween="cubic" easing="inout"/>
 				</animation>	
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
                     </control>
                 </control>
             </control>
@@ -934,23 +957,25 @@
                 <posx>960</posx>
                 <animation effect="rotatey" center="1330" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1330" start="0" end="-65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="795" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1330" start="0" end="-65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="795" time="800" tween="cubic" easing="inout"/>
 				</animation>				
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
                     </control>
                 </control>
             </control>
@@ -958,23 +983,25 @@
                 <posx>860</posx>
                 <animation effect="rotatey" center="1230" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1230" start="0" end="-65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="645" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1230" start="0" end="-65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="645" time="800" tween="cubic" easing="inout"/>
 				</animation>				
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
                     </control>
                 </control>
             </control>
@@ -982,23 +1009,25 @@
                 <posx>760</posx>
                 <animation effect="rotatey" center="1130" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1130" start="0" end="-65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="495" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1130" start="0" end="-65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="495" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
                     </control>
                 </control>
             </control>
@@ -1006,23 +1035,25 @@
                 <posx>660</posx>
                 <animation effect="rotatey" center="1030" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1030" start="0" end="-65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="345" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1030" start="0" end="-65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="345" time="800" tween="cubic" easing="inout"/>
 				</animation>				
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
+                    </control>
                     <control type="image">
                         <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
                     </control>
                 </control>
             </control>
@@ -1030,43 +1061,47 @@
                 <posx>560</posx>
                 <animation effect="rotatey" center="930" start="65" end="65" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="930" start="0" end="-65" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="195" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="930" start="0" end="-65" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="195" time="800" tween="cubic" easing="inout"/>
 				</animation>	
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumb</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
-                        <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <include>MusicShowcaseThumbReflection</include>
+                        <info>Container(57).ListItem(1).Icon</info>
+                    </control>
                 </control>
             </control>
             <control type="group">
                 <posx>505</posx>
                 <control type="group">
-					<include condition="Window.IsActive(2)">MusicShowcaseBlack</include>				
                     <control type="image">
                         <include>MusicShowcaseThumbMain</include>
-                        <info>Container(57).ListItem(0).Thumb</info>
+                        <info>Container(57).ListItem(0).Icon</info>
                     </control>
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MusicShowcaseGlassOverlayMain</include>
                     </control>
                     <control type="image">
-                        <include>MusicShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(0).Thumb</info>
+                        <description>Black overlay</description>
+                        <include>MusicShowcaseOverlay</include>
                     </control>
-					<include condition="Window.IsActive(2)">MusicShowcaseBlackReflection</include>						
+                    <control type="image">
+                        <include>MusicShowcaseThumbReflection</include>
+                        <info>Container(57).ListItem(0).Icon</info>
+                    </control>
                 </control>
             </control>
         </control>
@@ -1074,7 +1109,7 @@
     <include name="ShowcaseMovies">
         <control type="group" id="6001">
             <posy>380</posy>
-            <camera x="640" y="540" />
+            <camera x="640" y="540"/>
             <visible>Control.IsVisible(57) + Container.OnNext + !Skin.HasSetting(flattenshowcase)</visible>
             <animation effect="slide" end="-90,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
@@ -1085,29 +1120,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-7).Thumb</info>
+                        <info>Container(57).ListItem(-7).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-7).Thumb</info>
+                        <info>Container(57).ListItem(-7).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)]</visible>
                     </control>
+<include>mod_moviegenre_Showcase15</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-7).Thumb</info>
+                        <info>Container(57).ListItem(-7).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-7).Thumb</info>
+                        <info>Container(57).ListItem(-7).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-					
+<include>mod_moviegenre_Showcase_ref15</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1116,28 +1156,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase1</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref1</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1146,28 +1192,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase2</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref2</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1176,28 +1228,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase3</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref3</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1206,28 +1264,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase4</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref4</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1236,28 +1300,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+					<include>mod_moviegenre_Showcase5</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref5</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1268,28 +1338,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+					<include>mod_moviegenre_Showcase13</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref13</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1298,28 +1374,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase12</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref12</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1328,28 +1410,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase11</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref11</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1358,28 +1446,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase10</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref10</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1388,28 +1482,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase9</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref9</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1418,28 +1518,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase8</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref8</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1453,28 +1559,34 @@
                     <control type="group">
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase7</include><!-- <<<<<< Add this -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlayAngled</include>
                         </control>
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MovieShowcaseOverlay</include>
+                        </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase_ref7</include><!-- <<<<<< Add this -->
                     </control>
                 </control>
                 <control type="group">
@@ -1484,35 +1596,41 @@
                     <control type="group">
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(-1).Thumb</info>
+                            <info>Container(57).ListItem(-1).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(-1).Thumb</info>
+                            <info>Container(57).ListItem(-1).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase6</include><!-- <<<<<< Add this -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlayAngled</include>
                         </control>
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MovieShowcaseOverlay</include>
+                        </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(-1).Thumb</info>
+                            <info>Container(57).ListItem(-1).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(-1).Thumb</info>
+                            <info>Container(57).ListItem(-1).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase_ref6</include><!-- <<<<<< Add this -->
                     </control>
                 </control>
             </control>
         </control>
         <control type="group" id="6002">
             <posy>380</posy>
-            <camera x="640" y="540" />
+            <camera x="640" y="540"/>
             <visible>Control.IsVisible(57) + Container.OnPrevious + !Skin.HasSetting(flattenshowcase)</visible>
             <animation effect="slide" end="90,0" time="250" reversible="false">Hidden</animation>
             <control type="group">
@@ -1523,28 +1641,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(7).Thumb</info>
+                        <info>Container(57).ListItem(7).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(7).Thumb</info>
+                        <info>Container(57).ListItem(7).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+					<include>mod_moviegenre_Showcase14</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(7).Thumb</info>
+                        <info>Container(57).ListItem(7).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(7).Thumb</info>
+                        <info>Container(57).ListItem(7).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref14</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1553,28 +1677,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase13</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref13</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1583,28 +1713,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase12</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref12</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1613,28 +1749,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase11</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref11</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1643,28 +1785,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase10</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref10</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1673,28 +1821,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+					<include>mod_moviegenre_Showcase9</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref9</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1705,28 +1859,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase1</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref1</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1735,28 +1895,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase2</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref2</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1765,28 +1931,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase3</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref3</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1795,28 +1967,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase4</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref4</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1825,28 +2003,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase5</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref5</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1855,28 +2039,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase6</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref6</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -1890,28 +2080,34 @@
                     <control type="group">
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase7</include><!-- <<<<<< Add this -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlay</include>
                         </control>
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MovieShowcaseOverlay</include>
+                        </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(0).Thumb</info>
+                            <info>Container(57).ListItem(0).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase_ref7</include><!-- <<<<<< Add this -->
                     </control>
                 </control>
                 <control type="group">
@@ -1921,28 +2117,34 @@
                     <control type="group">
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(1).Thumb</info>
+                            <info>Container(57).ListItem(1).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumb</include>
-                            <info>Container(57).ListItem(1).Thumb</info>
+                            <info>Container(57).ListItem(1).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase8</include><!-- <<<<<< Add this -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlay</include>
                         </control>
+                        <control type="image">
+                            <description>Black overlay</description>
+                            <include>MovieShowcaseOverlay</include>
+                        </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(1).Thumb</info>
+                            <info>Container(57).ListItem(1).Icon</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
                     <control type="image">
                             <include>MovieShowcaseThumbReflection</include>
-                            <info>Container(57).ListItem(1).Thumb</info>
+                            <info>Container(57).ListItem(1).Icon</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
+<include>mod_moviegenre_Showcase_ref8</include><!-- <<<<<< Add this -->
                     </control>
                 </control>
             </control>
@@ -1957,413 +2159,485 @@
             <animation effect="fade" time="500">WindowOpen</animation>
             <animation effect="fade" time="200">WindowClose</animation>
             <visible>Control.IsVisible(57) + !Control.IsVisible(6001) + !Control.IsVisible(6002) + Control.IsVisible(960)</visible>
-            <camera x="640" y="540" />
+            <camera x="640" y="540"/>
             <control type="group">
                 <posx>10</posx>
                 <animation effect="rotatey" center="-90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="-90" start="0" end="55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-685" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="-90" start="0" end="55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-685" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase1</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-6).Thumb</info>
+                        <info>Container(57).ListItem(-6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref1</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>100</posx>
                 <animation effect="rotatey" center="0" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="0" start="0" end="55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-577" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="0" start="0" end="55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-577" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase2</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-5).Thumb</info>
+                        <info>Container(57).ListItem(-5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref2</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>190</posx>
                 <animation effect="rotatey" center="90" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="90" start="0" end="55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-469" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="90" start="0" end="55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-469" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase3</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-4).Thumb</info>
+                        <info>Container(57).ListItem(-4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref3</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>280</posx>
                 <animation effect="rotatey" center="180" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="180" start="0" end="55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-362" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="180" start="0" end="55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-362" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase4</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-3).Thumb</info>
+                        <info>Container(57).ListItem(-3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref4</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>370</posx>
                 <animation effect="rotatey" center="270" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="270" start="0" end="55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-256" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="270" start="0" end="55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-256" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase5</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-2).Thumb</info>
+                        <info>Container(57).ListItem(-2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref5</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>460</posx>
                 <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="360" start="0" end="55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="-151" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="360" start="0" end="55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="-151" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase6</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(-1).Thumb</info>
+                        <info>Container(57).ListItem(-1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref6</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>1000</posx>
                 <animation effect="rotatey" center="1380" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1380" start="0" end="-55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="685" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1380" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="685" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase13</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(6).Thumb</info>
+                        <info>Container(57).ListItem(6).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref13</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>910</posx>
                 <animation effect="rotatey" center="1290" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1290" start="0" end="-55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="577" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1290" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="577" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase12</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(5).Thumb</info>
+                        <info>Container(57).ListItem(5).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref12</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>820</posx>
                 <animation effect="rotatey" center="1200" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1200" start="0" end="-55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="469" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1200" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="469" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase11</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(4).Thumb</info>
+                        <info>Container(57).ListItem(4).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref11</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>730</posx>
                 <animation effect="rotatey" center="1110" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1110" start="0" end="-55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="362" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1110" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="362" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase10</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(3).Thumb</info>
+                        <info>Container(57).ListItem(3).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref10</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>640</posx>
                 <animation effect="rotatey" center="1020" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="1020" start="0" end="-55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="256" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="1020" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="256" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase9</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(2).Thumb</info>
+                        <info>Container(57).ListItem(2).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref9</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
                 <posx>550</posx>
                 <animation effect="rotatey" center="930" start="55" end="55" time="0" condition="true">Conditional</animation>
                 <animation type="Conditional" condition="Skin.HasSetting(flattenshowcase)">
-					<effect type="rotatey" center="930" start="0" end="-55" time="800" tween="cubic" easing="inout" />
-					<effect type="slide" start="0" end="151" time="800" tween="cubic" easing="inout" />
+					<effect type="rotatey" center="930" start="0" end="-55" time="800" tween="cubic" easing="inout"/>
+					<effect type="slide" start="0" end="151" time="800" tween="cubic" easing="inout"/>
 				</animation>
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumb</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase8</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflection</include>
-                        <info>Container(57).ListItem(1).Thumb</info>
+                        <info>Container(57).ListItem(1).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref8</include><!-- <<<<<< Add this -->
                 </control>
             </control>
             <control type="group">
@@ -2371,28 +2645,34 @@
                 <control type="group">
                     <control type="image">
                         <include>MovieShowcaseThumbMain</include>
-                        <info>Container(57).ListItem(0).Thumb</info>
+                        <info>Container(57).ListItem(0).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbMain</include>
-                        <info>Container(57).ListItem(0).Thumb</info>
+                        <info>Container(57).ListItem(0).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase7</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlay</include>
                     </control>
                     <control type="image">
+                        <description>Black overlay</description>
+                        <include>MovieShowcaseOverlay</include>
+                    </control>
+                    <control type="image">
                         <include>MovieShowcaseThumbReflectionMain</include>
-                        <info>Container(57).ListItem(0).Thumb</info>
+                        <info>Container(57).ListItem(0).Icon</info>
 						<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                     </control>
                     <control type="image">
                         <include>MovieShowcaseThumbReflectionMain</include>
-                        <info>Container(57).ListItem(0).Thumb</info>
+                        <info>Container(57).ListItem(0).Icon</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
+<include>mod_moviegenre_Showcase_ref7</include><!-- <<<<<< Add this -->
                 </control>
             </control>
         </control>
@@ -2495,6 +2775,7 @@
                         <info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
                     </control>
+                    <include>mod_moviegenre_Showcase21</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlay</include>
@@ -2514,7 +2795,8 @@
                         <include>MovieShowcaseThumbReflection</include>
                         <info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-                    </control>				
+                    </control>
+                        <include>mod_moviegenre_Showcase_ref21</include><!-- <<<<<< Add this -->				
 				</itemlayout>
                 <focusedlayout height="350" width="196" condition="Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)">
                     <control type="image">
@@ -2531,6 +2813,7 @@
 						<animation effect="zoom" start="100" end="120" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="120" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>						
                     </control>
+                        <include>mod_moviegenre_Showcase20</include><!-- <<<<<< Add this -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlay</include>
@@ -2559,6 +2842,7 @@
 						<animation effect="zoom" start="100" end="130" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="120" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>						
                     </control>					
+                        <include>mod_moviegenre_Showcase_ref20</include><!-- <<<<<< Add this -->
 				</focusedlayout>
                 <itemlayout height="350" width="250" condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">
                     <control type="image">
@@ -2626,7 +2910,7 @@
                 <texturesliderbarfocus>-</texturesliderbarfocus>
                 <textureslidernib>windows/scrollbarnub-nofocus.png</textureslidernib>
                 <textureslidernibfocus>windows/scrollbarnub-focus.png</textureslidernibfocus>
-                <pulseonselect></pulseonselect>
+                <pulseonselect/>
                 <orientation>horizontal</orientation>
                 <showonepage>false</showonepage>
                 <onup>57</onup>
@@ -2705,16 +2989,6 @@
                 </control>
             </control>
         </control>
-		
-		<control type="image">
-			<posx>0</posx>
-			<posy>675</posy>
-			<width>1280</width>
-			<height>48</height>
-			<texture>showcase/showcase_gradient.png</texture>
-			<visible>Skin.HasSetting(darkshowcase) + Control.IsVisible(57)</visible>
-			<include>Animation_CommonFade</include>
-		</control>
 		
         <control type="group">
             <include>ShowcaseVisible</include>

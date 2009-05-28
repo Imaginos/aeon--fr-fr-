@@ -775,7 +775,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>11</onup>
+				<onup>15</onup>
 				<ondown>7</ondown>
 				<visible allowhiddenfocus="true">![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
 			</control>
@@ -787,7 +787,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>11</onup>
+				<onup>15</onup>
 				<ondown>7</ondown>
 				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
 			</control>
@@ -825,6 +825,7 @@
 				<ondown>8</ondown>
 				<onleft>500</onleft>
 				<onright>500</onright>
+				<onclick>SetFocus(500)</onclick>
 				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
 			</control>
 			<control type="label">
@@ -924,7 +925,7 @@
 				<label>31244</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>9</onup>
-				<ondown>11</ondown>
+				<ondown>15</ondown>
 				<onleft>800</onleft>
 				<onright>800</onright>
 				<visible allowhiddenfocus="true">![Control.HasFocus(10) | ControlGroup(14).HasFocus]</visible>
@@ -957,7 +958,7 @@
 				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
 			</control>
 <!-- mod for flag options in showcase view -->
-			<control type="button" id="11">
+			<control type="button" id="15">
 				<description>flags management</description>
 				<posy>290</posy>
 				<label>GESTION LABELS</label>
@@ -969,7 +970,7 @@
 				<ondown>6</ondown>
 				<visible allowhiddenfocus="true">![Control.HasFocus(11) | ControlGroup(21).HasFocus]</visible>
 			</control>
-			<control type="button" id="11">
+			<control type="button">
 				<description>management</description>
 				<posy>290</posy>
 				<label>GESTION LABELS</label>
