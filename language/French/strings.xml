@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- $Revision: 204$ -->
-<!-- Date of translation : 2009-05-03 (10h05 UMT) -->
+<!-- Date of translation : 2009-05-28 (18h18 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -121,7 +121,7 @@
 	<string id="31110">BASCULER LE TEXTE TEMPS/DURÉE (ACTUELLEMENT: OFF)</string>
 	<string id="31111">BASCULER LE STYLE DES DÉTAILS SUPÉRIEURS (ACTUELLEMENT: MAX)</string>
 	<string id="31112">BASCULER LA BARRE DE PROGRESSION (ACTUELLEMENT: OFF)</string>
-	<string id="31113">BASCULER LE STYLE DES DÉTAILS (ACTUELLEMENT: ON)</string>	
+	<string id="31113">BASCULER LE TEXTE TEMPS/DURÉE (ACTUELLEMENT: ON)</string>	
   
 <!-- Aeon Customisation Menu labels -->
   
