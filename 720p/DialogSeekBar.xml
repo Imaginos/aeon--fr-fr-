@@ -180,7 +180,19 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_OSDMusicArtist</font>
-		<label>$INFO[VideoPlayer.Title]</label>			
+		<label>$INFO[VideoPlayer.season].$INFO[VideoPlayer.episode] - $INFO[VideoPlayer.title]</label>
+		<visible>!IsEmpty(VideoPlayer.season)</visible>
+	</control>
+	<control type="label">
+		<posx>0</posx>
+		<posy>58</posy>
+		<width>1280</width>
+		<height>25</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>Font_OSDMusicArtist</font>
+		<label>$INFO[VideoPlayer.title]</label>
+		<visible>IsEmpty(VideoPlayer.season)</visible>
 	</control>
 <!-- End -->
 
