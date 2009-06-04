@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- $Revision: 204$ -->
-<!-- Date of translation : 2009-05-28 (18h18 UMT) -->
+<!-- Date of translation : 2009-06-04 (18h16 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -400,8 +400,8 @@
 <!-- OSD -->
 
 	<string id="31700">CODEC</string>
-	<string id="31701">BITRATE</string>
-	<string id="31702">SAMPLERATE</string>
+	<string id="31701">DÉBIT</string>
+	<string id="31702">FRÉQUENCE</string>
 	<string id="31703">CANAUX</string>
 	<string id="31704">SUIVANTE:</string>
 	<string id="31705">RETOUR RAPIDE</string>
