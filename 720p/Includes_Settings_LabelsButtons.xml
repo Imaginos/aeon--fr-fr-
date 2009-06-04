@@ -266,13 +266,21 @@
 	<control type="group">
 		<description>31086</description>
 		<include>Labels_MainLabelGroup</include>
-		<visible>Control.HasFocus(301)</visible>
+		<!--<visible>Control.HasFocus(301)</visible> <<<<< Old -->	
+		<visible>Control.HasFocus(301)|Control.HasFocus(345)</visible><!-- <<<<< ADD this -->	
 
 		<control type="label">
+			<visible>Control.HasFocus(301)</visible><!-- <<<<< ADD this -->
 			<include>Labels_MainLabelBigVars</include>
-			<label>$LOCALIZE[31104] $INFO[Control.GetLabel(301)] $LOCALIZE[31105]</label>
+			<label>$LOCALIZE[31104] $INFO[Container(301).ListItem.Label]$INFO[Container(301).ListItem.Label2] $LOCALIZE[31105]</label>
 		</control>
-
+<!-- ADD this >>>>> -->
+		<control type="label">
+			<visible>Control.HasFocus(345)</visible>
+			<include>Labels_MainLabelBigVars</include>
+			<label>$LOCALIZE[31104] $INFO[Container(301).ListItem.Label]$INFO[Container(301).ListItem.Label2] - $INFO[Container(345).ListItem.Label]$INFO[Container(345).ListItem.Label2] $LOCALIZE[31105]</label>
+		</control>
+<!-- <<<<< ADD this -->
 		<control type="label">
 			<include>Labels_MainLabelSmallVars</include>
 			<label>31088</label>
@@ -428,6 +436,23 @@
 		</control>
 	</control>	
 
+<!--MODs -->
+	<control type="group">
+		<description>Settings Labels - Tier 1: Advanced Options</description>
+		<include>Labels_MainLabelGroup</include>
+		<visible>Control.HasFocus(12)</visible>
+
+		<control type="label">
+			<include>Labels_MainLabelBigVars</include>
+			<label>Passion xbmc mods</label>
+		</control>
+
+		<control type="label">
+			<include>Labels_MainLabelSmallVars</include>
+			<label>31819</label>
+		</control>
+	</control>	
+<!--MODs ens -->
 </include>
 
 	<include name="Settings_ButtonGroupDimensions">
@@ -456,7 +481,7 @@
 				<onclick>SetFocus(300)</onclick>
 				<onleft>300</onleft>
 				<onright>300</onright>
-				<onup>11</onup>
+				<onup>12</onup><!--MODs -->
 				<ondown>7</ondown>
 				<onfocus>Skin.Reset(bmtransit)</onfocus>
 				<visible allowhiddenfocus="true">![Control.HasFocus(6) | Control.HasFocus(300) | Control.HasFocus(92)]</visible>
@@ -469,7 +494,7 @@
 				<onclick>SetFocus(300)</onclick>
 				<onleft>300</onleft>
 				<onright>300</onright>
-				<onup>11</onup>
+				<onup>12</onup><!--MODs -->
 				<ondown>7</ondown>
 				<visible>Control.HasFocus(6) | Control.HasFocus(300) | Control.HasFocus(92)</visible>
 			</control>
@@ -498,7 +523,10 @@
 				<ondown>8</ondown>
 				<onleft>301</onleft>
 				<onright>301</onright>
-				<visible allowhiddenfocus="true">![Control.HasFocus(7) | Control.HasFocus(301)]</visible>
+
+				<!--<visible allowhiddenfocus="true">![Control.HasFocus(7) | Control.HasFocus(301)]</visible> <<<<<< old -->
+				<visible allowhiddenfocus="true">![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(345)]</visible><!-- <<<<<< Add this -->
+
 			</control>
 			<control type="button" id="7">
 				<description>FURNITURE</description>
@@ -509,7 +537,10 @@
 				<ondown>8</ondown>
 				<onleft>301</onleft>
 				<onright>301</onright>
-				<visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>
+
+				<!-- <visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>  <<<<<< old -->
+				<visible>Control.HasFocus(7) | Control.HasFocus(301)| Control.HasFocus(345)]</visible><!-- <<<<<< Add this -->
+
 			</control>
 			<control type="label">
 				<description>Furniture Sub Unfocused</description>
@@ -518,6 +549,10 @@
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(7) | Control.HasFocus(301)]</visible>
+
+				<!--<visible>![Control.HasFocus(7) | Control.HasFocus(301)]</visible> <<<<<< old -->
+				<visible>![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(345)]</visible><!-- <<<<<< Add this -->
+
 			</control>
 			<control type="label">
 				<description>Furniture Sub Unfocused</description>
@@ -525,7 +560,10 @@
 				<label>31123</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>
+
+				<!-- <visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>  <<<<<< old -->
+				<visible>Control.HasFocus(7) | Control.HasFocus(301)| Control.HasFocus(345)]</visible><!-- <<<<<< Add this -->
+
 			</control>
 			<control type="button" id="8">
 				<description>My Programs</description>
@@ -648,7 +686,7 @@
 				<label>31158</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>10</onup>
-				<ondown>6</ondown>
+				<ondown>12</ondown><!--MODs -->
 				<onclick>XBMC.ActivateWindow(56)</onclick>
 				<visible allowhiddenfocus="true">!Control.HasFocus(11)</visible>
 			</control>
@@ -658,7 +696,7 @@
 				<label>31158</label>
 				<include>Objects_SettingsSectionMenuButtonFocused</include>
 				<onup>10</onup>
-				<ondown>6</ondown>
+				<ondown>12</ondown><!--MODs -->
 				<visible>Control.HasFocus(11)</visible>
 			</control>
 			<control type="label">
@@ -676,7 +714,46 @@
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(11)</visible>
-			</control>			
+			</control>
+<!--MODs -->
+			<control type="button" id="12">
+				<description>Mods</description>
+				<posy>348</posy>
+				<label>Passion xbmc</label>
+				<include>Objects_SettingsSectionMenuButton</include>
+				<onup>11</onup>
+				<ondown>6</ondown>
+				<onclick>XBMC.ActivateWindow(57)</onclick>	
+				<visible allowhiddenfocus="true">!Control.HasFocus(12)</visible>
+			</control>
+			<control type="button">
+				<description>OSD</description>
+				<posy>348</posy>
+				<label>Passion xbmc</label>
+				<include>Objects_SettingsSectionMenuButtonFocused</include>
+				<onup>11</onup>
+				<ondown>6</ondown>
+				<onleft>60</onleft>
+				<onright>60</onright>				
+				<visible>Control.HasFocus(12)</visible>
+			</control>
+			<control type="label">
+				<description>OSD Sub Unfocused</description>
+				<posy>380</posy>
+				<label>Options des mods</label>
+				<textcolor>FFf5f5f5</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>!Control.HasFocus(12)</visible>
+			</control>
+			<control type="label">
+				<description>OSD Sub Unfocused</description>
+				<posy>380</posy>
+				<label>Options des mods</label>
+				<textcolor>FF262728</textcolor>
+				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+				<visible>Control.HasFocus(12)</visible>
+			</control>
+<!-- end -->
 		</control>
 	</include>
 
@@ -775,7 +852,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>15</onup>
+				<onup>10</onup>
 				<ondown>7</ondown>
 				<visible allowhiddenfocus="true">![Control.HasFocus(6) | ControlGroup(20).HasFocus]</visible>
 			</control>
@@ -787,7 +864,7 @@
 				<onclick>SetFocus(400)</onclick>
 				<onleft>400</onleft>
 				<onright>400</onright>
-				<onup>15</onup>
+				<onup>10</onup>
 				<ondown>7</ondown>
 				<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
 			</control>
@@ -825,7 +902,6 @@
 				<ondown>8</ondown>
 				<onleft>500</onleft>
 				<onright>500</onright>
-				<onclick>SetFocus(500)</onclick>
 				<visible>Control.HasFocus(7) | ControlGroup(11).HasFocus</visible>
 			</control>
 			<control type="label">
@@ -925,7 +1001,7 @@
 				<label>31244</label>
 				<include>Objects_SettingsSectionMenuButton</include>
 				<onup>9</onup>
-				<ondown>15</ondown>
+				<ondown>6</ondown>
 				<onleft>800</onleft>
 				<onright>800</onright>
 				<visible allowhiddenfocus="true">![Control.HasFocus(10) | ControlGroup(14).HasFocus]</visible>
@@ -957,48 +1033,6 @@
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(10) | ControlGroup(14).HasFocus</visible>
 			</control>
-<!-- mod for flag options in showcase view -->
-			<control type="button" id="15">
-				<description>flags management</description>
-				<posy>290</posy>
-				<label>GESTION LABELS</label>
-				<include>Objects_SettingsSectionMenuButton</include>
-				<onclick>SetFocus(407)</onclick>
-				<onleft>407</onleft>
-				<onright>407</onright>
-				<onup>10</onup>
-				<ondown>6</ondown>
-				<visible allowhiddenfocus="true">![Control.HasFocus(11) | ControlGroup(21).HasFocus]</visible>
-			</control>
-			<control type="button">
-				<description>management</description>
-				<posy>290</posy>
-				<label>GESTION LABELS</label>
-				<include>Objects_SettingsSectionMenuButtonFocused</include>
-				<onclick>SetFocus(407)</onclick>
-				<onleft>407</onleft>
-				<onright>407</onright>
-				<onup>10</onup>
-				<ondown>6</ondown>
-				<visible>Control.HasFocus(11) | ControlGroup(21).HasFocus</visible>
-			</control>
-			<control type="label">
-				<description>Backdrops Unfocused</description>
-				<posy>322</posy>
-				<label>Ordre des labels</label>
-				<textcolor>FFf5f5f5</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>![Control.HasFocus(11) | ControlGroup(21).HasFocus]</visible>
-			</control>
-			<control type="label">
-				<description>Backdrops Focused</description>
-				<posy>322</posy>
-				<label>Ordre des labels</label>
-				<textcolor>FF262728</textcolor>
-				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-				<visible>Control.HasFocus(11) | ControlGroup(21).HasFocus</visible>
-			</control>
-<!-- mod for flag options in showcase view -->
 		</control>
 	</include>
 
@@ -1328,7 +1362,7 @@
 			<description>Videos subheadings</description>
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(MyVideosSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>General Sub Unfocused</description>
 				<posy>32</posy>
@@ -1414,7 +1448,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(MyPicturesSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
@@ -1452,7 +1486,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(AppearanceSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
@@ -1538,7 +1572,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(NetworkSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
@@ -1624,7 +1658,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(SystemSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
@@ -1710,7 +1744,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(MyMusicSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Videos Sub Unfocused</description>
 				<posy>32</posy>
@@ -1828,7 +1862,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(MyWeatherSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Weather Sub</description>
 				<posy>32</posy>
@@ -1842,7 +1876,7 @@
 		<control type="group">
 			<include>Settings_ButtonGroupDimensionsXBMC</include>
 			<visible>Window.IsActive(MyProgramsSettings)</visible>
-			<include>Animations_SettingsButtonFade</include>
+			<include>Animation_SettingsButtonFade</include>
 			<control type="label">
 				<description>My Weather Sub</description>
 				<posy>32</posy>

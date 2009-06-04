@@ -1,0 +1,562 @@
+<window id="57">
+	<defaultcontrol>1</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+
+	<control type="multiimage">
+		<include>FullscreenDimensions</include>
+		<imagepath>backdrops/default_settings</imagepath>
+		<info>Skin.String(CustomSettings)</info>
+	</control>
+
+	<include>Furniture_SettingsBackPanel</include>
+
+	<control type="label">
+		<description>sectiontitle</description>
+		<label>PASSION XBMC</label>
+		<include>Objects_SettingsSectionTitle</include>
+	</control>
+	
+	<control type="label">
+		<description>sectiontitle</description>
+		<posx>308</posx>
+		<posy>70</posy>
+		<width>936</width>
+		<height>49</height>
+		<label>31231</label>
+		<textcolor>FFbec0c2</textcolor>
+		<include>Animation_CommonFadeOpenClose</include>
+		<font>Font_SettingsSectionTitle</font>
+	</control>
+
+
+	<control type="group">
+		<include>Settings_ButtonGroupDimensionsXBMC</include>
+		<include>Animation_CommonFade</include>
+
+
+
+		<control type="button" id="1">
+			<description>Home</description>
+			<posy>0</posy>
+			<label>31234</label>
+			<include>Objects_SettingsSectionMenuButton</include>
+			<onup>5</onup>
+			<ondown>2</ondown>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<visible allowhiddenfocus="true">![Control.HasFocus(1) | ControlGroup(10).HasFocus]</visible>
+		</control>
+		<control type="button" id="1">
+			<description>Home</description>
+			<posy>0</posy>
+			<label>31234</label>
+			<include>Objects_SettingsSectionMenuButtonFocused</include>
+			<onup>5</onup>
+			<ondown>8</ondown>
+			<onleft>10</onleft>
+			<onright>10</onright>
+			<visible>Control.HasFocus(1) | ControlGroup(10).HasFocus</visible>
+		</control>
+		<control type="label">
+			<description>Home</description>
+			<posy>32</posy>
+			<label>31235</label>
+			<textcolor>FFf5f5f5</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>![Control.HasFocus(1) | ControlGroup(10).HasFocus]</visible>
+		</control>
+		<control type="label">
+			<description>Home</description>
+			<posy>32</posy>
+			<label>31235</label>
+			<textcolor>FF262728</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>Control.HasFocus(1) | ControlGroup(10).HasFocus</visible>
+		</control>
+
+		<control type="button" id="2">
+			<posy>58</posy>
+			<label>genre</label>
+			<include>Objects_SettingsSectionMenuButton</include>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<onclick>SetFocus(600)</onclick>
+			<visible allowhiddenfocus="true">![Control.HasFocus(2) | ControlGroup(11).HasFocus]</visible>
+		</control>
+		<control type="button" id="2">
+			<posy>58</posy>
+			<label>genre</label>
+			<include>Objects_SettingsSectionMenuButtonFocused</include>
+			<onup>1</onup>
+			<ondown>3</ondown>
+			<onleft>11</onleft>
+			<onright>11</onright>
+			<visible>Control.HasFocus(2) | ControlGroup(11).HasFocus</visible>
+		</control>
+		<control type="label">
+			<description>genre</description>
+			<posy>90</posy>
+			<label>Options avancées</label>
+			<textcolor>FFf5f5f5</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>![Control.HasFocus(2) | ControlGroup(11).HasFocus]</visible>
+		</control>
+		<control type="label">
+			<description>genre</description>
+			<posy>90</posy>
+			<label>Options avancées</label>
+			<textcolor>FF262728</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>Control.HasFocus(2) | ControlGroup(11).HasFocus</visible>
+		</control>
+
+		<control type="button" id="3">
+			<description>flags management</description>
+			<posy>116</posy>
+			<label>SHOWCASE / MK2</label>
+			<include>Objects_SettingsSectionMenuButton</include>
+			<onclick>SetFocus(12)</onclick>
+			<onup>2</onup>
+			<ondown>4</ondown>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<visible allowhiddenfocus="true">![Control.HasFocus(3) | ControlGroup(12).HasFocus]</visible>
+		</control>
+		<control type="button" id="3">
+			<description>Purge</description>
+			<posy>116</posy>
+			<label>SHOWCASE / MK2</label>
+			<include>Objects_SettingsSectionMenuButtonFocused</include>
+			<onup>2</onup>
+			<ondown>4</ondown>
+			<onleft>12</onleft>
+			<onright>12</onright>
+			<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus</visible>
+		</control>
+		<control type="label">
+			<description>My Weather Sub Unfocused</description>
+			<posy>148</posy>
+			<label>Options avancées</label>
+			<textcolor>FFf5f5f5</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>![Control.HasFocus(3) | ControlGroup(12).HasFocus]</visible>
+		</control>
+		<control type="label">
+			<description>My Weather Sub Unfocused</description>
+			<posy>148</posy>
+			<label>Options avancées</label>
+			<textcolor>FF262728</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus</visible>
+		</control>
+
+		<control type="button" id="4">
+			<posy>174</posy>
+			<label>ANCIEN MULTIPLEX</label>
+			<include>Objects_SettingsSectionMenuButton</include>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<onleft>14</onleft>
+			<onright>14</onright>
+			<onclick>SetFocus(14)</onclick>
+			<visible allowhiddenfocus="true">![Control.HasFocus(4) | ControlGroup(14).HasFocus]</visible>
+		</control>
+		<control type="button" id="4">
+			<posy>174</posy>
+			<label>ANCIEN MULTIPLEX</label>
+			<include>Objects_SettingsSectionMenuButtonFocused</include>
+			<onup>3</onup>
+			<ondown>5</ondown>
+			<onleft>14</onleft>
+			<onright>14</onright>
+			<visible>Control.HasFocus(4) | ControlGroup(14).HasFocus</visible>
+		</control>
+		<control type="label">
+			<description>Sub menu</description>
+			<posy>206</posy>
+			<label>Options avancées</label>
+			<textcolor>FFf5f5f5</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>![Control.HasFocus(4) | ControlGroup(14).HasFocus]</visible>
+		</control>
+		<control type="label">
+			<description>Sub menu</description>
+			<posy>206</posy>
+			<label>Options avancées</label>
+			<textcolor>FF262728</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>Control.HasFocus(4) | ControlGroup(14).HasFocus</visible>
+		</control>
+		
+		<control type="button" id="5">
+			<description>flags management</description>
+			<posy>232</posy>
+			<label>EPISODES</label>
+			<include>Objects_SettingsSectionMenuButton</include>
+			<onclick>SetFocus(15)</onclick>
+			<onleft>15</onleft>
+			<onright>15</onright>
+			<onup>4</onup>
+			<ondown>1</ondown>
+			<visible allowhiddenfocus="true">![Control.HasFocus(5) | ControlGroup(15).HasFocus]</visible>
+		</control>
+		<control type="button">
+			<description>management</description>
+			<posy>232</posy>
+			<label>EPISODES</label>
+			<include>Objects_SettingsSectionMenuButtonFocused</include>
+			<onclick>SetFocus(15)</onclick>
+			<onleft>15</onleft>
+			<onright>15</onright>
+			<onup>4</onup>
+			<ondown>1</ondown>
+			<visible>Control.HasFocus(5) | ControlGroup(15).HasFocus</visible>
+		</control>
+		<control type="label">
+			<description>Backdrops Unfocused</description>
+			<posy>264</posy>
+			<label>Options avancées</label>
+			<textcolor>FFf5f5f5</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>![Control.HasFocus(5) | ControlGroup(15).HasFocus]</visible>
+		</control>
+		<control type="label">
+			<description>Backdrops Focused</description>
+			<posy>264</posy>
+			<label>Options avancées</label>
+			<textcolor>FF262728</textcolor>
+			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
+			<visible>Control.HasFocus(5) | ControlGroup(15).HasFocus</visible>
+		</control>
+	</control>
+
+	
+
+
+<!-- -->
+
+
+	<control type="grouplist" id="10">
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>10</onup>
+		<ondown>10</ondown>
+		<onleft>1</onleft>
+		<onright>1</onright>
+		<visible>Control.HasFocus(1) | ControlGroup(10).HasFocus</visible>
+		<control type="radiobutton" id="500">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Fonds météo en fonction des conditions actuelles (ne fonctionne pas)</label>
+<!--			<label>Weather Backdrop by Current Weather Conditions</label>-->
+			<onclick>Skin.ToggleSetting(CustomWeatherConditions)</onclick>
+			<selected>Skin.HasSetting(CustomWeatherConditions)</selected>
+		</control>			
+<!--		<control type="radiobutton" id="501">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Home menu slide animation $LOCALIZE[31077]/$LOCALIZE[351]...</label>
+			<onclick>Skin.ToggleSetting(CustomMenuanimation)</onclick>
+			<selected>!Skin.HasSetting(CustomMenuanimation)</selected>
+		</control> -->
+	</control>
+	
+	<control type="grouplist" id="11">
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>11</onup>
+		<ondown>11</ondown>
+		<onleft>2</onleft>
+		<onright>2</onright>
+		<visible>Control.HasFocus(2) | ControlGroup(11).HasFocus</visible>
+		<control type="radiobutton" id="700">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Affichage des images de genre</label>
+<!--			<label>Movie genre Icons on/off</label>-->
+			<onclick>Skin.ToggleSetting(moviegenre_onoff)</onclick>
+			<selected>!Skin.HasSetting(moviegenre_onoff)</selected>
+		</control>
+
+		<control type="radiobutton" id="701">
+			<visible>!Skin.HasSetting(moviegenre_onoff)</visible>
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Utiliser l'image par défaut</label>
+<!--			<label>Movie Genre fallback image on/off</label> -->
+			<onclick>Skin.ToggleSetting(moviegenre_default_onoff)</onclick>
+			<selected>!Skin.HasSetting(moviegenre_default_onoff)</selected>
+		</control>
+<!--		<control type="radiobutton" id="702">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Utilisation des fanarts</label>
+<!--			<label>Movie Genre fanart image on/off</label>--
+			<onclick>Skin.ToggleSetting(genre_fanart_onoff)</onclick>
+			<selected>skin.HasSetting(genre_fanart_onoff)</selected>
+		</control>			
+<!--		<control type="radiobutton" id="703">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>music genre Icons on/off</label>
+			<onclick>Skin.ToggleSetting(musicgenre_onoff)</onclick>
+			<selected>!Skin.HasSetting(musicgenre_onoff)</selected>
+		</control>
+		<control type="radiobutton" id="704">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>music Genre fanart image on/off</label>
+			<onclick>Skin.ToggleSetting(musicgenre_fanart_onoff)</onclick>
+			<selected>skin.HasSetting(musicgenre_fanart_onoff)</selected>
+		</control> -->
+	</control>
+	
+	<control type="grouplist" id="12">
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>12</onup>
+		<ondown>12</ondown>
+		<onleft>3</onleft>
+		<onright>3</onright>
+		<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus</visible>
+		<control type="radiobutton" id="449">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Activation du thème Sombre</label>
+			<onclick>Skin.Togglesetting(darkshowcase)</onclick>
+			<selected>Skin.HasSetting(darkshowcase)</selected>
+		</control>
+		<control type="radiobutton" id="450">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, codec vidéo, résolution, format audio</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,codec)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,codec) + Skin.String(movieshowcaseflags_pos3,resolution) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="451">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, durée, format audio, codec vidéo</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,audio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,codec)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,duration) + Skin.String(movieshowcaseflags_pos3,audio) + Skin.String(movieshowcaseflags_pos4,codec)</selected>
+		</control>
+		<control type="radiobutton" id="452">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, durée, résolution, format audio</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,duration) + Skin.String(movieshowcaseflags_pos3,resolution) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="453">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, évaluation, durée, codec vidéo</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,duration)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,codec)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,rating) + Skin.String(movieshowcaseflags_pos3,duration) + Skin.String(movieshowcaseflags_pos4,codec)</selected>
+		</control>
+		<control type="radiobutton" id="454">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, évaluation, format audio, résolution</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,audio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,resolution)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,rating) + Skin.String(movieshowcaseflags_pos3,audio) + Skin.String(movieshowcaseflags_pos4,resolution)</selected>
+		</control>
+		<control type="radiobutton" id="455">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, source, codec vidéo, format audio</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,codec)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,source) + Skin.String(movieshowcaseflags_pos3,codec) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="456">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, source, durée, évaluation</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,duration)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,rating)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,source) + Skin.String(movieshowcaseflags_pos3,duration) + Skin.String(movieshowcaseflags_pos4,rating)</selected>
+		</control>	
+		<control type="radiobutton" id="457">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, source, résolution, format audio   (disposition originale)</label>
+			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(movieshowcaseflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
+			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,source) + Skin.String(movieshowcaseflags_pos3,resolution) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
+		</control>	
+	</control>
+
+
+	<control type="grouplist" id="14">
+		<visible>Control.HasFocus(4) | ControlGroup(14).HasFocus</visible>
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>14</onup>
+		<ondown>14</ondown>
+		<onleft>4</onleft>
+		<onright>4</onright>
+		<usecontrolcoords>true</usecontrolcoords>
+		<control type="radiobutton" id="470">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, codec vidéo, résolution, format audio</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,codec)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,codec) + Skin.String(multiplexmediaflags_pos3,resolution) + Skin.String(multiplexmediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="471">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, durée, format audio, codec vidéo</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,audio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,codec)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,duration) + Skin.String(multiplexmediaflags_pos3,audio) + Skin.String(multiplexmediaflags_pos4,codec)</selected>
+		</control>
+		<control type="radiobutton" id="472">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, durée, résolution, format audio</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,duration)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,duration) + Skin.String(multiplexmediaflags_pos3,resolution) + Skin.String(multiplexmediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="473">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, évaluation, durée, codec vidéo</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,duration)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,codec)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,rating) + Skin.String(multiplexmediaflags_pos3,duration) + Skin.String(multiplexmediaflags_pos4,codec)</selected>
+		</control>
+		<control type="radiobutton" id="474">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, évaluation, format audio, résolution</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,audio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,resolution)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,rating) + Skin.String(multiplexmediaflags_pos3,audio) + Skin.String(multiplexmediaflags_pos4,resolution)</selected>
+		</control>
+		<control type="radiobutton" id="475">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, source, codec vidéo, format audio</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,codec)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,source) + Skin.String(multiplexmediaflags_pos3,codec) + Skin.String(multiplexmediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="476">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, source, durée, évaluation</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,duration)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,rating)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,source) + Skin.String(multiplexmediaflags_pos3,duration) + Skin.String(multiplexmediaflags_pos4,rating)</selected>
+		</control>
+		<control type="radiobutton" id="477">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>studio, source, résolution, format audio   (disposition originale)</label>
+			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(multiplexmediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(multiplexmediaflags_pos_set)</onclick>
+			<selected>Skin.String(multiplexmediaflags_pos1,studio) + Skin.String(multiplexmediaflags_pos2,source) + Skin.String(multiplexmediaflags_pos3,resolution) + Skin.String(multiplexmediaflags_pos4,audio)</selected>
+		</control>
+	</control>
+	<control type="grouplist" id="15">
+		<include>Objects_SettingsControlAreaVars</include>
+		<onup>15</onup>
+		<ondown>15</ondown>
+		<onleft>5</onleft>
+		<onright>5</onright>
+		<visible>Control.HasFocus(5) | ControlGroup(15).HasFocus</visible>
+		<control type="radiobutton" id="490">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>chaine, codec vidéo, résolution, format audio</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,codec)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,codec) + Skin.String(episodemediaflags_pos3,resolution) + Skin.String(episodemediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="491">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>chaine, évaluation, codec vidéo, format audio</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,codec)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,codec) + Skin.String(episodemediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="492">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>chaine, évaluation, résolution, format audio</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,resolution) + Skin.String(episodemediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="493">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>chaine, source, résolution, format audio</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,source)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,resolution)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,source) + Skin.String(episodemediaflags_pos3,resolution) + Skin.String(episodemediaflags_pos4,audio)</selected>
+		</control>
+		<control type="radiobutton" id="494">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>résolution, évaluation, codec vidéo, format audio</label>
+			<onclick>Skin.SetString(episodemediaflags_pos1,resolution)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos3,codec)</onclick>
+			<onclick>Skin.SetString(episodemediaflags_pos4,audio)</onclick>
+			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
+			<selected>Skin.String(episodemediaflags_pos1,resolution) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,codec) + Skin.String(episodemediaflags_pos4,audio)</selected>
+		</control>
+		
+		
+	</control>
+	
+
+
+	<include>Furniture_SettingsFrontPanel</include>
+
+	<include>Background_ContextBlack</include>
+	<include>Furniture_Debug</include>
+	
+	</controls>
+</window>
