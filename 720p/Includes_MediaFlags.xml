@@ -3389,22 +3389,23 @@
 		<height>72</height>
 	</include>
 	<include name="Furniture_EpisodeMediaFlags">
-		<include condition="!Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlagsVars</include>
-		<include condition="Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlagsVars</include>
+<!--		<include condition="!Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlagsVars</include>
+		<include condition="Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlagsVars</include>-->
+		<include>Furniture_EpisodeLowerMediaFlagsVars</include>
 		<control type="group">
 			<visible>Window.IsActive(25) + [Control.IsVisible(57) | [Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)]] + !Skin.HasSetting(nomediaflags) + Container.Content(episodes)</visible>
 			<include>Animation_CommonFade</include>		
 			<control type="group">
 <!-- position mod -->
 				<visible>Skin.String(episodemediaflags_pos1,network) | Skin.String(episodemediaflags_pos2,network) | Skin.String(episodemediaflags_pos3,network) | Skin.String(episodemediaflags_pos4,network)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,network) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
+<!--				<include condition="Skin.String(episodemediaflags_pos1,network) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
 				<include condition="Skin.String(episodemediaflags_pos2,network) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,network) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,network) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>
-				<include condition="Skin.String(episodemediaflags_pos1,network) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,network) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,network) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,network) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos4,network) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>-->
+				<include condition="Skin.String(episodemediaflags_pos1,network)">Furniture_EpisodeLowerMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,network)">Furniture_EpisodeLowerMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,network)">Furniture_EpisodeLowerMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,network)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<texture>flags/tv/default.png</texture>
@@ -3715,14 +3716,14 @@
 <!-- position mod -->
 				<visible>Skin.String(episodemediaflags_pos1,source) | Skin.String(episodemediaflags_pos2,source) | Skin.String(episodemediaflags_pos3,source) | Skin.String(episodemediaflags_pos4,source)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,source) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
+<!--				<include condition="Skin.String(episodemediaflags_pos1,source) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
 				<include condition="Skin.String(episodemediaflags_pos2,source) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,source) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,source) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>
-				<include condition="Skin.String(episodemediaflags_pos1,source) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,source) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,source) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,source) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos4,source) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>-->
+				<include condition="Skin.String(episodemediaflags_pos1,source)">Furniture_EpisodeLowerMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,source)">Furniture_EpisodeLowerMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,source)">Furniture_EpisodeLowerMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,source)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -3780,14 +3781,14 @@
 <!-- position mod -->
 				<visible>Skin.String(episodemediaflags_pos1,resolution) | Skin.String(episodemediaflags_pos2,resolution) | Skin.String(episodemediaflags_pos3,resolution) | Skin.String(episodemediaflags_pos4,resolution)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,resolution) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
+<!--				<include condition="Skin.String(episodemediaflags_pos1,resolution) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
 				<include condition="Skin.String(episodemediaflags_pos2,resolution) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,resolution) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,resolution) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>
-				<include condition="Skin.String(episodemediaflags_pos1,resolution) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,resolution) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,resolution) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,resolution) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos4,resolution) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>-->
+				<include condition="Skin.String(episodemediaflags_pos1,resolution)">Furniture_EpisodeLowerMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,resolution)">Furniture_EpisodeLowerMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,resolution)">Furniture_EpisodeLowerMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,resolution)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -3845,14 +3846,14 @@
 <!-- position mod -->
 				<visible>Skin.String(episodemediaflags_pos1,audio) | Skin.String(episodemediaflags_pos2,audio) | Skin.String(episodemediaflags_pos3,audio) | Skin.String(episodemediaflags_pos4,audio)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,audio) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
+<!--			<include condition="Skin.String(episodemediaflags_pos1,audio) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
 				<include condition="Skin.String(episodemediaflags_pos2,audio) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,audio) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,audio) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>
-				<include condition="Skin.String(episodemediaflags_pos1,audio) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,audio) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,audio) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,audio) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos4,audio) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>-->
+				<include condition="Skin.String(episodemediaflags_pos1,audio)">Furniture_EpisodeLowerMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,audio)">Furniture_EpisodeLowerMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,audio)">Furniture_EpisodeLowerMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,audio)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
 					<include>Furniture_EpisodeMediaFlags</include>
@@ -3928,14 +3929,14 @@
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
 				<control type="group">
 					<visible>Skin.String(episodemediaflags_pos1,codec) | Skin.String(episodemediaflags_pos2,codec) | Skin.String(episodemediaflags_pos3,codec) | Skin.String(episodemediaflags_pos4,codec)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,codec) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
+<!--				<include condition="Skin.String(episodemediaflags_pos1,codec) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
 				<include condition="Skin.String(episodemediaflags_pos2,codec) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,codec) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,codec) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>
-				<include condition="Skin.String(episodemediaflags_pos1,codec) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,codec) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,codec) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,codec) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos4,codec) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>-->
+				<include condition="Skin.String(episodemediaflags_pos1,codec)">Furniture_EpisodeLowerMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,codec)">Furniture_EpisodeLowerMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,codec)">Furniture_EpisodeLowerMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,codec)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 					<control type="image" id="85">
 						<include>Furniture_EpisodeMediaFlags</include>
 						<texture>flags/codecs/divx.png</texture>
@@ -3963,14 +3964,14 @@
 				<posy>542</posy>
 				<visible>Skin.String(episodemediaflags_pos1,rating) | Skin.String(episodemediaflags_pos2,rating) | Skin.String(episodemediaflags_pos3,rating) | Skin.String(episodemediaflags_pos4,rating)</visible>
 				<visible>!Skin.HasSetting(nomediaflags)</visible>
-				<include condition="Skin.String(episodemediaflags_pos1,rating) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
+<!--				<include condition="Skin.String(episodemediaflags_pos1,rating) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position1</include>
 				<include condition="Skin.String(episodemediaflags_pos2,rating) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position2</include>
 				<include condition="Skin.String(episodemediaflags_pos3,rating) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,rating) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include>
-				<include condition="Skin.String(episodemediaflags_pos1,rating) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position1</include>
-				<include condition="Skin.String(episodemediaflags_pos2,rating) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position2</include>
-				<include condition="Skin.String(episodemediaflags_pos3,rating) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position3</include>
-				<include condition="Skin.String(episodemediaflags_pos4,rating) + Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeLowerMediaFlags_Position4</include>
+				<include condition="Skin.String(episodemediaflags_pos4,rating) + !Skin.HasSetting(lowerepisodemediaflags)">Furniture_EpisodeMediaFlags_Position4</include><-->
+				<include condition="Skin.String(episodemediaflags_pos1,rating)">Furniture_EpisodeLowerMediaFlags_Position1</include>
+				<include condition="Skin.String(episodemediaflags_pos2,rating)">Furniture_EpisodeLowerMediaFlags_Position2</include>
+				<include condition="Skin.String(episodemediaflags_pos3,rating)">Furniture_EpisodeLowerMediaFlags_Position3</include>
+				<include condition="Skin.String(episodemediaflags_pos4,rating)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 				<description>rating</description>
 				<control type="label">
 					<align>left</align>
