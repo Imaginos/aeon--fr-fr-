@@ -35,7 +35,7 @@
 		<include>Conditions_HiddenByInfoPages</include>
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
-
+		<include>ListFade</include>
 		<include>Viewtype_Wall</include>
 		<include>Furniture_WallTime</include>
 		<include>Furniture_WallRSS</include>		
@@ -98,7 +98,7 @@
 					<usealttexture>Skin.HasSetting(nomoviefanart)</usealttexture>
 					<onclick>Skin.SetBool(nomoviefanart)</onclick>
 					<altclick>Skin.Reset(nomoviefanart)</altclick>
-					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + [Control.IsVisible(57) | Control.IsVisible(52)]</visible>
+					<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + [Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)]</visible>
 				</control>
 				
 				<control type="togglebutton" id="902">
@@ -112,8 +112,6 @@
 				
 				<include condition="!Skin.HasSetting(nomediaflagsbutton)">Objects_FlagsButton</include>
 
-				<include condition="!Skin.HasSetting(nolightnightbuttons)">Objects_LightNightButtons</include>
-				
 				<include>Objects_WallGridButton</include>
 				
 				<include>Objects_WallBackdropButton</include>
@@ -156,10 +154,12 @@
 		
 		<include>Viewtype_Showcase</include>
 		<include>Viewtype_List</include>
-		<include>Viewtype_Multiplex</include>		
+		<include condition="!Skin.HasSetting(oldmultiplex)">Viewtype_Multiplex</include>
+		<include condition="Skin.HasSetting(oldmultiplex)">Viewtype_MultiplexOld</include>
 		
 	</control>
 
+	<include condition="Skin.HasSetting(videomovies)">Furniture_ShowcaseMediaFlags</include>	
 	<include>ViewChange</include>
 	<include>Background_ContextBlack</include>
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>

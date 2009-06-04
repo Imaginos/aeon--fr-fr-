@@ -19,9 +19,10 @@
 <include file="Viewtype_Showcase.xml" />
 <include file="Viewtype_StripShow.xml" />
 <include file="Viewtype_Multiplex.xml" />
+<include file="Viewtype_MultiplexOld.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_Wall.xml" />
-<include file="Includes_moviegenre.xml" />
+<include file="Includes_moviegenre.xml" /> <!-- aeon passion mod -->
 
 <!-- Text colours ================================== -->
 

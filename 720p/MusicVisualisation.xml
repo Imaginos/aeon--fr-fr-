@@ -172,7 +172,7 @@
 			<texture>osd/fullscreen_bottom.png</texture>
 			<visible>Player.HasAudio</visible>
 		</control>
-		
+<!-- aeon passion mod BEGIN -->
 		<control type="image">
 			<posx>16</posx>
 			<posy>16</posy>
@@ -181,17 +181,27 @@
 			<info>MusicPlayer.Cover</info>
 			<bordertexture border="-1">osd/osd_musicthumbframe.png</bordertexture>				
 		</control>
-
-		<control type="image" id="1">
+		<control type="label">
 			<description>Rating image</description>
-			<posx>1125</posx>
-			<posy>63</posy>
-			<width>125</width>
+			<posx>140</posx>
+			<posy>95</posy>
+			<width>50</width>
 			<height>25</height>
-			<info>Player.StarRating</info>
-			<aspectratio align="right">keep</aspectratio>
+			<label>$INFO[MusicPlayer.Year]</label>
+			<aspectratio align="left">keep</aspectratio>
+			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>		
 		</control>
-
+		<control type="label">
+			<description>Rating image</description>
+			<posx>140</posx>
+			<posy>120</posy>
+			<width>300</width>
+			<height>25</height>
+			<label>$INFO[MusicPlayer.Genre]</label>
+			<aspectratio align="left">keep</aspectratio>
+			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>		
+		</control>
+<!-- aeon passion mod END -->
 		<control type="label">
 			<posx>0</posx>
 			<posy>45</posy>

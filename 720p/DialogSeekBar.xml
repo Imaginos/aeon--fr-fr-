@@ -55,7 +55,7 @@
 		<font>Font_OSDSeek</font>
 		<textcolor>FF363636</textcolor>
 		<include>Animation_CommonFade</include>	
-		<label>PAUSE</label>
+		<label>PAUSE</label> <!-- aeon passion mod -->
 		<visible>Player.Paused</visible>
 	</control>	
 	
@@ -170,8 +170,7 @@
 		<colordiffuse>d0FFFFFF</colordiffuse>
 		<label>$INFO[VideoPlayer.Time] ($INFO[System.Time])</label>
 	</control>
-
-	<!-- Hitcher Movie title to the seekbar -->	
+<!-- aeon passion mod BEGIN -->
 	<control type="label">
 		<posx>0</posx>
 		<posy>58</posy>
@@ -180,7 +179,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>Font_OSDMusicArtist</font>
-		<label>$INFO[VideoPlayer.season].$INFO[VideoPlayer.episode] - $INFO[VideoPlayer.title]</label>
+		<label>$INFO[VideoPlayer.season].$INFO[VideoPlayer.episode]: $INFO[VideoPlayer.title]</label>
 		<visible>!IsEmpty(VideoPlayer.season)</visible>
 	</control>
 	<control type="label">
@@ -194,8 +193,7 @@
 		<label>$INFO[VideoPlayer.title]</label>
 		<visible>IsEmpty(VideoPlayer.season)</visible>
 	</control>
-<!-- End -->
-
+<!-- aeon passion mod END -->
 	<control type="label">
 		<posx>1168</posx>
 		<posy>60</posy>
