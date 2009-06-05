@@ -404,12 +404,20 @@
 <!-- aeon passion mod -->
 			<control type="label">
 				<posx>75</posx>
-				<posy>25</posy>
+				<posy>24</posy>
 				<width>1130</width>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<include>ShowcaseMainLabelWide</include>
-				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)] | Container.Content(seasons)</visible>
-			</control>			
+				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)]</visible>
+			</control>
+			<control type="label">
+				<posx>75</posx>
+				<posy>35</posy>
+				<width>1130</width>
+				<label>$INFO[ListItem.TVShowTitle]</label>
+				<include>ShowcaseMainLabelWide</include>
+				<visible>Container.Content(seasons)</visible>
+			</control>
 <!-- aeon passion mod -->
 			<control type="group">
 				<posx>105</posx>
