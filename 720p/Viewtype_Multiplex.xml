@@ -406,7 +406,7 @@
 				<posx>75</posx>
 				<posy>24</posy>
 				<width>1130</width>
-				<label>$INFO[ListItem.TVShowTitle]</label>
+				<label>$INFO[ListItem.Title]</label>
 				<include>ShowcaseMainLabelWide</include>
 				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)]</visible>
 			</control>
@@ -1015,16 +1015,17 @@
 				<include>ShowcaseMainLabelWide</include>
 				<visible>!Container.Content(episodes) + [[!Container.Content(movies) | Window.IsActive(24)] | [Container.Content(movies) + Skin.HasSetting(nomediaflags)]]</visible>					
 			</control>
-<!-- aeon passion mod -->
+<!-- aeon passion mod -->	
 			<control type="label">
-				<posy>663</posy>
-				<label>[UPPERCASE]$LOCALIZE[31062] $INFO[ListItem.Season] : $LOCALIZE[31063] $INFO[ListItem.Episode][/UPPERCASE]</label>
-				<include>ShowcaseDetailLabel</include>
-				<visible>Container.Content(episodes)</visible>					
-			</control>		
-			<control type="label">
-				<label>[UPPERCASE]$INFO[ListItem.Title][/UPPERCASE]</label>
+				<posy>670</posy>
+				<label>[UPPERCASE]$INFO[ListItem.TVShowTitle][/UPPERCASE]</label>
 				<include>ShowcaseMainLabelWide</include>
+				<visible>Container.Content(episodes)</visible>					
+			</control>	
+			<control type="label">
+				<posy>695</posy>
+				<label>[UPPERCASE]$LOCALIZE[31062] $INFO[ListItem.Season] . $LOCALIZE[31063] $INFO[ListItem.Episode][/UPPERCASE]</label>
+				<include>ShowcaseDetailLabel</include>
 				<visible>Container.Content(episodes)</visible>					
 			</control>		
 <!-- aeon passion mod -->			
