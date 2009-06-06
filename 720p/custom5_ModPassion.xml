@@ -312,11 +312,17 @@
 		<onleft>3</onleft>
 		<onright>3</onright>
 		<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus</visible>
-		<control type="radiobutton" id="449">
+<!--		<control type="radiobutton" id="448">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>Activation du thème Sombre</label>
 			<onclick>Skin.Togglesetting(darkshowcase)</onclick>
 			<selected>Skin.HasSetting(darkshowcase)</selected>
+		</control>-->
+		<control type="radiobutton" id="449">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>31259</label>
+			<onclick>Skin.ToggleSetting(nodefaultflags)</onclick>
+			<selected>!Skin.HasSetting(nodefaultflags)</selected>
 		</control>
 		<control type="radiobutton" id="450">
 			<include>Objects_SettingsDefaultRadioButton</include>
