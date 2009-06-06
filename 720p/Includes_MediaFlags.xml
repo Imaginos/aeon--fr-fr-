@@ -36,25 +36,20 @@
 <!-- mod for flag positions in episode view -->
 	<include name="Furniture_EpisodeLowerMediaFlags_Position1">
 		<posx>80</posx>
-		<posy>580</posy>
-		<colordiffuse>94FFFFFF</colordiffuse>
-		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	<include name="Furniture_EpisodeLowerMediaFlags_Position2">
 		<posx>190</posx>
-		<posy>580</posy>
-		<colordiffuse>94FFFFFF</colordiffuse>
-		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	<include name="Furniture_EpisodeLowerMediaFlags_Position3">
 		<posx>975</posx>
-		<posy>580</posy>
-		<colordiffuse>94FFFFFF</colordiffuse>
-		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
 	<include name="Furniture_EpisodeLowerMediaFlags_Position4">
 		<posx>1085</posx>
-		<posy>580</posy>
+	</include>
+	<include name="Furniture_EpisodeMediaFlagsVars">
+		<width>110</width>
+		<height>72</height>
+ 		<posy>580</posy>
 		<colordiffuse>94FFFFFF</colordiffuse>
 		<visible>!Skin.HasSetting(nomediaflags)</visible>
 	</include>
@@ -3354,8 +3349,6 @@
 	</include>	
 
 	<include name="Furniture_EpisodeMediaFlags">
-		<width>110</width>
-		<height>72</height>
 		<control type="group">
 			<visible>Window.IsActive(25) + [Control.IsVisible(57) | [Control.IsVisible(52) + !Skin.HasSetting(oldmultiplex)]] + !Skin.HasSetting(nomediaflags) + Container.Content(episodes)</visible>
 			<include>Animation_CommonFade</include>		
@@ -3373,299 +3366,299 @@
 				</control>	
 <!-- Dual HD/SD flag networks -->	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/abc.png</texture>
 					<visible>substring(listitem.director,netabc)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/abc_hd.png</texture>
 					<visible>substring(listitem.director,netabc)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/cbs.png</texture>
 					<visible>substring(listitem.director,netCBS)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/cbs_hd.png</texture>
 					<visible>substring(listitem.director,netCBS)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/lifetime.png</texture>
 					<visible>substring(listitem.director,netLifetime)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/lifetime_hd.png</texture>
 					<visible>substring(listitem.director,netLifetime)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/hbo.png</texture>
 					<visible>substring(listitem.director,netHBO)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/hbo_hd.png</texture>
 					<visible>substring(listitem.director,netHBO)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/fox.png</texture>
 					<visible>substring(listitem.director,netFox)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/fox_hd.png</texture>
 					<visible>substring(listitem.director,netFox)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/showtime.png</texture>
 					<visible>substring(listitem.director,netshowtime)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/showtime_hd.png</texture>
 					<visible>substring(listitem.director,netshowtime)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/cartoon.png</texture>
 					<visible>substring(listitem.director,netCartoon Network)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/cartoon_network_hd.png</texture>
 					<visible>substring(listitem.director,netCartoon Network)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/scifi.png</texture>
 					<visible>substring(listitem.director,SciFi)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/scifihd.png</texture>
 					<visible>substring(listitem.director,SciFi)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/nbc.png</texture>
 					<visible>substring(listitem.director,netNBC)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/nbc_hd.png</texture>
 					<visible>substring(listitem.director,netNBC)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/bbc.png</texture>
 					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netBBC One)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/bbc_hd.png</texture>
 					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netBBC One)</visible>
 				</control>					
 <!-- End Dual HD/SD flag networks -->
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/a&e.png</texture>
 					<visible>substring(listitem.director,netA&E)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/abcfamily.png</texture>
 					<visible>substring(listitem.director,netABC Family)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/adultswim.png</texture>
 					<visible>substring(listitem.director,Adult Swim)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/amc.png</texture>
 					<visible>substring(listitem.director,netAMC)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/animalplanet.png</texture>
 					<visible>substring(listitem.director,netAnimal Planet)</visible>
 				</control>					
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/bbc_three.png</texture>
 					<visible>substring(listitem.director,netbbc-3)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/bet.png</texture>
 					<visible>substring(listitem.director,netBET)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/bravo.png</texture>
 					<visible>substring(listitem.director,netBravo)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/channel4uk.png</texture>
 					<visible>substring(listitem.director,netChannel 4)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/comedycentral.png</texture>
 					<visible>substring(listitem.director,netComedy Central)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/cw.png</texture>
 					<visible>substring(listitem.director,netCW)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/discovery.png</texture>
 					<visible>substring(listitem.director,netDiscovery)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/disney.png</texture>
 					<visible>substring(listitem.director,netDisney)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/espn.png</texture>
 					<visible>substring(listitem.director,netESPN)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/foodnetwork.png</texture>
 					<visible>substring(listitem.director,netFood Network)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/fx.png</texture>
 					<visible>substring(listitem.director,netFX)</visible>
 				</control>					
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/history.png</texture>
 					<visible>substring(listitem.director,netHistory)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/msnbc.png</texture>
 					<visible>substring(listitem.director,netMSNBC)</visible>
 				</control>					
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/mtv.png</texture>
 					<visible>substring(listitem.director,netMTV)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/mytv.png</texture>
 					<visible>substring(listitem.director,netMY)</visible>
 				</control>					
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/nickelodeon.png</texture>
 					<visible>substring(listitem.director,netNickelodeon) | substring(listitem.director,netNicktoons)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/pbs.png</texture>
 					<visible>substring(listitem.director,netPBS)</visible>
 				</control>		
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/space.png</texture>
 					<visible>substring(listitem.director,netSpace)</visible>
 				</control>					
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/spike.png</texture>
 					<visible>substring(listitem.director,netSpike)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/syndicated.png</texture>
 					<visible>substring(listitem.director,netSyndicated)</visible>
 				</control>
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/tbs.png</texture>
 					<visible>substring(listitem.director,netTBS)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/tnt.png</texture>
 					<visible>substring(listitem.director,netTNT)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/upn.png</texture>
 					<visible>substring(listitem.director,netUPN)</visible>
 				</control>	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/usa.png</texture>
 					<visible>substring(listitem.director,netUSA)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/versus.png</texture>
 					<visible>substring(listitem.director,netVersus)</visible>
 				</control>				
 				<control type="image" id="91">
-				<include>Furniture_EpisodeMediaFlags</include>
+				<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/vh1.png</texture>
 					<visible>substring(listitem.director,netVH1)</visible>
 				</control>				
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/wgn.png</texture>
 					<visible>substring(listitem.director,netWGN)</visible>
 				</control>
 <!-- For specific shows -->
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/tv/babylonian.png</texture>
 					<visible>substring(listitem.director,netSyndicated) + substring(listitem.TVShowTitle,Babylon)</visible>
 				</control> 
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/studios/marvel.png</texture>
 					<visible>substring(listitem.director,netMarvel)</visible>
 				</control>  	
 				<control type="image" id="91">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/studios/dc.png</texture>
 					<visible>substring(listitem.director,netDCComics)</visible>
 				</control>  								
@@ -3682,52 +3675,52 @@
 				<include condition="Skin.String(episodemediaflags_pos4,source)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/defaultsource.png</texture>
 					<visible>!Control.IsVisible(92) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>	
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/hddvd.png</texture>
 					<visible>substring(listitem.filename,hddvd)</visible>
 				</control>
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/bluray.png</texture>
 					<visible>substring(listitem.filename,bluray) | substring(listitem.filename,blu-ray) | substring(listitem.filename,BRRip)</visible>
 				</control>
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/dvd.png</texture>
 					<visible>substring(listitem.filename,sddvd) | substring(listitem.filename,dvdrip)</visible>
 				</control>
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/hdtv.png</texture>
 					<visible>substring(listitem.filename,hdtv) | substring(listitem.filename,pdtv)</visible>
 				</control>	
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/sdtv.png</texture>
 					<visible>substring(listitem.filename,sdtv) | substring(listitem.filename,tvrip)</visible>
 				</control>	
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/wmvhd.png</texture>
 					<visible>substring(listitem.studio,WVC1)</visible>
 				</control>
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/x264.png</texture>
 					<visible>substring(listitem.studio,V_MPEG4)</visible>
 				</control>
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/divx.png</texture>
 					<visible>substring(listitem.director,DX50)</visible>
 				</control>
 				<control type="image" id="92">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/sources/xvid.png</texture>
 					<visible>substring(listitem.director,XVID)</visible>
 				</control>	
@@ -3743,52 +3736,52 @@
 				<include condition="Skin.String(episodemediaflags_pos4,resolution)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/defaultscreen.png</texture>
 					<visible>!Control.IsVisible(93) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/sd.png</texture>
 					<visible>substring(listitem.director,sdp)</visible>
                 </control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/480p.png</texture>
                     <visible>substring(listitem.director,480p)</visible>
                 </control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/576p.png</texture>
                     <visible>substring(listitem.director,576p)</visible>
                 </control>				
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/720p.png</texture>
                     <visible>substring(listitem.director,720p)</visible>
                 </control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/1080p.png</texture>
                     <visible>substring(listitem.director,1080p)</visible>
                 </control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/480i.png</texture>
                     <visible>substring(listitem.director,480i)</visible>
                 </control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/576i.png</texture>
                     <visible>substring(listitem.director,576i)</visible>
                 </control>				
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/720i.png</texture>
                     <visible>substring(listitem.director,720i)</visible>
                 </control>
                 <control type="image" id="93">
-                    <include>Furniture_EpisodeMediaFlags</include>
+                    <include>Furniture_EpisodeMediaFlagsVars</include>
                     <texture>flags/resolutions/1080i.png</texture>
                     <visible>substring(listitem.director,1080i)</visible>
                 </control>					
@@ -3804,47 +3797,47 @@
 				<include condition="Skin.String(episodemediaflags_pos4,audio)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 <!-- END of position mod -->
 				<control type="image">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/defaultsound.png</texture>
 					<visible>!Control.IsVisible(94) + !Skin.HasSetting(nodefaultflags)</visible>
 				</control>						
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/dtsma.png</texture>
 					<visible>substring(listitem.director,dtsma) | substring(listitem.studio,master audio) + !substring(listitem.studio,ac-3)</visible>
 				</control>					
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/dts.png</texture>
 					<visible>substring(listitem.director,dts) + !substring(listitem.studio,ac-3) + !substring(listitem.studio,dtsma) | substring(listitem.studio,master audio)</visible>
 				</control>			
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/dolbytruehd.png</texture>
 					<visible>substring(listitem.director,truehd) | substring(listitem.studio,true hd)</visible>
 				</control>	
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/dolbydigital.png</texture>
 					<visible>substring(listitem.director,ac-3)</visible>
 				</control>
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/mp3.png</texture>
 					<visible>substring(listitem.director,MPEG Audio)</visible>
 				</control>
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/flac.png</texture>
 					<visible>substring(listitem.director,flac)</visible>
 				</control>
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/ogg.png</texture>
 					<visible>substring(listitem.director,vorbis)</visible>
 				</control>				
 				<control type="image" id="94">
-					<include>Furniture_EpisodeMediaFlags</include>
+					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>flags/codecs/aac.png</texture>
 					<visible>substring(listitem.director,aac)</visible>
 				</control>				
@@ -3882,22 +3875,22 @@
 					<include condition="Skin.String(episodemediaflags_pos3,codec)">Furniture_EpisodeLowerMediaFlags_Position3</include>
 					<include condition="Skin.String(episodemediaflags_pos4,codec)">Furniture_EpisodeLowerMediaFlags_Position4</include>
 						<control type="image" id="85">
-							<include>Furniture_EpisodeMediaFlags</include>
+							<include>Furniture_EpisodeMediaFlagsVars</include>
 							<texture>flags/codecs/divx.png</texture>
 							<visible>substring(listitem.director,DX50) | substring(listitem.director,divx) | substring(listitem.director,DIV3)</visible>
 						</control>
 						<control type="image" id="85">
-							<include>Furniture_EpisodeMediaFlags</include>
+							<include>Furniture_EpisodeMediaFlagsVars</include>
 							<texture>flags/codecs/xvid.png</texture>
 							<visible>substring(listitem.director,XVID)</visible>
 						</control>
 						<control type="image" id="85">
-							<include>Furniture_EpisodeMediaFlags</include>
+							<include>Furniture_EpisodeMediaFlagsVars</include>
 							<texture>flags/codecs/x264.png</texture>
 							<visible>substring(listitem.director,AVC)</visible>
 						</control>
 						<control type="image" id="85">
-							<include>Furniture_EpisodeMediaFlags</include>
+							<include>Furniture_EpisodeMediaFlagsVars</include>
 							<texture>flags/codecs/wmvhd.png</texture>
 							<visible>substring(listitem.studio,WVC1)</visible>
 						</control>
