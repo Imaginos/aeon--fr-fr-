@@ -47,7 +47,7 @@
 		<posx>1085</posx>
 	</include>
 	<include name="vertical_correction">
-		<posy>67</posy>
+		<posy>-67</posy>
 	</include>
 <!--	<include name="Furniture_EpisodeMediaFlagsVars">
 		<width>110</width>
