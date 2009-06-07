@@ -39,6 +39,12 @@
 	<ondown>351</ondown>
 </include>
 
+<!--Weather Backdrop by Current Weather Conditions -->
+	<include name="BackgroundVarsWeather2">
+		<thumb>$INFO[Skin.String(CustomWeatherFolder)]$INFO[Weather.FanartCode]</thumb>		
+	</include>
+<!-- End-->
+
 <include name="MainMenu">
 
 	<control type="button" id="351">
@@ -158,6 +164,8 @@
 				<include>BackgroundVarsWeather</include>					
 				<onclick>xbmc.activatewindow(2600)</onclick>
 				<visible>Skin.HasSetting(weather)</visible>
+<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather2</include><!--Weather Backdrop by Current Weather Conditions -->
+<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include><!--Weather Backdrop by Current Weather Conditions -->
 			</item>
 			<item id="9">
 				<label>31016</label>
@@ -319,6 +327,8 @@
 				<onclick>Skin.SetString(custom,CustomWeather)</onclick>
 				<onclick>SetFocus(92)</onclick>
 				<visible>Skin.HasSetting(weather)</visible>
+<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather2</include><!--Weather Backdrop by Current Weather Conditions -->
+<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include><!--Weather Backdrop by Current Weather Conditions -->	
 			</item>			
 			<item id="13">
 				<description>Play DVD</description>
@@ -486,13 +496,17 @@
 			</item>
 			<item id="10">
 				<label>31017</label>
-				<include>BackgroundVarsWeather</include>					
+				<include>BackgroundVarsWeather</include>	
+<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsMusicWeather2</include><!--Weather Backdrop by Current Weather Conditions -->
+<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsMusicWeather</include><!--Weather Backdrop by Current Weather Conditions -->				
 				<onclick>Skin.Reset(weather)</onclick>
 				<visible>Skin.HasSetting(weather)</visible>
 			</item>
 			<item id="10">
 				<description>My Pictures</description>
 				<label2>31017</label2>
+<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsMusicWeather2</include><!--Weather Backdrop by Current Weather Conditions -->
+<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsMusicWeather</include><!--Weather Backdrop by Current Weather Conditions -->	
 				<icon>special://skin/media/backdrops/summer/summer.png</icon>
 				<thumb>$INFO[Skin.String(CustomWeather)]</thumb>				
 				<onclick>Skin.SetBool(weather)</onclick>

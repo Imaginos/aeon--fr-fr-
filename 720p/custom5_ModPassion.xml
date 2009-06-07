@@ -503,6 +503,12 @@
 		<onleft>5</onleft>
 		<onright>5</onright>
 		<visible>Control.HasFocus(5) | ControlGroup(15).HasFocus</visible>
+		<control type="radiobutton" id="480">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>Correction de la hauteur des labels</label>
+			<onclick>Skin.Togglesetting(vertical_correction)</onclick>
+			<selected>Skin.HasSetting(vertical_correction)</selected>
+		</control>
 		<control type="radiobutton" id="490">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>chaine, codec vidéo, résolution, format audio</label>

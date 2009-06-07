@@ -44,7 +44,27 @@
 		<include>Animation_CommonFade</include>
 		<visible>Player.Paused</visible>
 	</control>
-	
+
+<!-- aeon passion mod BEGIN -->
+<!-- clearart -->	
+	<control type ="image">  
+		<posx>950</posx>     
+		<posy>-178</posy>    
+		<width>330</width>     
+		<height>185</height> 
+		<texture>cleararts/$INFO[VideoPlayer.TVShowTitle].png</texture> 
+		<aspectratio align="right" aligny="bottom">keep</aspectratio>   
+		<visible>VideoPlayer.Content(episodes)</visible>
+	</control>
+	<control type="label">
+		<posx>950</posx>     
+		<posy>-178</posy>    
+		<width>330</width>     
+		<height>185</height> 
+		<label>$INFO[listitem.filenameandpath]</label>
+	</control>	
+<!-- aeon passion mod END -->
+
 	<control type="label">
 		<posx>499</posx>
 		<posy>-20</posy>
