@@ -431,7 +431,7 @@
 			</control>
 			<control type="label">
 				<posx>75</posx>
-				<posy>35</posy>
+				<posy>24</posy>
 				<width>1130</width>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<include>ShowcaseMainLabelWide</include>
@@ -1053,11 +1053,11 @@
 			</control>		
 <!-- aeon passion mod -->			
 
-			<control type="label">
+<!--			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title][/UPPERCASE]</label>
 				<include>ShowcaseMainLabelWide</include>
 				<visible>Container.Content(episodes)</visible>					
-			</control>			
+			</control>		-->	
 			<control type="label">
 				<label>[UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31005][/UPPERCASE]</label>
 				<include>ShowcaseItemsLabel</include>
@@ -1082,11 +1082,11 @@
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Genre)</visible>
 			</control>
-			<control type="label" id="72">
+<!--			<control type="label" id="72">
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)] | Container.Content(seasons)</visible>
-			</control>
+			</control>-->
 			<control type="label" id="72">
 				<info>ListItem.PictureResolution</info>
 				<include>ShowcaseDetailLabel</include>
