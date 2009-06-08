@@ -1805,10 +1805,10 @@
 			<control type="group">
 				<visible>!Skin.HasSetting(movieshowcaseflags_pos_set) + Container.Content(movies) + !Window.IsActive(24)</visible>
 				<include>Animation_CommonFade</include>
+				<include>Furniture_ShowcaseMediaFlagsTextVars</include>
 				<control type="group">
 					<include>Furniture_ShowcaseMediaFlags_Position1</include>
 					<control type="label">
-						<posy>669</posy>
 						<posx>0</posx>
 						<align>left</align>
 						<font>Font_FSInfoPlot</font>
@@ -1816,7 +1816,6 @@
 						<visible>Skin.HasSetting(darkshowcase)</visible>			
 					</control>
 					<control type="label">
-						<posy>669</posy>
 						<posx>0</posx>
 						<align>left</align>
 						<font>Font_FSInfoPlot</font>
@@ -3855,24 +3854,28 @@
 			</control>
 <!-- Multiplex flags not managed alert -->
 			<control type="group">
-			<visible>!Skin.HasSetting(nomediaflags) + !Skin.HasSetting(episodemediaflags_pos_set)</visible>
-			<include>Animation_CommonFade</include>
+				<include>Furniture_ShowcaseMediaFlagsTextVars</include>
+				<visible>!Skin.HasSetting(nomediaflags) + !Skin.HasSetting(episodemediaflags_pos_set)</visible>
 				<include>Furniture_EpisodeLowerMediaFlags_Position1</include>
                 <control type="label">
-					<posy>107</posy>
+					<posy>0</posy>
 					<posx>0</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<label>Choisir les labels dans les options</label>
-					<visible>Skin.HasSetting(darkmultiplex)</visible>			
+					<label>Choisir les labels dans les options</label>	
                 </control>
+			</control>
+<!-- correction needed display-->
+			<control type="group">
+				<include>Furniture_ShowcaseMediaFlagsTextVars</include>
+				<visible>!Skin.HasSetting(nomediaflags) + !Skin.HasSetting(episodemediaflags_pos_set)</visible>
+				<include>Furniture_EpisodeLowerMediaFlags_Position1</include>
                 <control type="label">
-					<posy>107</posy>
+					<posy>67</posy>
 					<posx>0</posx>
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
-					<label>Choisir les labels dans les options</label>
-					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
+					<label>Désactivez la correction vericale !</label>	
                 </control>
 			</control>
 <!-- video codec display -->

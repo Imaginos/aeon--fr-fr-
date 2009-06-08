@@ -33,8 +33,8 @@
 	
 	<control type="grouplist" id="20">
 		<include>Objects_SettingsControlAreaVars</include>
-		<onup>407</onup> <!-- aeon passion mod -->
-		<ondown>400</ondown> <!-- aeon passion mod -->
+		<onup>20</onup>
+		<ondown>20</ondown> <!-- aeon passion mod (navigation fix) -->
 		<onleft>6</onleft>
 		<onright>6</onright>
 		<visible>Control.HasFocus(6) | ControlGroup(20).HasFocus</visible>
@@ -76,17 +76,17 @@
 		
 		<control type="radiobutton" id="406">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Dévérouiller toutes les vues TV</label> <!-- aeon passion mod -->
+			<label>31247</label> <!-- aeon passion mod (uses strings.xml) -->
 			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
 			<selected>Skin.HasSetting(unlockTVviews)</selected>
 		</control>
 		
 		<control type="radiobutton" id="407">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Ancien Multiplex 'Sombre'</label> <!-- aeon passion mod -->
+			<label>31248</label> <!-- aeon passion mod (uses strings.xml) -->
 			<onclick>Skin.ToggleSetting(oldmultiplex)</onclick>
 			<selected>Skin.HasSetting(oldmultiplex)</selected>
-		</control>
+		</control>		
 		
 	</control>
 
@@ -278,30 +278,7 @@
 			<onclick>Skin.SetBool(nopicturefanart)</onclick>
 			<onclick>Skin.SetBool(noinfofanart)</onclick>
 			<visible>![Skin.HasSetting(nomusicfanart) | Skin.HasSetting(nomoviefanart) | Skin.HasSetting(notvfanart) | Skin.HasSetting(nopicturefanart) | Skin.HasSetting(noinfofanart)]</visible>
-		</control>	
-<!-- aeon passion mod -->
-		<control type="radiobutton" id="707">
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Affichage des images de genre</label>
-			<onclick>Skin.ToggleSetting(moviegenre_onoff)</onclick>
-			<selected>!Skin.HasSetting(moviegenre_onoff)</selected>
-		</control>
-
-		<control type="radiobutton" id="708">
-			<visible>!Skin.HasSetting(moviegenre_onoff)</visible>
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Utiliser l'image par défaut</label>
-			<onclick>Skin.ToggleSetting(moviegenre_default_onoff)</onclick>
-			<selected>!Skin.HasSetting(moviegenre_default_onoff)</selected>
-		</control>
-		<control type="radiobutton" id="709">
-			<visible>!Skin.HasSetting(moviegenre_onoff)</visible>
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Utilisation des fanarts</label>
-			<onclick>Skin.ToggleSetting(genre_fanart_onoff)</onclick>
-			<selected>skin.HasSetting(genre_fanart_onoff)</selected>
-		</control>			
-<!-- aeon passion mod -->				
+		</control>				
 		
 	</control>
 	

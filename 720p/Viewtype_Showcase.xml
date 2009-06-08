@@ -45,34 +45,34 @@
     <include name="MovieShowcaseThumb">
         <include>MovieShowcaseThumbDimensions</include>
         <align>center</align>
-        <texture diffuse="thumbs/movieposter_mask.png">defaultvideobigposter.png</texture>
+        <texture background="true" diffuse="thumbs/movieposter_mask.png">defaultvideobigposter.png</texture>
         <aspectratio scalediffuse="false">stretch</aspectratio>
-<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+		<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- aeon passion mod -->
     </include>
 	
     <include name="MovieShowcaseThumbMain">
         <include>MovieShowcaseThumbDimensions</include>
         <align>center</align>
-        <texture diffuse="thumbs/movieposter_mask.png">defaultvideobigposter.png</texture>
+        <texture background="true" diffuse="thumbs/movieposter_mask.png">defaultvideobigposter.png</texture>
         <aspectratio scalediffuse="false">stretch</aspectratio>
-<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+		<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- aeon passion mod -->
     </include>
 	
     <include name="MovieShowcaseThumbReflectionMain">
         <include>MovieShowcaseThumbReflectionDimensions</include>
         <colordiffuse>52FFFFFF</colordiffuse>
-        <texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobigposter.png</texture>
+        <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobigposter.png</texture>
         <aspectratio scalediffuse="false">stretch</aspectratio>
-<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->
+		<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- aeon passion mod -->
     </include>
 	
     <include name="MovieShowcaseThumbReflection">
         <include>MovieShowcaseThumbReflectionDimensions</include>
         <colordiffuse>d0FFFFFF</colordiffuse>
-        <texture flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobigposter.png</texture>
+        <texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">defaultvideobigposter.png</texture>
         <aspectratio scalediffuse="false">stretch</aspectratio>
-		<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>
-<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- <<<<<< Add this -->			
+		<animation effect="fade" start="70" end="70" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>	
+		<visible>!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)</visible><!-- aeon passion mod -->		
     </include>
 	
 <!-- Movie Showcase Variables: Thumb glass overlays -->
@@ -117,7 +117,7 @@
 
     <include name="MusicShowcaseThumb">
         <include>MusicShowcaseThumbDimensions</include>
-        <texture diffuse="thumbs/cdcover_mask.png">defaultaudiobig.png</texture>
+        <texture background="true" diffuse="thumbs/cdcover_mask.png">defaultaudio.png</texture>
 		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
 		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>		
     </include>
@@ -140,7 +140,7 @@
 	
     <include name="MusicShowcaseThumbMain">
         <include>MusicShowcaseThumbDimensions</include>
-        <texture diffuse="thumbs/cdcover_mask.png">defaultaudiobig.png</texture>
+        <texture background="true" diffuse="thumbs/cdcover_mask.png">defaultaudio.png</texture>
 		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
 		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>	
     </include>
@@ -148,7 +148,7 @@
     <include name="MusicShowcaseThumbReflection">
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>d0FFFFFF</colordiffuse>
-        <texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudiobig.png</texture>
+        <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudio.png</texture>
 		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
 		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>	
 		<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>		
@@ -157,7 +157,7 @@
     <include name="MusicShowcaseThumbReflectionMain">
         <include>MusicShowcaseThumbReflectionDimensions</include>
         <colordiffuse>52FFFFFF</colordiffuse>
-        <texture flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudiobig.png</texture>
+        <texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">defaultaudio.png</texture>
 		<include condition="Window.IsActive(2)">MusicShowcaseThumbKeep</include>
 		<include condition="!Window.IsActive(2)">MusicShowcaseThumbStretch</include>	
 		<animation effect="fade" start="50" end="50" time="0" condition="Skin.HasSetting(darkshowcase)">Conditional</animation>	
@@ -234,7 +234,7 @@
         <include condition="!Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelLightShade</include>
         <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>		
 		<visible>!ControlGroup(7000).HasFocus()</visible>
-        <animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
+        <animation effect="slide" end="0,-11" time="200" condition="!Container.Content(seasons) + [!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
     </include>
 
     <include name="ShowcaseItemsLabel">
@@ -259,35 +259,11 @@
         <include condition="Skin.HasSetting(darkshowcase)">Colour_ShowcaseLabelNightShade</include>
     </include>
 	
-    <include name="ShowcaseSpot">
-        <posx>144</posx>
-        <posy>583</posy>
-        <width>993</width>
-        <height>137</height>
-        <include condition="!Skin.HasSetting(darkshowcase)">ShowcaseSpotLight</include>
-		<include condition="Skin.HasSetting(darkshowcase)">ShowcaseSpotNight</include>
-        <include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-        <visible>Control.IsVisible(57)</visible>
-    </include>
-	
-    <include name="ShowcaseSpot">
-        <posx>144</posx>
-        <posy>583</posy>
-        <width>993</width>
-        <height>137</height>
-        <include>ShowcaseSpotLight</include>
-        <include>Animation_CommonFade</include>
-		<include>Animation_HideShowcase</include>
-        <visible>Control.IsVisible(50)</visible>
-    </include>
-<!--- ??????	
     <control type="image" id="82">
         <texture>-</texture>
         <visible>Container(57).OnNext | Container(57).OnPrevious</visible>
         <animation effect="fade" time="4000">Hidden</animation>
     </control>
---->
 	
     <include name="ShowcaseSquare">
         <control type="group" id="7001">
@@ -1098,7 +1074,7 @@
                         <info>Container(57).ListItem(-7).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)]</visible>
                     </control>
-<include>mod_moviegenre_Showcase15</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase15</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1113,7 +1089,7 @@
                         <info>Container(57).ListItem(-7).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref15</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref15</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1130,7 +1106,7 @@
                         <info>Container(57).ListItem(-6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase1</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase1</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1145,7 +1121,7 @@
                         <info>Container(57).ListItem(-6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref1</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref1</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1162,7 +1138,7 @@
                         <info>Container(57).ListItem(-5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase2</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase2</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1177,7 +1153,7 @@
                         <info>Container(57).ListItem(-5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref2</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref2</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1194,7 +1170,7 @@
                         <info>Container(57).ListItem(-4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase3</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase3</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1209,7 +1185,7 @@
                         <info>Container(57).ListItem(-4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref3</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref3</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1226,7 +1202,7 @@
                         <info>Container(57).ListItem(-3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase4</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase4</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1241,7 +1217,7 @@
                         <info>Container(57).ListItem(-3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref4</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref4</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1258,7 +1234,7 @@
                         <info>Container(57).ListItem(-2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-					<include>mod_moviegenre_Showcase5</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase5</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1273,7 +1249,7 @@
                         <info>Container(57).ListItem(-2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref5</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref5</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1292,7 +1268,7 @@
                         <info>Container(57).ListItem(6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase13</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase13</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1307,7 +1283,7 @@
                         <info>Container(57).ListItem(6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref13</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref13</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1324,7 +1300,7 @@
                         <info>Container(57).ListItem(5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase12</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase12</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1339,7 +1315,7 @@
                         <info>Container(57).ListItem(5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref12</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref12</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1356,7 +1332,7 @@
                         <info>Container(57).ListItem(4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase11</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase11</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1371,7 +1347,7 @@
                         <info>Container(57).ListItem(4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref11</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref11</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1388,7 +1364,7 @@
                         <info>Container(57).ListItem(3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase10</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase10</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1403,7 +1379,7 @@
                         <info>Container(57).ListItem(3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref10</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref10</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1420,7 +1396,7 @@
                         <info>Container(57).ListItem(2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase9</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase9</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1435,7 +1411,7 @@
                         <info>Container(57).ListItem(2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref9</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref9</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1452,7 +1428,7 @@
                         <info>Container(57).ListItem(1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase8</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase8</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1467,7 +1443,7 @@
                         <info>Container(57).ListItem(1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref8</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref8</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1484,27 +1460,27 @@
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumb</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase7</include><!-- <<<<<< Add this -->
+						<include>mod_moviegenre_Showcase7</include><!-- aeon passion mod -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlayAngled</include>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase_ref7</include><!-- <<<<<< Add this -->
+						<include>mod_moviegenre_Showcase_ref7</include><!-- aeon passion mod -->
                     </control>
                 </control>
                 <control type="group">
@@ -1517,27 +1493,27 @@
                             <info>Container(57).ListItem(-1).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumb</include>
                             <info>Container(57).ListItem(-1).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase6</include><!-- <<<<<< Add this -->
+						<include>mod_moviegenre_Showcase6</include><!-- aeon passion mod -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlayAngled</include>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(-1).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(-1).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase_ref6</include><!-- <<<<<< Add this -->
+						<include>mod_moviegenre_Showcase_ref6</include><!-- aeon passion mod -->
                     </control>
                 </control>
             </control>
@@ -1563,7 +1539,7 @@
                         <info>Container(57).ListItem(7).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-					<include>mod_moviegenre_Showcase14</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase14</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1578,7 +1554,7 @@
                         <info>Container(57).ListItem(7).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref14</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref14</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1595,7 +1571,7 @@
                         <info>Container(57).ListItem(6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase13</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase13</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1610,7 +1586,7 @@
                         <info>Container(57).ListItem(6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref13</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref13</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1627,7 +1603,7 @@
                         <info>Container(57).ListItem(5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase12</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase12</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1642,7 +1618,7 @@
                         <info>Container(57).ListItem(5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref12</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref12</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1659,7 +1635,7 @@
                         <info>Container(57).ListItem(4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase11</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase11</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1674,7 +1650,7 @@
                         <info>Container(57).ListItem(4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref11</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref11</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1691,7 +1667,7 @@
                         <info>Container(57).ListItem(3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase10</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase10</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1706,7 +1682,7 @@
                         <info>Container(57).ListItem(3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref10</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref10</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1723,7 +1699,7 @@
                         <info>Container(57).ListItem(2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-					<include>mod_moviegenre_Showcase9</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase9</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1738,7 +1714,7 @@
                         <info>Container(57).ListItem(2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref9</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref9</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1757,7 +1733,7 @@
                         <info>Container(57).ListItem(-6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase1</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase1</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1772,7 +1748,7 @@
                         <info>Container(57).ListItem(-6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref1</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref1</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1788,8 +1764,8 @@
                         <include>MovieShowcaseThumb</include>
                         <info>Container(57).ListItem(-5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
-                    </control>
-<include>mod_moviegenre_Showcase2</include><!-- <<<<<< Add this -->
+					</control>
+					<include>mod_moviegenre_Showcase2</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1804,7 +1780,7 @@
                         <info>Container(57).ListItem(-5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref2</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref2</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1821,7 +1797,7 @@
                         <info>Container(57).ListItem(-4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase3</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase3</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1836,7 +1812,7 @@
                         <info>Container(57).ListItem(-4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref3</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref3</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1853,7 +1829,7 @@
                         <info>Container(57).ListItem(-3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase4</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase4</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1868,7 +1844,7 @@
                         <info>Container(57).ListItem(-3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref4</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref4</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1885,7 +1861,7 @@
                         <info>Container(57).ListItem(-2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase5</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase5</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1900,7 +1876,7 @@
                         <info>Container(57).ListItem(-2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref5</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref5</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1917,7 +1893,7 @@
                         <info>Container(57).ListItem(-1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase6</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase6</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -1932,7 +1908,7 @@
                         <info>Container(57).ListItem(-1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref6</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref6</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -1944,32 +1920,32 @@
                     <animation effect="rotatey" center="360" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="in">Hidden</animation>
                     <animation effect="rotatey" center="360" start="-55" end="-55" time="0" condition="true">Conditional</animation>
                     <control type="group">
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumb</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumb</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase7</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase7</include><!-- aeon passion mod -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlay</include>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(0).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase_ref7</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref7</include><!-- aeon passion mod -->
                     </control>
                 </control>
                 <control type="group">
@@ -1977,32 +1953,32 @@
                     <visible>Container.OnPrevious</visible>
                     <animation effect="rotatey" center="885" start="0" end="55" time="250" reversible="false" tween="quadratic" easing="out">Hidden</animation>
                     <control type="group">
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumb</include>
                             <info>Container(57).ListItem(1).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumb</include>
                             <info>Container(57).ListItem(1).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase8</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase8</include><!-- aeon passion mod -->
                         <control type="image">
                             <description>Glass overlay</description>
                             <include>MovieShowcaseGlassOverlay</include>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(1).Thumb</info>
 							<visible>![Container.Content(seasons) | Container.Content(episodes) | Skin.HasSetting(alternativerender)]</visible>
                         </control>
-                    <control type="image">
+						<control type="image">
                             <include>MovieShowcaseThumbReflection</include>
                             <info>Container(57).ListItem(1).Thumb</info>
 							<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                         </control>
-<include>mod_moviegenre_Showcase_ref8</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref8</include><!-- aeon passion mod -->
                     </control>
                 </control>
             </control>
@@ -2036,7 +2012,7 @@
                         <info>Container(57).ListItem(-6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase1</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase1</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2051,7 +2027,7 @@
                         <info>Container(57).ListItem(-6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref1</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref1</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2072,7 +2048,7 @@
                         <info>Container(57).ListItem(-5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase2</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase2</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2087,7 +2063,7 @@
                         <info>Container(57).ListItem(-5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref2</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref2</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2108,7 +2084,7 @@
                         <info>Container(57).ListItem(-4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase3</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase3</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2123,7 +2099,7 @@
                         <info>Container(57).ListItem(-4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref3</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref3</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2144,7 +2120,7 @@
                         <info>Container(57).ListItem(-3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase4</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase4</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2159,7 +2135,7 @@
                         <info>Container(57).ListItem(-3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref4</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref4</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2180,7 +2156,7 @@
                         <info>Container(57).ListItem(-2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase5</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase5</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2195,7 +2171,7 @@
                         <info>Container(57).ListItem(-2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref5</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref5</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2216,7 +2192,7 @@
                         <info>Container(57).ListItem(-1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase6</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase6</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2231,7 +2207,7 @@
                         <info>Container(57).ListItem(-1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref6</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref6</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2252,7 +2228,7 @@
                         <info>Container(57).ListItem(6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase13</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase13</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2267,7 +2243,7 @@
                         <info>Container(57).ListItem(6).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref13</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref13</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2288,7 +2264,7 @@
                         <info>Container(57).ListItem(5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase12</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase12</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2303,7 +2279,7 @@
                         <info>Container(57).ListItem(5).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref12</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref12</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2324,7 +2300,7 @@
                         <info>Container(57).ListItem(4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase11</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase11</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2339,7 +2315,7 @@
                         <info>Container(57).ListItem(4).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref11</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref11</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2360,7 +2336,7 @@
                         <info>Container(57).ListItem(3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase10</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase10</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2375,7 +2351,7 @@
                         <info>Container(57).ListItem(3).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref10</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref10</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2396,7 +2372,7 @@
                         <info>Container(57).ListItem(2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase9</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase9</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2411,7 +2387,7 @@
                         <info>Container(57).ListItem(2).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref9</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref9</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2432,7 +2408,7 @@
                         <info>Container(57).ListItem(1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase8</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase8</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlayAngled</include>
@@ -2447,7 +2423,7 @@
                         <info>Container(57).ListItem(1).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref8</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref8</include><!-- aeon passion mod -->
                 </control>
             </control>
             <control type="group">
@@ -2463,7 +2439,7 @@
                         <info>Container(57).ListItem(0).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase7</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase7</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlay</include>
@@ -2478,16 +2454,13 @@
                         <info>Container(57).ListItem(0).Thumb</info>
 						<visible>[Container.Content(seasons) | Container.Content(episodes)] | Skin.HasSetting(alternativerender)</visible>
                     </control>
-<include>mod_moviegenre_Showcase_ref7</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase_ref7</include><!-- aeon passion mod -->
                 </control>
             </control>
         </control>
     </include>
 	
     <include name="Viewtype_Showcase">
-        <control type="image">
-            <include>ShowcaseSpot</include>
-        </control>
 		
         <control type="group">
             <visible>Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)</visible>
@@ -2555,7 +2528,7 @@
         </control>		
 		
         <control type="group">
-            <include>ShowcaseVisible</include>
+            <visible>Control.IsVisible(57)</visible>
             <control type="wraplist" id="57">
 				<include condition="Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)">MovieShowcaseGroupVars</include>
 				<include condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">MusicShowcaseGroupVars</include>
@@ -2581,7 +2554,7 @@
                         <info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
                     </control>
-<include>mod_moviegenre_Showcase21</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase21</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlay</include>
@@ -2601,8 +2574,8 @@
                         <include>MovieShowcaseThumbReflection</include>
                         <info>ListItem.Icon</info>
 						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
-                    </control>
-<include>mod_moviegenre_Showcase_ref21</include><!-- <<<<<< Add this -->				
+                    </control>	
+					<include>mod_moviegenre_Showcase_ref21</include><!-- aeon passion mod -->				
 				</itemlayout>
                 <focusedlayout height="350" width="196" condition="Window.IsActive(28) | Window.IsActive(24) | [Window.IsActive(25) + !Container.Content(episodes)] | Window.IsActive(1)">
                     <control type="image">
@@ -2619,7 +2592,7 @@
 						<animation effect="zoom" start="100" end="120" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="120" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>						
                     </control>
-<include>mod_moviegenre_Showcase20</include><!-- <<<<<< Add this -->
+					<include>mod_moviegenre_Showcase20</include><!-- aeon passion mod -->
                     <control type="image">
                         <description>Glass overlay</description>
                         <include>MovieShowcaseGlassOverlay</include>
@@ -2647,8 +2620,8 @@
 						<visible>Skin.HasSetting(alternativerender) + Skin.HasSetting(flattenshowcase) + !Control.IsVisible(6000)</visible>
 						<animation effect="zoom" start="100" end="130" center="135,230" time="400" easing="out" reversible="false" tween="cubic">Focus</animation>
 						<animation effect="zoom" start="120" end="100" center="135,230" time="400" easing="out" reversible="false" tween="cubic" condition="!Control.HasFocus(57) + Skin.HasSetting(flattenshowcase)">Unfocus</animation>						
-                    </control>
-<include>mod_moviegenre_Showcase_ref20</include><!-- <<<<<< Add this -->					
+                    </control>	
+					<include>mod_moviegenre_Showcase_ref20</include><!-- aeon passion mod -->					
 				</focusedlayout>
                 <itemlayout height="350" width="250" condition="Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502) | Window.IsActive(2) | Window.IsActive(20)">
                     <control type="image">
@@ -2727,9 +2700,8 @@
 				<include>Animation_CommonFade</include>
             </control>
 
-			<include condition="Skin.HasSetting(videomovies)">Furniture_ShowcaseMediaFlags</include>
-			
             <control type="group">
+				<visible>Control.IsVisible(57)</visible>
 				<include>Animation_HideShowcase</include>
                 <control type="fadelabel">
                     <label>31609</label>
@@ -2738,7 +2710,7 @@
 					<pauseatend>3000</pauseatend>
 					<scroll>false</scroll>
                     <include>ShowcaseMainLabel</include>
-					<visible>Window.IsActive(25) + stringcompare(container(57).numitems,0)</visible>
+					<visible>Window.IsActive(25) + Control.IsVisible(57) + stringcompare(container(57).numitems,0)</visible>
                 </control>
                 <control type="fadelabel">
                     <label>31609</label>
@@ -2747,7 +2719,7 @@
 					<pauseatend>3000</pauseatend>
 					<scroll>false</scroll>
                     <include>ShowcaseMainLabel</include>
-					<visible>Window.IsActive(502) + stringcompare(container(57).numitems,0)</visible>
+					<visible>Window.IsActive(502) + Control.IsVisible(57) + stringcompare(container(57).numitems,0)</visible>
                 </control>				
                 <control type="label">
                     <label>[UPPERCASE]$INFO[ListItem.Label][/UPPERCASE]</label>
@@ -2795,16 +2767,6 @@
                 </control>
             </control>
         </control>
-		
-		<control type="image">
-			<posx>0</posx>
-			<posy>675</posy>
-			<width>1280</width>
-			<height>48</height>
-			<texture>showcase/showcase_gradient.png</texture>
-			<visible>Skin.HasSetting(darkshowcase) + Control.IsVisible(57)</visible>
-			<include>Animation_CommonFade</include>
-		</control>
 		
         <control type="group">
             <include>ShowcaseVisible</include>

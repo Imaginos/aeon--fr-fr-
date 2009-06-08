@@ -208,6 +208,8 @@
   
 <!-- Aeon Advanced options -->
 
+	<string id="31247">UNLOCK ALL VIEWS FOR TV SHOWS</string>
+	<string id="31248">USE LEGACY 'DARK' MULTIPLEX</string>
 	<string id="31249">MEDIA FLAGS TOGGLE</string>
 	<string id="31250">MULTIPLEX LAYOUT (FANART, PLOT, THUMBSHOW)</string>
 	<string id="31251">MULTIPLEX INFO TOGGLE (ON, OFF, AUTO, TRIGGER)</string>

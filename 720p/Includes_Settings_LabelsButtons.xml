@@ -523,8 +523,6 @@
 				<ondown>8</ondown>
 				<onleft>301</onleft>
 				<onright>301</onright>
-
-				<!--<visible allowhiddenfocus="true">![Control.HasFocus(7) | Control.HasFocus(301)]</visible> <<<<<< old -->
 				<visible allowhiddenfocus="true">![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(345)]</visible><!-- aeon passion mod -->
 
 			</control>
@@ -537,8 +535,6 @@
 				<ondown>8</ondown>
 				<onleft>301</onleft>
 				<onright>301</onright>
-
-				<!-- <visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>  <<<<<< old -->
 				<visible>Control.HasFocus(7) | Control.HasFocus(301)| Control.HasFocus(345)]</visible><!-- aeon passion mod -->
 
 			</control>
@@ -549,8 +545,6 @@
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>![Control.HasFocus(7) | Control.HasFocus(301)]</visible>
-
-				<!--<visible>![Control.HasFocus(7) | Control.HasFocus(301)]</visible> <<<<<< old -->
 				<visible>![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(345)]</visible><!-- aeon passion mod -->
 
 			</control>
@@ -560,8 +554,6 @@
 				<label>31123</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
-
-				<!-- <visible>Control.HasFocus(7) | Control.HasFocus(301)</visible>  <<<<<< old -->
 				<visible>Control.HasFocus(7) | Control.HasFocus(301)| Control.HasFocus(345)]</visible><!-- aeon passion mod -->
 
 			</control>

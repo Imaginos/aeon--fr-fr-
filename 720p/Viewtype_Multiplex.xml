@@ -71,8 +71,8 @@
 				<texture>multiplex/multiplex_back.png</texture>
 				<visible>!Skin.HasSetting(multiplexthin)</visible>
 				<include>Animation_CommonFade</include>
-			</control>      
-
+			</control>			
+			
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
@@ -411,14 +411,15 @@
 				<texture>multiplex/multiplex_back.png</texture>
 				<visible>!Skin.HasSetting(multiplexthin)</visible>
 				<include>Animation_CommonFade</include>
-			</control>        
-      
+			</control>				
+			
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
 				<height>564</height>
 				<texture>multiplex/multiplex_tvtablet.png</texture>
-			</control>
+			</control>	
+
 <!-- aeon passion mod -->
 			<control type="label">
 				<posx>75</posx>
@@ -437,6 +438,7 @@
 				<visible>Container.Content(seasons)</visible>
 			</control>
 <!-- aeon passion mod -->
+
 			<control type="group">
 				<posx>105</posx>
 				<posy>30</posy>
@@ -475,17 +477,19 @@
 					</control>
 					
 					<control type="label">
-						<include>MultiplexInfoValue</include>				
+						<include>MultiplexInfoValue</include>
 						<label fallback="31425">$INFO[Container(52).ListItem.Date]</label> <!-- aeon passion mod -->
 					</control>			
 				</control>
 
 			</control>
+
 <!-- mod for episode media flags -->
 			<control type="group">
 				<include>Furniture_EpisodeMediaFlags</include>
 			</control>
 <!-- mod for episode media flags -->
+
 			<control type="group">
 				<posx>105</posx>
 				<posy>30</posy>
@@ -1033,6 +1037,7 @@
 				<include>ShowcaseMainLabelWide</include>
 				<visible>!Container.Content(episodes) + [[!Container.Content(movies) | Window.IsActive(24)] | [Container.Content(movies) + Skin.HasSetting(nomediaflags)]]</visible>					
 			</control>
+
 <!-- aeon passion mod -->	
 			<control type="label">
 				<posy>670</posy>
@@ -1047,6 +1052,12 @@
 				<visible>Container.Content(episodes)</visible>					
 			</control>		
 <!-- aeon passion mod -->			
+
+			<control type="label">
+				<label>[UPPERCASE]$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title][/UPPERCASE]</label>
+				<include>ShowcaseMainLabelWide</include>
+				<visible>Container.Content(episodes)</visible>					
+			</control>			
 			<control type="label">
 				<label>[UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31005][/UPPERCASE]</label>
 				<include>ShowcaseItemsLabel</include>
@@ -1071,13 +1082,11 @@
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Genre)</visible>
 			</control>
-<!-- aeon passion mod -->
-<!--			<control type="label" id="72">
+			<control type="label" id="72">
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)] | Container.Content(seasons)</visible>
-			</control> -->
- <!-- aeon passion mod -->
+			</control>
 			<control type="label" id="72">
 				<info>ListItem.PictureResolution</info>
 				<include>ShowcaseDetailLabel</include>

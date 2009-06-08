@@ -64,7 +64,7 @@
 		<label>$INFO[listitem.filenameandpath]</label>
 	</control>	
 <!-- aeon passion mod END -->
-
+	
 	<control type="label">
 		<posx>499</posx>
 		<posy>-20</posy>
@@ -190,6 +190,7 @@
 		<colordiffuse>d0FFFFFF</colordiffuse>
 		<label>$INFO[VideoPlayer.Time] ($INFO[System.Time])</label>
 	</control>
+	
 <!-- aeon passion mod BEGIN -->
 	<control type="label">
 		<posx>0</posx>
@@ -214,6 +215,7 @@
 		<visible>IsEmpty(VideoPlayer.season)</visible>
 	</control>
 <!-- aeon passion mod END -->
+	
 	<control type="label">
 		<posx>1168</posx>
 		<posy>60</posy>

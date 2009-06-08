@@ -82,8 +82,8 @@
 	<string id="31074">MAX</string>
 	<string id="31075">DISPOSITION</string>
 	<string id="31076">GRILLE</string>
-	<string id="31077">ACTIVÉ</string>
-	<string id="31078">DÉSACTIVÉ</string>
+	<string id="31077">ON</string>
+	<string id="31078">OFF</string>
 	<string id="31079">INVISIB. AUTO</string>
   
 <!-- Aeon Customisation Virtual Home page labels -->
@@ -209,9 +209,11 @@
   
 <!-- Aeon Advanced options -->
   
+	<string id="31247">Dévérouiller toutes les vues TV</string>
+	<string id="31248">Ancien Multiplex 'Sombre'</string>
 	<string id="31249">MENU DES VUES : OPTION "LABELS"</string>
 	<string id="31250">MENU MULTIPLEX : OPTION "PRÉSENTATION" (FANART, RÉSUMÉ, VIGNETTES INSÉRÉES)</string>
-	<string id="31251">MENU MULTIPLEX : OPTION "INFO" (ACTIVÉ, DÉSACTIVÉ, AUTO, ACTION)</string>
+	<string id="31251">MENU MULTIPLEX : OPTION "INFO" (ON, OFF, AUTO, ACTION)</string>
 	<string id="31252">EFFET GRADIENT POUR LE MENU D'ACCUEIL</string>
 	<string id="31253">LIER LE RACCOURCI JEUX AU LANCEUR DE PLUGINS</string>
 	<string id="31258">AFFICHER LA NOTATION (IMDB, ETC.) SUR LA PAGE INFO DES FILMS</string>

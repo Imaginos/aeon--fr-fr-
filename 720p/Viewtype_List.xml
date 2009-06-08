@@ -176,9 +176,10 @@
 	</include>
 	
 	<include name="List_NowPlaying">
-		<posx>860</posx>
-		<width>336</width>
+		<posx>960</posx>
+		<width>200</width>
 		<height>18</height>
+		<scroll>false</scroll>
 		<font>Font_ListPlaying</font>
 	</include>
 	
@@ -1051,7 +1052,6 @@
 			<animation effect="slide" time="1000" start="600,0" end="0,0" tween="cubic" easing="out">WindowOpen</animation>
 			<animation effect="fade" time="400" start="0" end="100">Visible</animation>
 			<animation effect="fade" time="400" start="100" end="0">Hidden</animation>			
-			<animation effect="slide" delay="1500" time="400" start="0,0" end="0,-10" tween="cubic" easing="inout" condition="Player.HasAudio">Conditional</animation>			
 			<control type="image">
 				<width>346</width>
 				<height>511</height>
@@ -1059,24 +1059,26 @@
 				<texture diffuse="list/list_movieicon_mask.png">defaultVideo.png</texture>
 				<info>ListItem.Icon</info>
 				<bordertexture border="-28">list/list_movieicon_frame.png</bordertexture>
-				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>
+				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)] + [!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)]</visible><!-- aeon passion mod -->
 			</control>
 			
 			<control type="image">
-				<posy>513</posy>
+				<posy>510</posy>
 				<width>346</width>
 				<height>511</height>
 				<fadetime>400</fadetime>
 				<texture flipy="true" diffuse="list/list_movieicon_flipmask.png">$INFO[ListItem.Icon]</texture>
-				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]</visible>				
-			</control>			
+				<visible>[Window.IsActive(1) + !Skin.HasSetting(listgamessquare)] | [Window.IsActive(24) + !Skin.HasSetting(listvideosquare)] | [Window.IsActive(25) + !Container.Content(episodes) + !Container.Content(musicvideos)]+ [!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)]</visible><!-- aeon passion mod -->
+			</control>
+
+			<include>mod_moviegenre_list2</include><!-- aeon passion mod -->
 
 			<control type="largeimage">
 				<width>346</width>
 				<height>511</height>			
 				<texture diffuse="list/list_movieicon_mask.png">$INFO[listitem.path,,movie.tbn]</texture>
 				<animation effect="fade" start="0" end="100" time="000">VisibleChange</animation>
-				<visible>Control.IsVisible(102) + Container.Content(movies)</visible>
+				<visible>Control.IsVisible(102) + Container.Content(movies) +[!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)]</visible><!-- aeon passion mod -->
 			</control>
 			
 			<control type="largeimage">
@@ -1084,9 +1086,23 @@
 				<height>511</height>			
 				<texture diffuse="list/list_movieicon_mask.png">$INFO[listitem.path,,folder.jpg]</texture>
 				<animation effect="fade" start="0" end="100" time="000">VisibleChange</animation>
-				<visible>Control.IsVisible(102) + Container.Content(tvshows)</visible>
+				<visible>!Window.IsActive(24)+Control.IsVisible(102) + Container.Content(tvshows)+ [!Container.Content(genres)|Skin.HasSetting(moviegenre_onoff)]</visible><!-- aeon passion mod -->
 			</control>			
 
+			<include>mod_moviegenre_list1</include> <!-- aeon passion mod -->
+
+			<!--  [Fix] Large thumbs don't disappear by Rand Al Thor -->
+			<control type="image" id="102">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>0</width>
+				<height>0</height>
+			        <texture>-</texture>
+			 	<visible>Control.HasFocus(50) + [!Container(50).OnNext + !Container(50).OnPrevious]</visible>
+				<animation effect="fade" start="0" end="100" time="150" >Visible</animation>
+			</control>
+			<!-- end -->
+			
 			<control type="image">
 				<width>346</width>
 				<height>511</height>
@@ -1140,9 +1156,11 @@
 				<aspectratio scalediffuse="false">stretch</aspectratio>			
 				<texture diffuse="list/list_musicicon_mask.png">$INFO[ListItem.Icon]</texture>
 				<bordertexture border="-32">list/list_musicicon_frame.png</bordertexture>
-				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)+ [!Container.Content(genres)|Skin.HasSetting(musicgenre_onoff)]</visible><!-- aeon passion mod -->
 			</control>
-			
+
+			<include>mod_musicgenre_list1</include> <!-- aeon passion mod -->
+
 			<control type="image">
 				<posy>513</posy>
 				<width>346</width>
@@ -1150,8 +1168,10 @@
 				<fadetime>400</fadetime>
 				<aspectratio scalediffuse="false">stretch</aspectratio>			
 				<texture flipy="true" diffuse="list/list_musicicon_flipmask.png">$INFO[ListItem.Icon]</texture>
-				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)</visible>
+				<visible>Window.IsActive(500) | Window.IsActive(501) | Window.IsActive(502)+ [!Container.Content(genres)|Skin.HasSetting(musicgenre_onoff)]</visible><!-- aeon passion mod -->
 			</control>
+			
+			<include>mod_musicgenre_list2</include> <!-- aeon passion mod -->
 
 			<control type="image">
 				<posy>165</posy>			
@@ -1163,33 +1183,8 @@
 			</control>
 		</control>
 
-		<control type="group">
-			<animation effect="fade" delay="1500" start="0" end="100" time="400">Visible</animation>
-			<animation effect="fade" start="100" end="0" time="100">Hidden</animation>
-			<visible>Control.IsVisible(50) + Player.HasAudio</visible>
-			<control type="progress" id="20">
-				<description>Progressbar</description>
-				<posx>855</posx>
-				<posy>630</posy>
-				<width>346</width>
-				<height>18</height>
-				<texturebg>list/progress_back.png</texturebg>
-				<lefttexture>list/progress_left.png</lefttexture>
-				<midtexture>list/progress_mid.png</midtexture>
-				<righttexture>list/progress_right.png</righttexture>
-				<overlaytexture>-</overlaytexture>
-				<info>Player.Progress</info>
-			</control>
+	<include>Furniture_NowPlayingWidget</include>
 
-			<control type="label">
-				<include>List_NowPlaying</include>
-				<posy>655</posy>
-				<textcolor>8f000000</textcolor>
-				<scroll>true</scroll>
-				<label>[UPPERCASE]$INFO[MusicPlayer.Artist] - "$INFO[MusicPlayer.Title]"[/UPPERCASE]</label>
-			</control>
-		</control>
-		
 	<control type="group">
 		<animation effect="fade" delay="500" start="0" end="100" time="1000" condition="Control.IsVisible(50)">Conditional</animation>
 		<animation effect="fade" delay="1500" start="100" end="0" time="200" condition="Player.HasAudio">Conditional</animation>		

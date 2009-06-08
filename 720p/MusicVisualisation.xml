@@ -224,6 +224,7 @@
 			<label>[COLOR 91FFFFFF]$INFO[MusicPlayer.Duration][/COLOR]</label>
 		</control>	
 <!-- aeon passion mod END -->
+
 		<control type="label">
 			<posx>0</posx>
 			<posy>45</posy>
