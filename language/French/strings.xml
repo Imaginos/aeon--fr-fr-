@@ -495,4 +495,24 @@
 	<string id="31937">ÉPISODES</string>
 	<string id="31938">SAISONS</string>
 
+<!-- Aeon Passion Cutomisation -->
+
+	<string id="31950">Choisir les labels dans les options</string>
+	<string id="31951">Désactivez la correction vericale !</string>
+	<string id="31952">Options avancées</string>
+	<string id="31953">Ancien Multiplex</string>
+	<string id="31954">Fonds météo en fonction des conditions actuelles (ne fonctionne pas)</string>
+	<string id="31955">Affichage des images de genre</string>
+	<string id="31956">Utiliser l'image par défaut</string>
+	<string id="31957">studio</string>
+	<string id="31958">codec vidéo</string>
+	<string id="31959">résolution</string>
+	<string id="31960">format audio</string>
+	<string id="31961">durée</string>
+	<string id="31962">évaluation</string>
+	<string id="31963">source</string>
+	<string id="31964">chaine</string>
+	<string id="31965">Correction verticale de la hauteur des labels</string>
+	<string id="31966">disposition originale</string>
+	<string id="31967">Options des mods</string>
 </strings>

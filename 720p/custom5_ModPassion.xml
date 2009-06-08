@@ -99,7 +99,7 @@
 		<control type="label">
 			<description>genre</description>
 			<posy>90</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FFf5f5f5</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>![Control.HasFocus(2) | ControlGroup(11).HasFocus]</visible>
@@ -107,7 +107,7 @@
 		<control type="label">
 			<description>genre</description>
 			<posy>90</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FF262728</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>Control.HasFocus(2) | ControlGroup(11).HasFocus</visible>
@@ -139,7 +139,7 @@
 		<control type="label">
 			<description>My Weather Sub Unfocused</description>
 			<posy>148</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FFf5f5f5</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>![Control.HasFocus(3) | ControlGroup(12).HasFocus]</visible>
@@ -147,7 +147,7 @@
 		<control type="label">
 			<description>My Weather Sub Unfocused</description>
 			<posy>148</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FF262728</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>Control.HasFocus(3) | ControlGroup(12).HasFocus</visible>
@@ -155,7 +155,7 @@
 
 		<control type="button" id="4">
 			<posy>174</posy>
-			<label>ANCIEN MULTIPLEX</label>
+			<label>31953</label>
 			<include>Objects_SettingsSectionMenuButton</include>
 			<onup>3</onup>
 			<ondown>5</ondown>
@@ -166,7 +166,7 @@
 		</control>
 		<control type="button" id="4">
 			<posy>174</posy>
-			<label>ANCIEN MULTIPLEX</label>
+			<label>31953</label>
 			<include>Objects_SettingsSectionMenuButtonFocused</include>
 			<onup>3</onup>
 			<ondown>5</ondown>
@@ -177,7 +177,7 @@
 		<control type="label">
 			<description>Sub menu</description>
 			<posy>206</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FFf5f5f5</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>![Control.HasFocus(4) | ControlGroup(14).HasFocus]</visible>
@@ -185,7 +185,7 @@
 		<control type="label">
 			<description>Sub menu</description>
 			<posy>206</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FF262728</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>Control.HasFocus(4) | ControlGroup(14).HasFocus</visible>
@@ -194,7 +194,7 @@
 		<control type="button" id="5">
 			<description>flags management</description>
 			<posy>232</posy>
-			<label>EPISODES</label>
+			<label>31406</label>
 			<include>Objects_SettingsSectionMenuButton</include>
 			<onclick>SetFocus(15)</onclick>
 			<onleft>15</onleft>
@@ -206,7 +206,7 @@
 		<control type="button">
 			<description>management</description>
 			<posy>232</posy>
-			<label>EPISODES</label>
+			<label>31406</label>
 			<include>Objects_SettingsSectionMenuButtonFocused</include>
 			<onclick>SetFocus(15)</onclick>
 			<onleft>15</onleft>
@@ -218,7 +218,7 @@
 		<control type="label">
 			<description>Backdrops Unfocused</description>
 			<posy>264</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FFf5f5f5</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>![Control.HasFocus(5) | ControlGroup(15).HasFocus]</visible>
@@ -226,7 +226,7 @@
 		<control type="label">
 			<description>Backdrops Focused</description>
 			<posy>264</posy>
-			<label>Options avancées</label>
+			<label>31952</label>
 			<textcolor>FF262728</textcolor>
 			<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 			<visible>Control.HasFocus(5) | ControlGroup(15).HasFocus</visible>
@@ -248,8 +248,7 @@
 		<visible>Control.HasFocus(1) | ControlGroup(10).HasFocus</visible>
 		<control type="radiobutton" id="500">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Fonds météo en fonction des conditions actuelles (ne fonctionne pas)</label>
-<!--			<label>Weather Backdrop by Current Weather Conditions</label>-->
+			<label>31954</label>
 			<onclick>Skin.ToggleSetting(CustomWeatherConditions)</onclick>
 			<selected>Skin.HasSetting(CustomWeatherConditions)</selected>
 		</control>			
@@ -270,8 +269,7 @@
 		<visible>Control.HasFocus(2) | ControlGroup(11).HasFocus</visible>
 		<control type="radiobutton" id="700">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Affichage des images de genre</label>
-<!--			<label>Movie genre Icons on/off</label>-->
+			<label>31955</label>
 			<onclick>Skin.ToggleSetting(moviegenre_onoff)</onclick>
 			<selected>!Skin.HasSetting(moviegenre_onoff)</selected>
 		</control>
@@ -279,8 +277,7 @@
 		<control type="radiobutton" id="701">
 			<visible>!Skin.HasSetting(moviegenre_onoff)</visible>
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Utiliser l'image par défaut</label>
-<!--			<label>Movie Genre fallback image on/off</label> -->
+			<label>31956</label>
 			<onclick>Skin.ToggleSetting(moviegenre_default_onoff)</onclick>
 			<selected>!Skin.HasSetting(moviegenre_default_onoff)</selected>
 		</control>
@@ -326,7 +323,7 @@
 		</control>
 		<control type="radiobutton" id="450">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, codec vidéo, résolution, format audio</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31958], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,codec)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,resolution)</onclick>
@@ -336,7 +333,7 @@
 		</control>
 		<control type="radiobutton" id="451">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, durée, format audio, codec vidéo</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31961], $LOCALIZE[31960], $LOCALIZE[31958]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,duration)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,audio)</onclick>
@@ -346,7 +343,7 @@
 		</control>
 		<control type="radiobutton" id="452">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, durée, résolution, format audio</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31961], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,duration)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,resolution)</onclick>
@@ -356,7 +353,7 @@
 		</control>
 		<control type="radiobutton" id="453">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, évaluation, durée, codec vidéo</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31962], $LOCALIZE[31961], $LOCALIZE[31958]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,duration)</onclick>
@@ -366,7 +363,7 @@
 		</control>
 		<control type="radiobutton" id="454">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, évaluation, format audio, résolution</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31962], $LOCALIZE[31960], $LOCALIZE[31959]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,audio)</onclick>
@@ -376,7 +373,7 @@
 		</control>
 		<control type="radiobutton" id="455">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, source, codec vidéo, format audio</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,codec)</onclick>
@@ -386,7 +383,7 @@
 		</control>
 		<control type="radiobutton" id="456">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, source, durée, évaluation</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31961], $LOCALIZE[31962]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,duration)</onclick>
@@ -396,7 +393,7 @@
 		</control>	
 		<control type="radiobutton" id="457">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, source, résolution, format audio   (disposition originale)</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31959], $LOCALIZE[31960]   ($LOCALIZE[31966])</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos3,resolution)</onclick>
@@ -417,7 +414,7 @@
 		<usecontrolcoords>true</usecontrolcoords>
 		<control type="radiobutton" id="470">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, codec vidéo, résolution, format audio</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31958], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,codec)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,resolution)</onclick>
@@ -427,7 +424,7 @@
 		</control>
 		<control type="radiobutton" id="471">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, durée, format audio, codec vidéo</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31961], $LOCALIZE[31960], $LOCALIZE[31958]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,duration)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,audio)</onclick>
@@ -437,7 +434,7 @@
 		</control>
 		<control type="radiobutton" id="472">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, durée, résolution, format audio</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31961], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,duration)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,resolution)</onclick>
@@ -447,7 +444,7 @@
 		</control>
 		<control type="radiobutton" id="473">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, évaluation, durée, codec vidéo</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31962], $LOCALIZE[31961], $LOCALIZE[31958]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,duration)</onclick>
@@ -457,7 +454,7 @@
 		</control>
 		<control type="radiobutton" id="474">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, évaluation, format audio, résolution</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31962], $LOCALIZE[31960], $LOCALIZE[31959]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,audio)</onclick>
@@ -467,7 +464,7 @@
 		</control>
 		<control type="radiobutton" id="475">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, source, codec vidéo, format audio</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,codec)</onclick>
@@ -477,7 +474,7 @@
 		</control>
 		<control type="radiobutton" id="476">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, source, durée, évaluation</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31961], $LOCALIZE[31962]</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,duration)</onclick>
@@ -487,7 +484,7 @@
 		</control>
 		<control type="radiobutton" id="477">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>studio, source, résolution, format audio   (disposition originale)</label>
+			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31959], $LOCALIZE[31960]   ($LOCALIZE[31966])</label>
 			<onclick>Skin.SetString(multiplexmediaflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(multiplexmediaflags_pos3,resolution)</onclick>
@@ -503,15 +500,27 @@
 		<onleft>5</onleft>
 		<onright>5</onright>
 		<visible>Control.HasFocus(5) | ControlGroup(15).HasFocus</visible>
-		<control type="radiobutton" id="480">
+		<control type="radiobutton" id="488">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>Correction de la hauteur des labels</label>
+			<label>31965</label>
 			<onclick>Skin.Togglesetting(vertical_correction)</onclick>
 			<selected>Skin.HasSetting(vertical_correction)</selected>
 		</control>
+		<control type="radiobutton" id="489">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>31247</label>
+			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
+			<selected>Skin.HasSetting(unlockTVviews)</selected>
+		</control>
+		<control type="radiobutton" id="489">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>31247</label>
+			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
+			<selected>Skin.HasSetting(unlockTVviews)</selected>
+		</control>
 		<control type="radiobutton" id="490">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>chaine, codec vidéo, résolution, format audio</label>
+			<label>$LOCALIZE[31964], $LOCALIZE[31958], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos2,codec)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos3,resolution)</onclick>
@@ -521,7 +530,7 @@
 		</control>
 		<control type="radiobutton" id="491">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>chaine, évaluation, codec vidéo, format audio</label>
+			<label>$LOCALIZE[31964], $LOCALIZE[31962], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos3,codec)</onclick>
@@ -531,7 +540,7 @@
 		</control>
 		<control type="radiobutton" id="492">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>chaine, évaluation, résolution, format audio</label>
+			<label>$LOCALIZE[31964], $LOCALIZE[31962], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos3,resolution)</onclick>
@@ -541,7 +550,7 @@
 		</control>
 		<control type="radiobutton" id="493">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>chaine, source, résolution, format audio</label>
+			<label>$LOCALIZE[31964], $LOCALIZE[31963], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos2,source)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos3,resolution)</onclick>
@@ -551,7 +560,7 @@
 		</control>
 		<control type="radiobutton" id="494">
 			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>résolution, évaluation, codec vidéo, format audio</label>
+			<label>$LOCALIZE[31959], $LOCALIZE[31962], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,resolution)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos2,rating)</onclick>
 			<onclick>Skin.SetString(episodemediaflags_pos3,codec)</onclick>
@@ -559,16 +568,9 @@
 			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
 			<selected>Skin.String(episodemediaflags_pos1,resolution) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,codec) + Skin.String(episodemediaflags_pos4,audio)</selected>
 		</control>
-		
-		
 	</control>
-	
-
-
 	<include>Furniture_SettingsFrontPanel</include>
-
 	<include>Background_ContextBlack</include>
 	<include>Furniture_Debug</include>
-	
 	</controls>
 </window>

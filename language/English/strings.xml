@@ -493,5 +493,25 @@
 	<string id="31936">TRACKS</string>
 	<string id="31937">SEASONS</string>
 	<string id="31938">EPISODES</string>
-	
+
+<!-- Aeon Passion Cutomisation -->
+
+	<string id="31950">Set flags in advanced settings</string>
+	<string id="31951">Disable vertical correction now !</string>
+	<string id="31952">Advanced settings</string>
+	<string id="31953">Old Multiplex</string>
+	<string id="31954">Weather Backdrop by Current Weather Conditions(not working)</string>
+	<string id="31955">Movie genre Icons on/off</string>
+	<string id="31956">Movie Genre fallback image on/off</string>
+	<string id="31957">studio</string>
+	<string id="31958">video codec</string>
+	<string id="31959">resolution</string>
+	<string id="31960">audio format</string>
+	<string id="31961">duration</string>
+	<string id="31962">rating</string>
+	<string id="31963">source</string>
+	<string id="31964">network</string>
+	<string id="31965">Vertical correction</string>
+	<string id="31966">Initial layout</string>
+	<string id="31967">Mods settings</string>
 </strings>

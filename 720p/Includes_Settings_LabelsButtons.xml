@@ -732,7 +732,7 @@
 			<control type="label">
 				<description>OSD Sub Unfocused</description>
 				<posy>380</posy>
-				<label>Options des mods</label>
+				<label>31967</label>
 				<textcolor>FFf5f5f5</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>!Control.HasFocus(12)</visible>
@@ -740,7 +740,7 @@
 			<control type="label">
 				<description>OSD Sub Unfocused</description>
 				<posy>380</posy>
-				<label>Options des mods</label>
+				<label>31967</label>
 				<textcolor>FF262728</textcolor>
 				<include>Objects_SettingsSectionMenuButtonSubtitle</include>
 				<visible>Control.HasFocus(12)</visible>
