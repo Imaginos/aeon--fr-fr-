@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <!-- $Revision: 204$ -->
-<!-- Date of translation : 2009-06-04 (18h16 UMT) -->
+<!-- Date of translation : 2009-06-08 (14h46 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -209,7 +209,7 @@
   
 <!-- Aeon Advanced options -->
   
-	<string id="31247">Dévérouiller toutes les vues TV</string>
+	<string id="31247">Déverouiller toutes les vues TV</string>
 	<string id="31248">Ancien Multiplex 'Sombre'</string>
 	<string id="31249">MENU DES VUES : OPTION "LABELS"</string>
 	<string id="31250">MENU MULTIPLEX : OPTION "PRÉSENTATION" (FANART, RÉSUMÉ, VIGNETTES INSÉRÉES)</string>
