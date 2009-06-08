@@ -512,12 +512,6 @@
 			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
 			<selected>Skin.HasSetting(unlockTVviews)</selected>
 		</control>
-		<control type="radiobutton" id="489">
-			<include>Objects_SettingsDefaultRadioButton</include>
-			<label>31247</label>
-			<onclick>Skin.ToggleSetting(unlockTVviews)</onclick>
-			<selected>Skin.HasSetting(unlockTVviews)</selected>
-		</control>
 		<control type="radiobutton" id="490">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31964], $LOCALIZE[31958], $LOCALIZE[31959], $LOCALIZE[31960]</label>
