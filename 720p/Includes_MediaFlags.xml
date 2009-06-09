@@ -3484,6 +3484,18 @@
 					<include>HD_Flag</include>
 					<texture>flags/tv/bbc_hd.png</texture>
 					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netBBC One)</visible>
+				</control>
+				<control type="image" id="91">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>NoHd_Flag</include>
+					<texture>flags/tv/the_movie_channel.png</texture>
+					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netThe Movie)</visible>
+				</control>
+				<control type="image" id="91">
+					<include>Furniture_ShowcaseMediaFlagsVars</include>
+					<include>HD_Flag</include>
+					<texture>flags/tv/the_movie_channel_hd.png</texture>
+					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netThe Movie)</visible>
 				</control>					
 <!-- End Dual HD/SD flag networks -->
 				<control type="image" id="91">
