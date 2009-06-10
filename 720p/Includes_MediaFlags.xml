@@ -76,7 +76,7 @@
 	</include>
 
 	<include name="Furniture_ShowcaseMediaFlagsVars">
-		<posy>647</posy>
+		<posy>650</posy>
 		<width>110</width>
 		<height>72</height>
 		<include>Animation_CommonFade</include>
@@ -88,7 +88,7 @@
 	</include>
 	
 	<include name="Furniture_ShowcaseMediaFlagsTextVars">
-		<posy>610</posy>
+		<posy>613</posy>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
 		<include>Animation_HideMultiplex</include>
@@ -3489,13 +3489,13 @@
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<include>NoHd_Flag</include>
 					<texture>flags/tv/the_movie_channel.png</texture>
-					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netThe Movie)</visible>
+					<visible>substring(listitem.director,netThe Movie)</visible>
 				</control>
 				<control type="image" id="91">
 					<include>Furniture_ShowcaseMediaFlagsVars</include>
 					<include>HD_Flag</include>
 					<texture>flags/tv/the_movie_channel_hd.png</texture>
-					<visible>substring(listitem.director,netBBC-1) | substring(listitem.director,netThe Movie)</visible>
+					<visible>substring(listitem.director,netThe Movie)</visible>
 				</control>					
 <!-- End Dual HD/SD flag networks -->
 				<control type="image" id="91">
