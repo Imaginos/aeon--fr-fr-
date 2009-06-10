@@ -59,18 +59,6 @@
 			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>			
 		</control>
 		
-		<control type="label">
-			<posx>0</posx>
-			<posy>75</posy>
-			<width>1280</width>
-			<height>30</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font>Font_OSDMusicTitle</font>
-			<label>[COLOR FFFFFFFF]$INFO[VideoPlayer.Title][/COLOR]</label>
-			<animation effect="slide" start="0,0" end="0,-12" time="200" condition="Control.IsVisible(212)">Conditional</animation>			
-		</control>
-		
 <!-- aeon passion mod BEGIN
 		Display season and episode numbers on the info bar -->
 		<control type="label">
