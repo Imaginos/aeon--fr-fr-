@@ -656,9 +656,9 @@
 	</include>
 
 	<include name="MultiplexMovieVarsWrap">
-		<posx>100</posx>
-		<posy>478</posy>
-		<width>1080</width>
+		<posx>46</posx>
+		<posy>490</posy>
+		<width>1188</width>
 		<height>300</height>	
 	</include>
 	
@@ -672,16 +672,16 @@
 	<include name="MultiplexIconDimensionsWrap">
 		<posx>6</posx>
 		<posy>0</posy>
-		<width>107</width>
-		<height>165</height>	
+		<width>96</width>
+		<height>144</height>	
 		<fadetime>200</fadetime>
 	</include>
 	
 	<include name="MultiplexIconDimensionsWrapReflect">
 		<posx>6</posx>
 		<posy>165</posy>
-		<width>107</width>
-		<height>165</height>
+		<width>96</width>
+		<height>144</height>
 		<colordiffuse>56FFFFFF</colordiffuse>
 		<fadetime>200</fadetime>		
 	</include>	
@@ -702,7 +702,7 @@
 	</include>	
 	
 	<include name="MultiplexFocusMovies">
-		<focusposition>4</focusposition>	
+		<focusposition>5</focusposition>	
 	</include>
 	
 	<include name="MultiplexFocusTV">
@@ -733,8 +733,8 @@
         </control>
 
 		<control type="image">
-			<posx>40</posx>
-			<posy>567</posy>
+			<posx>8</posx>
+			<posy>574</posy>
 			<width>33</width>
 			<height>37</height>
 			<texture>multiplex/multiplex_arrow2.png</texture>
@@ -744,15 +744,15 @@
 		</control>
 		
 		<control type="image">
-			<posx>1207</posx>
-			<posy>567</posy>
+			<posx>1238</posx>
+			<posy>574</posy>
 			<width>33</width>
 			<height>37</height>
 			<texture flipx="true">multiplex/multiplex_arrow2.png</texture>
 			<include>Animation_HideMultiplex</include>
 			<visible>Control.IsVisible(52)</visible>
 			<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Container.Content(movies)">Conditional</animation>			
-		</control>		
+		</control>
 		
 		<include condition="Skin.HasSetting(videomovies)">MultiplexInfoPaneMovies</include>	
 		<include condition="Skin.HasSetting(videotv)">MultiplexInfoPaneTV</include>
@@ -773,7 +773,7 @@
 			<scrolltime>200</scrolltime>
 			<visible>Window.IsActive(25)</visible>
 			<include>Animation_HideMultiplex</include>
-			<itemlayout width="120" height="300" condition="Container.Content(movies)">
+			<itemlayout width="108" height="300" condition="Container.Content(movies)">
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
@@ -787,7 +787,7 @@
 				</control>
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
-					<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+					<bordertexture border="-11">multiplex/multiplex_border.png</bordertexture>
 					<texture>common/blank.png</texture>
 				</control>
 				<control type="image">
@@ -802,7 +802,7 @@
 					<info>ListItem.Icon</info>
 				</control>				
 			</itemlayout>
-			<focusedlayout width="120" height="300" condition="Container.Content(movies)">
+			<focusedlayout width="108" height="300" condition="Container.Content(movies)">
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
 					<texture diffuse="multiplex/multiplex_mask.png">defaultvideo.png</texture>
@@ -818,7 +818,7 @@
 				</control>
 				<control type="image">
 					<include>MultiplexIconDimensionsWrap</include>
-					<bordertexture border="-17">multiplex/multiplex_border.png</bordertexture>
+					<bordertexture border="-11">multiplex/multiplex_border.png</bordertexture>
 					<texture>common/blank.png</texture>
 					<include>Animation_MultiplexFocusZoom</include>					
 				</control>
