@@ -46,7 +46,7 @@
 	</control>
 
 <!-- aeon passion mod BEGIN -->
-<!-- clearart -->	
+<!-- clearart 	
 	<control type ="image">  
 		<posx>950</posx>     
 		<posy>-178</posy>    
@@ -56,13 +56,16 @@
 		<aspectratio align="right" aligny="bottom">keep</aspectratio>   
 		<visible>VideoPlayer.Content(episodes)</visible>
 	</control>
-	<control type="label">
-		<posx>950</posx>     
-		<posy>-178</posy>    
-		<width>330</width>     
-		<height>185</height> 
-		<label>$INFO[VideoPlayer.Year]</label>
-	</control>	
+-->
+	<control type ="image">  
+		<posx>1049</posx>     
+		<posy>-176</posy>    
+		<width>230</width>     
+		<height>184</height> 
+		<texture>$INFO[VideoPlayer.cover]</texture> 
+		<aspectratio align="right" aligny="bottom">keep</aspectratio>   
+		<visible>VideoPlayer.Content(episodes) + Skin.HasSetting(episodecoveronseekbar)</visible>
+	</control>
 <!-- aeon passion mod END -->
 	
 	<control type="label">

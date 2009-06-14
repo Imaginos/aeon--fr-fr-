@@ -3950,4 +3950,234 @@
 			</control>
 		</control>		
 	</include>
+	
+	<include name="MusicRatingFlagsVars">
+		<posx>80</posx>
+		<posy>653</posy>
+		<width>90</width>
+		<height>59</height>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+	</include>
+	<include name="MusicGenreFlagsVars">
+		<posx>190</posx>
+		<posy>653</posy>
+		<width>90</width>
+		<height>59</height>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+	</include>
+	<include name="MusicGenreTextVars">
+		<posx>227</posx>
+		<posy>669</posy>
+		<width>130</width>
+		<height>59</height>
+		<font>Font_BigTime</font>
+		<align>left</align>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+	</include>
+	<include name="MusicYearFlagsVars">
+		<posx>975</posx>
+		<posy>653</posy>
+		<width>90</width>
+		<height>59</height>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+	</include>
+	<include name="MusicYearTextVars">
+		<posx>975</posx>
+		<posy>669</posy>
+		<width>90</width>
+		<height>59</height>
+		<font>Font_BigTime</font>
+		<align>center</align>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Albums) | Container.Content(Songs)</visible>
+	</include>
+	<include name="MusicLabelFlagsVars">
+		<posx>1085</posx>
+		<posy>653</posy>
+		<width>90</width>
+		<height>59</height>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Albums)</visible>
+	</include>
+	<include name="MusicCodecFlagsVars">
+		<posx>1085</posx>
+		<posy>653</posy>
+		<width>90</width>
+		<height>59</height>
+		<colordiffuse>ffcccccc</colordiffuse>
+		<visible>Container.Content(Songs)</visible>
+	</include>
+	<include name="MusicMediaFlags">
+		<control type="group">
+		<!-- Rating -->
+			<control type="image" id="5091">
+				<include>MusicRatingFlagsVars</include>
+				<texture>flags/music/rating/rating0.png</texture>
+				<visible>[Container.Content(Albums) | Container.Content(Songs)] + !IsEmpty(ListItem.Thumb)</visible>
+			</control>
+			<control type="image" id="5091">
+				<include>MusicRatingFlagsVars</include>
+				<texture>flags/music/rating/rating1.png</texture>
+				<visible>substring(ListItem.Rating,1)</visible>
+			</control>
+			<control type="image" id="5091">
+				<include>MusicRatingFlagsVars</include>
+				<texture>flags/music/rating/rating2.png</texture>
+				<visible>substring(ListItem.Rating,2)</visible>
+			</control>
+			<control type="image" id="5091">
+				<include>MusicRatingFlagsVars</include>
+				<texture>flags/music/rating/rating3.png</texture>
+				<visible>substring(ListItem.Rating,3)</visible>
+			</control>
+			<control type="image" id="5091">
+				<include>MusicRatingFlagsVars</include>
+				<texture>flags/music/rating/rating4.png</texture>
+				<visible>substring(ListItem.Rating,4)</visible>
+			</control>
+			<control type="image" id="5091">
+				<include>MusicRatingFlagsVars</include>
+				<texture>flags/music/rating/rating5.png</texture>
+				<visible>substring(ListItem.Rating,5)</visible>
+			</control>
+		<!-- Genre -->
+			<control type="image" id="5092">
+				<include>MusicGenreFlagsVars</include>
+				<texture>flags/music/genre/genre.png</texture>
+				<visible>!IsEmpty(ListItem.Genre)</visible>
+			</control>
+			<control type="label">
+				<include>MusicGenreTextVars</include>
+				<label>$INFO[ListItem.Genre]</label>
+			</control>
+		<!-- Year -->
+			<control type="image" id="5093">
+				<include>MusicYearFlagsVars</include>
+				<texture>flags/music/year/year.png</texture>
+				<visible>!IsEmpty(ListItem.Year)</visible>
+			</control>
+			<control type="label">
+				<include>MusicYearTextVars</include>
+				<label>$INFO[ListItem.Year]</label>
+			</control>
+		<!-- Label -->
+			<control type="image" id="5094">
+				<include>MusicLabelFlagsVars</include>
+				<texture>flags/music/recordlabel/$INFO[ListItem.Property(Label),,.png]</texture>
+			</control>
+		<!-- Codec -->
+			<control type="grouplist">
+				<include>MusicCodecFlagsVars</include>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/aac.png</texture>
+					<visible>substring(listitem.filename,.aac)</visible>
+				</control>	
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/ac3.png</texture>
+					<visible>substring(listitem.filename,.ac3)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/aif.png</texture>
+					<visible>substring(listitem.filename,.aif) + ![substring(listitem.filename,.aifc)  | substring(listitem.filename,.aiff) ]</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/aifc.png</texture>
+					<visible>substring(listitem.filename,.aifc)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/aiff.png</texture>
+					<visible>substring(listitem.filename,.aiff)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/avs.png</texture>
+					<visible>substring(listitem.filename,.avs)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/ape.png</texture>
+					<visible>substring(listitem.filename,.ape)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/cdda.png</texture>
+					<visible>substring(listitem.filename,.cdda)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/dts.png</texture>
+					<visible>substring(listitem.filename,.dts)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/flac.png</texture>
+					<visible>substring(listitem.filename,.flac)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/m4a.png</texture>
+					<visible>substring(listitem.filename,.m4a)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/mlp.png</texture>
+					<visible>substring(listitem.filename,.mlp)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/mp2.png</texture>
+					<visible>substring(listitem.filename,.mp2)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/mp3.png</texture>
+					<visible>substring(listitem.filename,.mp3)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/mpc.png</texture>
+					<visible>substring(listitem.filename,.mpc)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/ogg.png</texture>
+					<visible>substring(listitem.filename,.ogg)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/ra.png</texture>
+					<visible>substring(listitem.filename,.ra)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/shn.png</texture>
+					<visible>substring(listitem.filename,.shn)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/wav.png</texture>
+					<visible>substring(listitem.filename,.wav)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/wma.png</texture>
+					<visible>substring(listitem.filename,.wma)</visible>
+				</control>
+				<control type="image" id="5094">
+					<include>MusicCodecFlagsVars</include>
+					<texture>flags/music/audiocodec/wv.png</texture>
+					<visible>substring(listitem.filename,.wv)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
 </includes>
