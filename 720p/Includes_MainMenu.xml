@@ -38,6 +38,7 @@
 	<onup>Skin.Reset(lowermainmenu)</onup>
 	<ondown>351</ondown>
 </include>
+
 <!-- aeon passion mod -->
 <!-- Weather Backdrop by Current Weather Conditions -->
 	<include name="BackgroundVarsWeather2">
@@ -242,7 +243,10 @@
 		<orientation>horizontal</orientation>
 		<focusposition>2</focusposition>
 		<scrolltime>200</scrolltime>
-		<visible>![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(10)]</visible>
+
+		<!--<visible>![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(10)]</visible> <<<<<< old -->
+		<visible>![Control.HasFocus(301) | Control.HasFocus(7) | Control.HasFocus(10) | Control.HasFocus(345)]</visible><!-- <<<<<< Add this -->
+
 		<animation effect="fade" start="0" end="100" time="200" condition="!Window.Previous(56) + !Window.Previous(12) + !Window.Previous(13) + !Window.Previous(14) + !Window.Previous(15) + !Window.Previous(16) + !Window.Previous(17) + !Window.Previous(18) + !Window.Previous(19)">WindowOpen</animation>
 		<itemlayout width="184" height="40">
 			<control type="label">
@@ -329,7 +333,8 @@
 			<item id="10">
 				<description>Weather</description>
 				<label>31017</label>
-				<include>BackgroundVarsVideo</include>						
+				<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather2</include><!--Weather Backdrop by Current Weather Conditions -->
+				<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsWeather</include><!--Weather Backdrop by Current Weather Conditions -->					
 				<onclick>Skin.SetString(custom,CustomWeather)</onclick>
 				<onclick>SetFocus(92)</onclick>
 				<visible>Skin.HasSetting(weather)</visible>
@@ -379,7 +384,7 @@
 		<width>840</width>
 		<onleft>301</onleft>
 		<onright>301</onright>
-		<onup>7</onup>
+		<onup>345</onup>
 		<ondown>7</ondown>
 		<viewtype>list</viewtype>
 		<orientation>horizontal</orientation>
@@ -510,8 +515,8 @@
 			<item id="10">
 				<description>My Pictures</description>
 				<label2>31017</label2>
-				<icon>special://skin/media/backdrops/summer/summer.png</icon>
-				<thumb>$INFO[Skin.String(CustomWeather)]</thumb>				
+				<include condition="Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsMusicWeather2</include><!--Weather Backdrop by Current Weather Conditions -->
+				<include condition="!Skin.HasSetting(CustomWeatherConditions)">BackgroundVarsMusicWeather</include><!--Weather Backdrop by Current Weather Conditions -->				
 				<onclick>Skin.SetBool(weather)</onclick>
 				<visible>!Skin.HasSetting(weather)</visible>
 			</item>

@@ -53,6 +53,9 @@
 		<onleft>Container.SetViewMode(52)</onleft>	
 	</include>	
 	
+	<include name="MultiplexButton2">
+		<onleft>Container.SetViewMode(51)</onleft>	
+	</include>
 	<include name="ViewChange">
 		<control type="image">
 			<include>FullscreenDimensions</include>
@@ -71,7 +74,9 @@
 			<onright>Container.SetViewMode(57)</onright>
 			<onright>SetFocus(900)</onright>
 			<include condition="Window.IsActive(2)">StripShowButton</include>
-			<include condition="Window.IsActive(25)">MultiplexButton</include>			
+			<include condition="Window.IsActive(25)">MultiplexButton</include>
+
+			<include condition="Window.IsActive(502)">MultiplexButton2</include>			
 			<onleft>SetFocus(900)</onleft>
 			<ondown>Container.SetViewMode(53)</ondown>
 			<ondown>SetFocus(900)</ondown>		
@@ -112,7 +117,7 @@
 		</control>		
 		<control type="group">
 			<include>ViewChangeAnimLeft</include>
-			<visible>Window.IsActive(25)</visible>
+			<visible>Window.IsActive(25) | Window.IsActive(502) </visible>
 			<control type="image">
 				<posx>121</posx>
 				<posy>277</posy>

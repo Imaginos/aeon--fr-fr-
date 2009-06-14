@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<!-- $Revision: 204$ -->
-<!-- Date of translation : 2009-06-08 (14h46 UMT) -->
+<!-- Date of translation : 2009-06-15 (23h30 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -502,8 +501,8 @@
 	<string id="31952">Options avancées</string>
 	<string id="31953">Ancien Multiplex</string>
 	<string id="31954">Fonds météo en fonction des conditions actuelles</string>
-	<string id="31955">Affichage des images de genre</string>
-	<string id="31956">Utiliser l'image par défaut</string>
+	<string id="31955">Affichage des icones de genre vidéo</string>
+	<string id="31956">Utiliser l'icone par défaut</string>
 	<string id="31957">studio</string>
 	<string id="31958">codec vidéo</string>
 	<string id="31959">résolution</string>
@@ -515,5 +514,7 @@
 	<string id="31965">Correction verticale de la hauteur des labels</string>
 	<string id="31966">disposition originale</string>
 	<string id="31967">Options des mods</string>
-	<string id="31968">Afficher la vignette de l'épisode dans la barre de progression</string>
+	<string id="31968">Afficher les vignettes d'épisodes dans la barre de progression</string>
+	<string id="31969">Utiliser les cleararts à la place des vignettes</string>
+	<string id="31970">Affichage des icones de genre musical</string>
 </strings>

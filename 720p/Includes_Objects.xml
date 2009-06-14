@@ -117,7 +117,16 @@
 				</control>
 				<control type="image">
 					<include>Objects_WeatherIcon</include>
-					<texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>				
+					<texture>$INFO[Window(Weather).Property(Day0.OutlookIcon)]</texture>
+			<!-- weather icon mod -->
+					<visible>!Skin.String(CustomWeatherIcon)</visible>				
+				</control>
+			
+				<control type="image">
+					<visible>Skin.String(CustomWeatherIcon)</visible>
+					<include>Objects_WeatherIcon</include>
+					<texture>$INFO[Skin.String(CustomWeatherIcon),,/]$INFO[Window(Weather).Property(Day0.FanartCode),,.png]</texture>	
+			<!-- end -->			
 				</control>
 			</control>
 			<control type="group">
@@ -145,7 +154,17 @@
 				<control type="image">
 					<include>Objects_WeatherIcon</include>
 					<texture>$INFO[Window(Weather).Property(Day1.OutlookIcon)]</texture>				
+			<!-- weather icon mod -->
+					<visible>!Skin.String(CustomWeatherIcon)</visible>				
 				</control>
+			
+				<control type="image">
+					<visible>Skin.String(CustomWeatherIcon)</visible>
+					<include>Objects_WeatherIcon</include>
+					<texture>$INFO[Skin.String(CustomWeatherIcon),,/]$INFO[Window(Weather).Property(Day1.FanartCode),,.png]</texture>
+			<!-- end -->				
+				</control>
+
 			</control>
 			<control type="group">
 				<posx>802</posx>
@@ -172,6 +191,15 @@
 				<control type="image">
 					<include>Objects_WeatherIcon</include>
 					<texture>$INFO[Window(Weather).Property(Day2.OutlookIcon)]</texture>				
+			<!-- weather icon mod -->
+					<visible>!Skin.String(CustomWeatherIcon)</visible>				
+				</control>
+			
+				<control type="image">
+					<visible>Skin.String(CustomWeatherIcon)</visible>
+					<include>Objects_WeatherIcon</include>
+					<texture>$INFO[Skin.String(CustomWeatherIcon),,/]$INFO[Window(Weather).Property(Day2.FanartCode),,.png]</texture>	
+			<!-- end -->			
 				</control>
 			</control>
 			<control type="group">
@@ -199,6 +227,15 @@
 				<control type="image">
 					<include>Objects_WeatherIcon</include>
 					<texture>$INFO[Window(Weather).Property(Day3.OutlookIcon)]</texture>				
+			<!-- weather icon mod -->
+					<visible>!Skin.String(CustomWeatherIcon)</visible>				
+				</control>
+			
+				<control type="image">
+					<visible>Skin.String(CustomWeatherIcon)</visible>
+					<include>Objects_WeatherIcon</include>
+					<texture>$INFO[Skin.String(CustomWeatherIcon),,/]$INFO[Window(Weather).Property(Day3.FanartCode),,.png]</texture>	
+			<!-- end -->			
 				</control>
 			</control>
 		</control>
@@ -403,7 +440,7 @@
 			<altlabel>$LOCALIZE[31067]S: $LOCALIZE[31077]</altlabel>
 			<usealttexture>Skin.HasSetting(nocurtains)</usealttexture>
 			<onclick>Skin.ToggleSetting(nocurtains)</onclick>
-			<visible>Control.IsVisible(52)</visible>
+			<visible>Control.IsVisible(52) | Control.IsVisible(50) | Control.IsVisible(57)</visible>
 		</control>
 	</include>	
 	

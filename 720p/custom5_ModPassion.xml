@@ -275,6 +275,12 @@
 			<onclick>Skin.ToggleSetting(moviegenre_default_onoff)</onclick>
 			<selected>!Skin.HasSetting(moviegenre_default_onoff)</selected>
 		</control>
+		<control type="radiobutton" id="702">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>31970</label>
+			<onclick>Skin.ToggleSetting(musicgenre_onoff)</onclick>
+			<selected>!Skin.HasSetting(musicgenre_onoff)</selected>
+		</control>
 <!--		<control type="radiobutton" id="702">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>Utilisation des fanarts</label>
@@ -511,6 +517,13 @@
 			<label>31968</label>
 			<onclick>Skin.ToggleSetting(episodecoveronseekbar)</onclick>
 			<selected>Skin.HasSetting(episodecoveronseekbar)</selected>
+		</control>
+		<control type="radiobutton" id="491">
+			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>31969</label>
+			<onclick>Skin.ToggleSetting(episodeclearartonseekbar)</onclick>
+			<selected>Skin.HasSetting(episodeclearartonseekbar)</selected>
+			<visible>Skin.HasSetting(episodecoveronseekbar)</visible>
 		</control>
 		<control type="radiobutton" id="491">
 			<include>Objects_SettingsDefaultRadioButton</include>

@@ -42,16 +42,18 @@
 			<visible>System.Date(09-23,12-21)</visible>
 		</control>
 
+
 		<control type="multiimage">
-			<include>Background_ImageFolder</include>
+			<include>BackgroundVarsGlobal</include>
 			<info>Skin.String(CustomWeatherFolder)</info>
 			<visible>Skin.String(CustomWeatherFolder)</visible>
 			<visible>!Skin.HasSetting(CustomWeatherConditions)</visible>
 		</control>
 
 		<control type="multiimage">
-			<include>Background_ImageFolder</include>
-			<imagepath>$INFO[Skin.String(CustomWeatherFolder)]$INFO[Weather.FanartCode]</imagepath>
+			
+		<include>BackgroundVarsGlobal</include>
+			<imagepath>$INFO[Skin.String(CustomWeather)]$INFO[Weather.FanartCode]</imagepath>
 			<visible>Skin.String(CustomWeatherFolder)</visible>
 			<visible>Skin.HasSetting(CustomWeatherConditions)</visible>
 		</control>

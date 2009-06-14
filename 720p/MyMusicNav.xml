@@ -3,6 +3,11 @@
 	<allowoverlay>yes</allowoverlay>
 	<controls>
 
+<!-- <<<<< ADD this -->
+	<control type="group">
+		<visible>[!Skin.HasSetting(musicgenre_fanart_onoff)+Container.Content(genres)] | !Container.Content(genres)</visible>
+<!-- ADD End -->
+
 	<control type="multiimage">
 		<include>BackgroundVarsGlobal</include>
 		<include>BackgroundVarsMusic</include>
@@ -10,7 +15,7 @@
 
 	<control type="largeimage" id="102">
 		<include>FullscreenDimensions</include>
-        <visible>!Control.IsVisible(103) + Control.IsVisible(57) + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
+        <visible>!Control.IsVisible(103) +[Control.IsVisible(51) | Control.IsVisible(50) | Control.IsVisible(57)] + !IsEmpty(listitem.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[listitem.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
@@ -18,11 +23,21 @@
 
 	<control type="largeimage" id="103">
 		<include>FullscreenDimensions</include>
-        <visible>Control.IsVisible(57) + !IsEmpty(container.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
+        <visible>[Control.IsVisible(51) | Control.IsVisible(50) | Control.IsVisible(57)] + !IsEmpty(container.property(fanart_image)) + !Skin.HasSetting(nomusicfanart)</visible>
 		<fadetime>400</fadetime>
 		<texture>$INFO[container.property(fanart_image)]</texture>
 		<include>Animation_FanartFade</include>
 	</control>
+<!-- <<<<< ADD this -->
+	</control>
+	 
+	<control type="image">
+		<include>FullscreenDimensions</include>
+		<fadetime>400</fadetime>
+		<texture>musicgenrefanart/$INFO[ListItem.Label].jpg</texture>
+		<visible>[Skin.HasSetting(musicgenre_fanart_onoff)+Container.Content(genres)]</visible>
+	</control>
+<!-- ADD End -->
 	
 	<include>Furniture_WallBackground</include>	
 
@@ -33,6 +48,7 @@
 		<include>Furniture_MediaPanel</include>
 		<include>Objects_ShowcaseMenuPanel</include>
 
+		<include>Viewtype_Music_Multiplex</include>
 		<include>Viewtype_Wall</include>
 		<include>Furniture_WallTime</include>
 		<include>Furniture_WallRSS</include>
@@ -69,26 +85,45 @@
 				<control type="togglebutton" id="940">
 					<include>Objects_MediaMenuButton</include>				
 					<include>Objects_ListLayoutStrings</include>
-					<usealttexture>Skin.HasSetting(musiclistfull)</usealttexture>
-					<onclick>Skin.SetBool(musiclistfull)</onclick>
-					<altclick>Skin.Reset(musiclistfull)</altclick>
-					<visible>Control.IsVisible(50)</visible>
+					<usealttexture>Skin.HasSetting(musicalbumslistfull)</usealttexture>
+					<onclick>Skin.SetBool(musicalbumslistfull)</onclick>
+					<altclick>Skin.Reset(musicalbumslistfull)</altclick>
+					<visible>Control.IsVisible(50) + !Window.IsActive(MyMusic) + Container.Content(albums)</visible>
+				</control>
+
+				<control type="togglebutton" id="945">
+					<include>Objects_MediaMenuButton</include>				
+					<include>Objects_ListLayoutStrings</include>
+					<usealttexture>Skin.HasSetting(musicsongslistfull)</usealttexture>
+					<onclick>Skin.SetBool(musicsongslistfull)</onclick>
+					<altclick>Skin.Reset(musicsongslistfull)</altclick>
+					<visible>Control.IsVisible(50) + !Window.IsActive(MyMusic) + Container.Content(songs)</visible>
 				</control>
 
 				<include>Objects_PanelDensityButton</include>
-				
+			<!-- Party Mod -->
+				<control type="button" id="915">
+					<label>589</label>
+					<include>Objects_MediaMenuButton</include>
+					<onclick>PlayerControl(Partymode(music))</onclick>
+				</control>
+			<!-- End -->
 				<control type="togglebutton" id="901">
 					<include>Objects_MediaMenuButton</include>				
 					<include>Objects_FanartToggleStrings</include>
 					<usealttexture>Skin.HasSetting(nomusicfanart)</usealttexture>
 					<onclick>Skin.SetBool(nomusicfanart)</onclick>
 					<altclick>Skin.Reset(nomusicfanart)</altclick>
-					<visible>Control.IsVisible(57)</visible>
+					<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(52)</visible>
 				</control>
 
 				<include>Objects_WallGridButton</include>
 				
-				<include>Objects_WallBackdropButton</include>				
+				<include>Objects_WallBackdropButton</include>
+
+				<include>Objects_CurtainsButton</include>
+
+				<include>Objects_LightNightButtons</include>				
 				
 				<control type="button" id="5">
 					<label>31057</label>
@@ -107,9 +142,8 @@
 		
 	</control>
 
-	<include>Furniture_DarkGradient</include>	
 	<include>ViewChange</include>
-	<!--<include>Background_ContextBlack</include>-->
+	<include>Background_ContextBlack</include>
 	<include condition="Skin.HasSetting(debug)">Furniture_Debug</include>
 	
 	</controls>

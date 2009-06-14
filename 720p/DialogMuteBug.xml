@@ -30,21 +30,26 @@
 			<height>163</height>
 			<texture>dialogs/progress_backg.png</texture>		
 		</control>
+
+	<control type="group">
+		<include>Dialogs_Group</include>
+		<include>Dialogs_Tablet</include>
+
+		<include>Dialogs_VolumeIcon</include>	
+
+		<control type="label" id="1">
+			<include>Dialogs_Label2</include>
+			<label>31707</label>
+		</control>
 	
 		<control type="label">
-			<posx>10</posx>
-			<posy>10</posy>
-			<width>688</width>
-			<height>51</height>
-			<textcolor>a7ffffff</textcolor>
-			<align>center</align>
-			<font>Font_ProgressLabelBig</font>
+			<include>Dialogs_Label3</include>
 			<label>31002</label>
-			<animation effect="slide" start="0,15" end="0,15" time="0" condition="IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>			
-			<animation effect="slide" start="0,0" end="0,0" time="0" condition="!IsEmpty(Control.GetLabel(3)) + IsEmpty(Control.GetLabel(4))">Conditional</animation>			
 		</control>
 
 	</control>
 
+
 	</controls>
+	
 </window>

@@ -23,7 +23,9 @@
 <include file="Viewtype_MultiplexOld.xml" />
 <include file="Viewtype_List.xml" />
 <include file="Viewtype_Wall.xml" />
-<include file="Includes_moviegenre.xml" /> <!-- aeon passion mod -->
+<include file="Viewtype_Music_Multiplex.xml" /><!-- <<<<<< Add this -->
+<include file="Includes_genre.xml" /><!-- <<<<<< Add this -->
+
 
 <!-- Text colours ================================== -->
 
