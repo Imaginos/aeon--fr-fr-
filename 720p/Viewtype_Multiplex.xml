@@ -398,11 +398,27 @@
 			<posx>0</posx>
 			<posy>65</posy>
 			<width>1280</width>
-			<height>381</height>
+<!--			
 			<visible>Skin.HasSetting(videotv) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvinfotrigger)]]</visible>
-			<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="!Skin.HasSetting(multiplextvinfoon)">WindowOpen</animation>			
+-->
+			<height>381</height>
+			<visible>
+			Container.Content(episodes) + Skin.HasSetting(videotv) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvinfotrigger)]]
+			|
+			Container.Content(seasons) + Skin.HasSetting(videotv) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvseasonsinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvseasonsinfotrigger)]]
+			|
+			Container.Content(tvshows) + Skin.HasSetting(videotv) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvshowsinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvshowsinfotrigger)]]
+			</visible>
+<!--
+			<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="!Skin.HasSetting(multiplextvinfoon)">WindowOpen</animation>
+-->
+			<animation effect="fade"  start="0" end="100" time="400" delay="3000" condition="
+			[Container.Content(episodes) + !Skin.HasSetting(multiplextvinfoon)]
+			| [Container.Content(seasons) + !Skin.HasSetting(multiplextvseasonsinfoon)]
+			| [Container.Content(tvshows) + !Skin.HasSetting(multiplextvshowsinfoon)]
+			">WindowOpen</animation>
 			<animation effect="fade" end="0" time="200">WindowClose</animation>
-			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>		
+			<animation effect="fade" start="0" end="100" time="400">VisibleChange</animation>
 
 			<control type="image">
 				<posx>75</posx>
@@ -481,15 +497,14 @@
 						<label fallback="31425">$INFO[Container(52).ListItem.Date]</label> <!-- aeon passion mod -->
 					</control>			
 				</control>
-
 			</control>
-
-<!-- mod for episode media flags -->
+<!-- aeon passion mod -->	
+<!-- episode media flags -->
 			<control type="group">
 				<include>Furniture_EpisodeMediaFlags</include>
 			</control>
-<!-- mod for episode media flags -->
-
+<!-- episode media flags -->
+<!-- aeon passion mod -->	
 			<control type="group">
 				<posx>105</posx>
 				<posy>30</posy>
@@ -532,7 +547,6 @@
 						<label fallback="31425">$INFO[Container(52).ListItem.Date]</label>
 					</control>			
 				</control>
-
 			</control>	
 
 			<control type="group">
@@ -577,7 +591,6 @@
 						<label fallback="31425">$INFO[Container(52).ListItem.Property(UnwatchedEpisodes)]</label>
 					</control>			
 				</control>
-
 			</control>				
 			
 			<control type="textbox">
@@ -648,10 +661,7 @@
 					<visible>Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)</visible>
 					<include>Animation_VisibleChange200</include>
 				</control>
-	
 			</control>	
-
-			
 		</control>	
 	</include>
 
@@ -742,7 +752,7 @@
 			<visible>Control.IsVisible(52)</visible>
 			<animation effect="slide" start="0,-30" end="0,-30" time="0" condition="Container.Content(movies)">Conditional</animation>
 		</control>
-		
+
 		<control type="image">
 			<posx>1238</posx>
 			<posy>574</posy>
@@ -756,7 +766,7 @@
 		
 		<include condition="Skin.HasSetting(videomovies)">MultiplexInfoPaneMovies</include>	
 		<include condition="Skin.HasSetting(videotv)">MultiplexInfoPaneTV</include>
-		
+
 		<control type="wraplist" id="52">
 			<viewtype label="31757">wrap</viewtype>
 			<include condition="Skin.HasSetting(videomovies)">MultiplexMovieVarsWrap</include>
@@ -764,8 +774,15 @@
 			<pagecontrol>60</pagecontrol>
 			<onleft>52</onleft>
 			<onright>52</onright>
+<!-- aeon passion mod -->
+<!--
 			<include condition="[Skin.HasSetting(videomovies) + !Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + !Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoAutoUp</include>
 			<include condition="[Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexinfotrigger)] | [Skin.HasSetting(videotv) + Skin.HasSetting(multiplextvinfotrigger)]">MultiplexInfoTriggerUp</include>
+-->			
+			<include condition="Skin.HasSetting(videomovies) + !Skin.HasSetting(multiplexinfotrigger)">MultiplexInfoAutoUp</include>
+			<include condition="Skin.HasSetting(videomovies) + Skin.HasSetting(multiplexinfotrigger)">MultiplexInfoTriggerUp</include>
+			<include condition="Skin.HasSetting(videotv)">MultiplexInfoTriggerUp</include>
+<!-- aeon passion mod -->
 			<ondown>60</ondown>
 			<orientation>horizontal</orientation>
 			<include condition="Skin.HasSetting(videomovies)">MultiplexFocusMovies</include>
@@ -967,7 +984,6 @@
 					<visible>false</visible>
 				</control>
 			</focusedlayout>			
-
 		</control>	
 
 		<control type="scrollbar" id="60">

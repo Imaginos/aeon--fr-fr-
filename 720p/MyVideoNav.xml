@@ -9,7 +9,26 @@
 		<width>0</width>
 		<height>0</height>
 		<texture>-</texture>
-		<visible>[Skin.HasSetting(videomovies) + !Skin.HasSetting(nomultiplexpopup) + ![Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfotrigger)] + [Control.HasFocus(52) | Control.HasFocus(61) | Control.HasFocus(94) | ControlGroup(7000).HasFocus()] + [!Container(52).OnNext + !Container(52).OnPrevious]] | [Skin.HasSetting(videotv) + !Skin.HasSetting(nomultiplextvpopup) + ![Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfotrigger)] + [Control.HasFocus(52) | Control.HasFocus(61) | Control.HasFocus(94) | ControlGroup(7000).HasFocus()] + [!Container(52).OnNext + !Container(52).OnPrevious]]</visible>
+<!-- aeon passion mod -->
+		<visible>
+		[
+		Skin.HasSetting(videomovies) + !Skin.HasSetting(nomultiplexpopup) 
+		+ ![Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfotrigger)] 
+		+ [Control.HasFocus(52) | Control.HasFocus(61) | Control.HasFocus(94) | ControlGroup(7000).HasFocus()] 
+		+ [!Container(52).OnNext + !Container(52).OnPrevious]
+		] | [
+		Skin.HasSetting(videotv) + !Skin.HasSetting(nomultiplextvpopup) 
+		+ [
+		![Container.Content(episodes) + [Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfotrigger)]]
+		+
+		![Container.Content(seasons) + [Skin.HasSetting(multiplextvseasonsinfooff) | Skin.HasSetting(multiplextvseasonsinfotrigger)]]
+		+
+		![Container.Content(tvshows) + [Skin.HasSetting(multiplextvshowsinfooff) | Skin.HasSetting(multiplextvshowsinfotrigger)]]
+		]
+		+ [Control.HasFocus(52) | Control.HasFocus(61) | Control.HasFocus(94) | ControlGroup(7000).HasFocus()]
+		+ [!Container(52).OnNext + !Container(52).OnPrevious]
+		]</visible>
+<!-- aeon passion mod -->
 		<animation effect="fade" start="0" end="100" time="150" delay="3000">Visible</animation>
 	</control>
 	
@@ -77,9 +96,8 @@
 					<label>103</label>
 					<include>Objects_MediaMenuButton</include>
 				</control>
-
-				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>			
 				
+				<include condition="!Skin.HasSetting(nomultiplexinfobuttons)">Objects_MultiplexInfoButtons</include>		
 				<include condition="!Skin.HasSetting(nomultiplexstylebuttons)">Objects_MultiplexStyleButtons</include>
 				
 				<control type="togglebutton" id="940">

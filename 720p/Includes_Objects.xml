@@ -406,9 +406,15 @@
 			<visible>Control.IsVisible(52)</visible>
 		</control>
 	</include>	
+
+	<include name="passion">
+		<control type="label">
+		<label>passion</label>
+		</control>
+	</include>
 	
 	<include name="Objects_MultiplexInfoButtons">
-		<control type="button" id="980">
+		<control type="button" id="970">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
 			<onclick>Skin.SetBool(multiplexinfoauto)</onclick>
@@ -417,7 +423,7 @@
 			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + Skin.HasSetting(multiplexinfooff)</visible>
 		</control>
 		
-		<control type="button" id="981">
+		<control type="button" id="971">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
 			<onclick>Skin.SetBool(multiplexinfotrigger)</onclick>
@@ -426,7 +432,7 @@
 			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + ![Skin.HasSetting(multiplexinfotrigger) | Skin.HasSetting(multiplexinfooff) | Skin.HasSetting(multiplexinfoon)]</visible>
 		</control>
 
-		<control type="button" id="982">
+		<control type="button" id="972">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
 			<onclick>Skin.SetBool(multiplexinfoon)</onclick>
@@ -435,7 +441,7 @@
 			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + Skin.HasSetting(multiplexinfotrigger)</visible>
 		</control>	
 
-		<control type="button" id="983">
+		<control type="button" id="973">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
 			<onclick>Skin.SetBool(multiplexinfooff)</onclick>
@@ -443,44 +449,121 @@
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Skin.HasSetting(videomovies) + Control.IsVisible(52) + Skin.HasSetting(multiplexinfoon)</visible>
 		</control>
-
-		<control type="button" id="984">
+<!-- aeon passion mod -->
+<!-- OFF -->
+		<control type="button" id="974">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
 			<onclick>Skin.SetBool(multiplextvinfoauto)</onclick>
 			<onclick>Skin.Reset(multiplextvinfooff)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvinfooff)</visible>
+			<visible>Container.Content(episodes)</visible>
 		</control>
-		
-		<control type="button" id="985">
+		<control type="button" id="978">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(multiplextvseasonsinfoauto)</onclick>
+			<onclick>Skin.Reset(multiplextvseasonsinfooff)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvseasonsinfooff)</visible>
+			<visible>Container.Content(seasons)</visible>
+		</control>
+		<control type="button" id="982">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31078]</label>
+			<onclick>Skin.SetBool(multiplextvshowsinfoauto)</onclick>
+			<onclick>Skin.Reset(multiplextvshowsinfooff)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvshowsinfooff)</visible>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+<!-- AUTO -->
+		<control type="button" id="975">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
 			<onclick>Skin.SetBool(multiplextvinfotrigger)</onclick>
 			<onclick>Skin.Reset(multiplextvinfoauto)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + ![Skin.HasSetting(multiplextvinfotrigger) | Skin.HasSetting(multiplextvinfooff) | Skin.HasSetting(multiplextvinfoon)]</visible>
+			<visible>Container.Content(episodes)</visible>
 		</control>
-
-		<control type="button" id="986">
+		<control type="button" id="979">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(multiplextvseasonsinfotrigger)</onclick>
+			<onclick>Skin.Reset(multiplextvseasonsinfoauto)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + ![Skin.HasSetting(multiplextvseasonsinfotrigger) | Skin.HasSetting(multiplextvseasonsinfooff) | Skin.HasSetting(multiplextvseasonsinfoon)]</visible>
+			<visible>Container.Content(seasons)</visible>
+		</control>
+		<control type="button" id="983">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31049]</label>
+			<onclick>Skin.SetBool(multiplextvshowsinfotrigger)</onclick>
+			<onclick>Skin.Reset(multiplextvshowsinfoauto)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + ![Skin.HasSetting(multiplextvshowsinfotrigger) | Skin.HasSetting(multiplextvshowsinfooff) | Skin.HasSetting(multiplextvshowsinfoon)]</visible>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+<!-- TRIGGER -->
+		<control type="button" id="976">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
 			<onclick>Skin.SetBool(multiplextvinfoon)</onclick>
 			<onclick>Skin.Reset(multiplextvinfotrigger)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvinfotrigger)</visible>
+			<visible>Container.Content(episodes)</visible>
 		</control>	
-
-		<control type="button" id="987">
+		<control type="button" id="980">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(multiplextvseasonsinfoon)</onclick>
+			<onclick>Skin.Reset(multiplextvseasonsinfotrigger)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvseasonsinfotrigger)</visible>
+			<visible>Container.Content(seasons)</visible>
+		</control>	
+		<control type="button" id="984">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31048]</label>
+			<onclick>Skin.SetBool(multiplextvshowsinfoon)</onclick>
+			<onclick>Skin.Reset(multiplextvshowsinfotrigger)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvshowsinfotrigger)</visible>
+			<visible>Container.Content(tvshows)</visible>
+		</control>	
+<!-- ON -->
+		<control type="button" id="977">
 			<include>Objects_MediaMenuButton</include>				
 			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
 			<onclick>Skin.SetBool(multiplextvinfooff)</onclick>
 			<onclick>Skin.Reset(multiplextvinfoon)</onclick>
 			<onclick>XBMC.ReloadSkin</onclick>
 			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvinfoon)</visible>
-		</control>		
+			<visible>Container.Content(episodes)</visible>
+		</control>
+		<control type="button" id="981">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(multiplextvseasonsinfooff)</onclick>
+			<onclick>Skin.Reset(multiplextvseasonsinfoon)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvseasonsinfoon)</visible>
+			<visible>Container.Content(seasons)</visible>
+		</control>
+		<control type="button" id="985">
+			<include>Objects_MediaMenuButton</include>				
+			<label>$LOCALIZE[31070]: $LOCALIZE[31077]</label>
+			<onclick>Skin.SetBool(multiplextvshowsinfooff)</onclick>
+			<onclick>Skin.Reset(multiplextvshowsinfoon)</onclick>
+			<onclick>XBMC.ReloadSkin</onclick>
+			<visible>Window.IsActive(25) + Skin.HasSetting(videotv) + Control.IsVisible(52) + Skin.HasSetting(multiplextvshowsinfoon)</visible>
+			<visible>Container.Content(tvshows)</visible>
+		</control>
+<!-- aeon passion mod -->
 	</include>
-	
 	<include name="Objects_MultiplexStyleButtons">
 		<control type="button" id="988">
 			<include>Objects_MediaMenuButton</include>				
