@@ -14,6 +14,9 @@
 		<effect type="fade" start="100" end="0" time="300" />
 	</animation>
 	<controls>
+		
+		<!-- Light -->
+		
 		<control type="image" id="997">
 			<description>background top image</description>
 			<posx>0</posx>
@@ -21,6 +24,7 @@
 			<width>308</width>
 			<height>26</height>
 			<texture>dialogs/context_top.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		<control type="image" id="999">
 			<description>background image</description>
@@ -28,6 +32,7 @@
 			<posy>0</posy>
 			<width>308</width>
 			<texture>dialogs/context_middle.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		<control type="image" id="998">
 			<description>background bottom image</description>
@@ -36,6 +41,7 @@
 			<width>308</width>
 			<height>27</height>
 			<texture>dialogs/context_bottom.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		<control type="button" id="1000">
 			<description>button template</description>
@@ -51,6 +57,52 @@
 			<aligny>top</aligny>
 			<font>Font_ContextMenuButton</font>
 			<textoffsety>8</textoffsety>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		
+		<!-- Night -->
+		
+		<control type="image" id="997">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-26</posy>
+			<width>308</width>
+			<height>26</height>
+			<texture>dialogs/night/context_top.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		<control type="image" id="999">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>308</width>
+			<texture>dialogs/night/context_middle2.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		<control type="image" id="998">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>390</posy>
+			<width>308</width>
+			<height>27</height>
+			<texture>dialogs/night/context_bottom2.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		<control type="button" id="1000">
+			<description>button template</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<height>39</height>
+			<width>308</width>
+			<textcolor>FF818181</textcolor>
+			<focusedcolor>FFdfdfdf</focusedcolor>
+			<texturenofocus>dialogs/night/context_nofocus.png</texturenofocus>
+			<texturefocus>dialogs/night/context_highlight.png</texturefocus>
+			<align>center</align>
+			<aligny>center</aligny>
+			<font>Font_ContextMenuButton</font>
+			<textoffsety>8</textoffsety>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
 		</control>
 	</controls>
 </window>

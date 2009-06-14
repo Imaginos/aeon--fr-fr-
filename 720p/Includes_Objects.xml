@@ -406,12 +406,6 @@
 			<visible>Control.IsVisible(52)</visible>
 		</control>
 	</include>	
-
-	<include name="passion">
-		<control type="label">
-		<label>passion</label>
-		</control>
-	</include>
 	
 	<include name="Objects_MultiplexInfoButtons">
 		<control type="button" id="970">
@@ -792,6 +786,8 @@
 	</include>
 	
 <!-- Context menus -->
+
+    <!-- Light -->
 	
 	<include name="Objects_ContextMenuButton">
 		<description>button template</description>
@@ -803,6 +799,24 @@
 		<focusedcolor>FFdfdfdf</focusedcolor>
 		<texturenofocus>dialogs/context_nofocus.png</texturenofocus>
 		<texturefocus>dialogs/context_highlight.png</texturefocus>
+		<align>center</align>
+		<aligny>top</aligny>
+		<font>Font_ContextMenuButton</font>
+		<textoffsety>8</textoffsety>
+	</include>
+	
+    <!-- Night -->
+	
+	<include name="Objects_ContextMenuButtonNight">
+		<description>button template</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<height>39</height>
+		<width>308</width>
+		<textcolor>FF818181</textcolor>
+		<focusedcolor>FFdfdfdf</focusedcolor>
+		<texturenofocus>dialogs/night/context_nofocus.png</texturenofocus>
+		<texturefocus>dialogs/night/context_highlight.png</texturefocus>
 		<align>center</align>
 		<aligny>top</aligny>
 		<font>Font_ContextMenuButton</font>

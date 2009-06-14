@@ -13,19 +13,31 @@
 	<animation type="WindowClose" reversible="false">
 		<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
 		<effect type="fade" start="100" end="0" time="300" />
-	</animation>	
+	</animation>
 	<controls>
 
 		<control type="group">
 			<width>406</width>
 			<height>556</height>
 			<animation effect="slide" start="-410,0" end="0,0" time="400" delay="500" tween="cubic" easing="out">WindowOpen</animation>
+			
+			<!-- Added image for night sidecar + visible condition -->
+			
 			<control type="image">
 				<posx>809</posx>
 				<posy>103</posy>
 				<width>406</width>
 				<height>556</height>
 				<texture>list/filebrowser_sidecar.png</texture>
+				<visible>!Skin.HasSetting(darkshowcase)</visible>
+			</control>
+			<control type="image">
+				<posx>809</posx>
+				<posy>103</posy>
+				<width>406</width>
+				<height>556</height>
+				<texture>list/night/filebrowser_sidecar.png</texture>
+				<visible>Skin.HasSetting(darkshowcase)</visible>
 			</control>
 			<control type="image">
 				<width>286</width>
@@ -107,14 +119,26 @@
 			<texture>list/listpanel_black.png</texture>
 		</control>
 		
+		<!-- Added image for night background + visible condition -->
+		
 		<control type="image">
 			<posx>60</posx>
 			<posy>73</posy>
 			<width>759</width>
 			<height>647</height>
 			<texture>list/listpanel_back_noreflect.png</texture>
-		</control>	
-	
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		
+		<control type="image">
+			<posx>60</posx>
+			<posy>73</posy>
+			<width>759</width>
+			<height>647</height>
+			<texture>list/night/listpanel_back_noreflect.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		
 		<control type="image">
 			<posx>669</posx>
 			<posy>137</posy>
@@ -123,13 +147,24 @@
 			<texture>list/listpanel_detailwide.png</texture>
 		</control>
 		
+		<!-- Added images for night buttons + visible condition -->
+		
 		<control type="image">
 			<posx>60</posx>
 			<posy>600</posy>
 			<width>759</width>
 			<height>88</height>
 			<texture>list/list_filebrowser_buttons.png</texture>
-			<visible>Window.IsActive(604)</visible>
+			<visible>Window.IsActive(604) + !Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		
+		<control type="image">
+			<posx>60</posx>
+			<posy>600</posy>
+			<width>759</width>
+			<height>88</height>
+			<texture>list/night/list_filebrowser_buttons.png</texture>
+			<visible>Window.IsActive(604) + Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		
 		<control type="image">
@@ -138,8 +173,17 @@
 			<width>759</width>
 			<height>88</height>
 			<texture>list/list_filebrowser_3buttons.png</texture>
-			<visible>!Window.IsActive(604)</visible>
-		</control>		
+			<visible>!Window.IsActive(604) + !Skin.HasSetting(darkshowcase)</visible>
+		</control>	
+		
+		<control type="image">
+			<posx>60</posx>
+			<posy>600</posy>
+			<width>759</width>
+			<height>88</height>
+			<texture>list/night/list_filebrowser_3buttons.png</texture>
+			<visible>!Window.IsActive(604) + Skin.HasSetting(darkshowcase)</visible>
+		</control>	
 
 		<control type="label" id="411">
 			<posx>105</posx>

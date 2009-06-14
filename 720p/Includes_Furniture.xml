@@ -1,4 +1,12 @@
 <includes>
+	
+	<include name="ListFloorLight">
+		<texture>list/list_floor.png</texture>
+	</include>
+
+	<include name="ListFloorNight">
+		<texture>list/night/list_floor.png</texture>
+	</include>
 
 <!-- Time -->
 
@@ -717,7 +725,8 @@
 			<posy>315</posy>
 			<width>1280</width>
 			<height>405</height>
-			<texture>list/list_floor.png</texture>
+			<include condition="!Skin.HasSetting(darkshowcase)">ListFloorLight</include>
+			<include condition="Skin.HasSetting(darkshowcase)">ListFloorNight</include>
 			<visible>Control.IsVisible(50)</visible>
 
 			<include>Animation_CommonFade</include>
@@ -1005,7 +1014,7 @@
 			</control>
 		</control>
 	</include>
-
+	
 	<include name="Furniture_DarkGradient">
 		<control type="image">
 			<posx>0</posx>
@@ -1015,9 +1024,8 @@
 			<texture>showcase/showcase_gradient.png</texture>
 			<visible>Skin.HasSetting(darkshowcase) + [Control.IsVisible(57) | Control.IsVisible(52)]</visible>
 			<include>Animation_CommonFade</include>
-		</control>		
+		</control>
 	</include>
-	
 	
 <!-- Settings windows -->
 

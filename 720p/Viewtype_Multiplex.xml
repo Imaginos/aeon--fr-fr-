@@ -1,5 +1,31 @@
 <includes>
 
+	<!-- Light & Night Includes -->
+	
+	<include name="MultiplexPlotLight">
+		<texture>multiplex/multiplex_tablet.png</texture>		
+	</include>
+	
+	<include name="MultiplexPlotNight">
+		<texture>multiplex/night/multiplex_tablet.png</texture>
+	</include>
+	
+	<include name="MultiplexBigThumbLight">
+		<texture>multiplex/multiplex_tablet_bigthumb.png</texture>
+	</include>
+	
+	<include name="MultiplexBigThumbNight">
+		<texture>multiplex/night/multiplex_tablet_bigthumb.png</texture>
+	</include>
+	
+	<include name="MultiplexTVLight">
+		<texture>multiplex/multiplex_tvtablet.png</texture>
+	</include>
+	
+	<include name="MultiplexTVNight">
+		<texture>multiplex/night/multiplex_tvtablet.png</texture>
+	</include>
+
 	<include name="MultiplexPlotWidth">
 		<width>285</width>	
 	</include>
@@ -68,19 +94,22 @@
 				<posx>75</posx>
 				<width>1130</width>
 				<height>564</height>
-				<texture>multiplex/multiplex_back.png</texture>
-				<visible>!Skin.HasSetting(multiplexthin)</visible>
-				<include>Animation_CommonFade</include>
-			</control>			
+				<!-- Plot Layout Light & Night Include -->
+				<include condition="!Skin.HasSetting(darkshowcase)">MultiplexPlotLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MultiplexPlotNight</include>
+				<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>				
+			</control>	
 			
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
 				<height>564</height>
-				<texture>multiplex/multiplex_tablet.png</texture>
-				<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>				
-			</control>
-
+				<!-- Bigthumb Layout Light & Night Include -->
+				<include condition="!Skin.HasSetting(darkshowcase)">MultiplexBigThumbLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MultiplexBigThumbNight</include>
+				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>				
+			</control>	
+<!--
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
@@ -88,7 +117,7 @@
 				<texture>multiplex/multiplex_tablet_bigthumb.png</texture>
 				<visible>Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)</visible>				
 			</control>				
-			
+-->			
 			<control type="group">
 				<posx>105</posx>
 				<posy>26</posy>
@@ -398,6 +427,7 @@
 			<posx>0</posx>
 			<posy>65</posy>
 			<width>1280</width>
+			<height>381</height>
 <!--			
 			<visible>Skin.HasSetting(videotv) + Control.IsVisible(52) + !Control.HasFocus(197) + [Control.IsVisible(109) | Control.HasFocus(110) | Skin.HasSetting(multiplextvinfoon) | [ControlGroup(7000).HasFocus() + Skin.HasSetting(multiplextvinfotrigger)]]</visible>
 -->
@@ -424,18 +454,18 @@
 				<posx>75</posx>
 				<width>1130</width>
 				<height>564</height>
-				<texture>multiplex/multiplex_back.png</texture>
-				<visible>!Skin.HasSetting(multiplexthin)</visible>
-				<include>Animation_CommonFade</include>
-			</control>				
-			
+				<!-- TV Layout Light & Night Include -->
+				<include condition="!Skin.HasSetting(darkshowcase)">MultiplexTVLight</include>
+				<include condition="Skin.HasSetting(darkshowcase)">MultiplexTVNight</include>
+			</control>	
+<!--			
 			<control type="image">
 				<posx>75</posx>
 				<width>1130</width>
 				<height>564</height>
 				<texture>multiplex/multiplex_tvtablet.png</texture>
 			</control>	
-
+-->
 <!-- aeon passion mod -->
 			<control type="label">
 				<posx>75</posx>
@@ -504,7 +534,8 @@
 				<include>Furniture_EpisodeMediaFlags</include>
 			</control>
 <!-- episode media flags -->
-<!-- aeon passion mod -->	
+<!-- aeon passion mod -->
+	
 			<control type="group">
 				<posx>105</posx>
 				<posy>30</posy>
@@ -983,7 +1014,7 @@
 					<include>Animation_VisibleChange200</include>
 					<visible>false</visible>
 				</control>
-			</focusedlayout>			
+			</focusedlayout>
 		</control>	
 
 		<control type="scrollbar" id="60">
@@ -1067,7 +1098,7 @@
 				<include>ShowcaseDetailLabel</include>
 				<visible>Container.Content(episodes)</visible>					
 			</control>		
-<!-- aeon passion mod -->			
+<!-- aeon passion mod -->
 
 <!--			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title][/UPPERCASE]</label>

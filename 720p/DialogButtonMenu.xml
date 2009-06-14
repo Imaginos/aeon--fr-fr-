@@ -30,6 +30,7 @@
 			<width>308</width>
 			<height>26</height>
 			<texture>dialogs/context_top.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		<control type="image">
 			<description>background image</description>
@@ -40,6 +41,7 @@
 			<include condition="[system.hasloginscreen + !System.HasMediaDVD] | [!system.hasloginscreen + System.HasMediaDVD]">Objects_ButtonMenu9Group</include>			
 			<include condition="system.hasloginscreen + System.HasMediaDVD">Objects_ButtonMenu10Group</include>		
 			<texture>dialogs/context_middle.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		<control type="image">
 			<description>background bottom image</description>
@@ -50,6 +52,41 @@
 			<animation effect="slide" start="0,-39" end="0,-39" time="0" condition="![system.hasloginscreen | System.HasMediaDVD]">Conditional</animation>
 			<animation effect="slide" start="0,39" end="0,39" time="0" condition="system.hasloginscreen + System.HasMediaDVD">Conditional</animation>			
 			<texture>dialogs/context_bottom.png</texture>
+			<visible>!Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		
+		<!-- Night -->
+		
+		<control type="image">
+			<description>background top image</description>
+			<posx>0</posx>
+			<posy>-26</posy>
+			<width>308</width>
+			<height>26</height>
+			<texture>dialogs/night/context_top.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>308</width>
+			<include condition="![system.hasloginscreen | System.HasMediaDVD]">Objects_ButtonMenu8Group</include> 
+			<include condition="[system.hasloginscreen + !System.HasMediaDVD] | [!system.hasloginscreen + System.HasMediaDVD]">Objects_ButtonMenu9Group</include>			
+			<include condition="system.hasloginscreen + System.HasMediaDVD">Objects_ButtonMenu10Group</include>		
+			<texture>dialogs/night/context_middle.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
+		</control>
+		<control type="image">
+			<description>background bottom image</description>
+			<posx>0</posx>
+			<posy>351</posy>
+			<width>308</width>
+			<height>27</height>
+			<animation effect="slide" start="0,-39" end="0,-39" time="0" condition="![system.hasloginscreen | System.HasMediaDVD]">Conditional</animation>
+			<animation effect="slide" start="0,39" end="0,39" time="0" condition="system.hasloginscreen + System.HasMediaDVD">Conditional</animation>			
+			<texture>dialogs/night/context_bottom.png</texture>
+			<visible>Skin.HasSetting(darkshowcase)</visible>
 		</control>
 		
 		<control type="grouplist" id="4112">
@@ -67,21 +104,24 @@
 			<control type="button" id="801">
 				<description>Settings</description>
 				<label>31200</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>Skin.SetBool(bmtransit)</onclick>
 				<onclick>XBMC.ActivateWindow(4)</onclick>
 			</control>
 			<control type="button" id="802">
 				<description>Customise</description>
 				<label>31201</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>Skin.SetBool(bmtransit)</onclick>				
 				<onclick>XBMC.ActivateWindow(604)</onclick>
 			</control>
 			<control type="button" id="803">
 				<description>Assistant</description>
 				<label>31202</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>Skin.SetBool(bmtransit)</onclick>				
 				<onclick>XBMC.ActivateWindow(605)</onclick>
 			</control>
@@ -89,47 +129,54 @@
 				<description>Home Visualiser</description>
 				<label>31203</label>
 				<altlabel>31204</altlabel>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>Skin.Togglesetting(homevis)</onclick>
-				<usealttexture>Skin.HasSetting(homevis)</usealttexture>
+<!--				<usealttexture>Skin.HasSetting(homevis)</usealttexture> -->
 			</control>
 			<control type="button" id="805">
 				<description>Now Playing</description>
 				<label>31205</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>Skin.SetBool(bmtransit)</onclick>
 				<onclick>XBMC.ActivateWindow(500)</onclick>
 			</control>
 			<control type="button" id="806">
 				<description>Shutdown Timer</description>
 				<label>31206</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>AlarmClock(,Shutdown,)</onclick>
 			</control>
 			<control type="button" id="807">
 				<description>Log Out</description>
 				<label>31209</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>System.LogOff</onclick>
 				<visible>system.hasloginscreen</visible>
 			</control>
 			<control type="button" id="810">
 				<description>Eject Tray</description>
 				<label>31210</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>EjectTray()</onclick>
 				<visible>System.HasMediaDVD</visible>
 			</control>				
 			<control type="button" id="808">
 				<description>Restart</description>
 				<label>31207</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>RestartApp</onclick>
 			</control>
 			<control type="button" id="809">
 				<description>Shutdown</description>
 				<label>31208</label>
-				<include>Objects_ContextMenuButton</include>
+				<include condition="!Skin.HasSetting(darkshowcase)">Objects_ContextMenuButton</include>
+				<include condition="Skin.HasSetting(darkshowcase)">Objects_ContextMenuButtonNight</include>
 				<onclick>Shutdown</onclick>
 			</control>				
 

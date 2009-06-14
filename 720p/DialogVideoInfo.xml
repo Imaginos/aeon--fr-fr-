@@ -1,4 +1,5 @@
 <window type="dialog" id="2003">
+
 	<defaultcontrol>8</defaultcontrol>
 	<zorder>2</zorder>
 	<coordinates>
@@ -6,6 +7,7 @@
 	<posx>0</posx>
 	<posy>0</posy>
 	</coordinates>
+	
 	<include>Animation_CommonFade</include>
 	<controls>
 
@@ -16,9 +18,9 @@
 
 	<control type="image">
 		<description>background image</description>
-		<posx>486</posx>
+		<posx>480</posx>
 		<posy>0</posy>
-		<width>795</width>
+		<width>800</width>
 		<height>720</height>
 		<texture>info/info_rightpanelbottom.png</texture>
 		<animation effect="slide" time="0" start="22,0" end="22,0" condition="Container.Content(episodes)">Conditional</animation>
@@ -37,7 +39,7 @@
 	<control type="image">
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>510</width>
+		<width>480</width>
 		<height>720</height>
 		<texture>common/darkgrey.png</texture>
 		<visible>Container.Content(episodes)</visible>
@@ -46,41 +48,17 @@
 	<control type="image">
 		<posx>0</posx>
 		<posy>83</posy>
-		<width>510</width>
+		<width>480</width>
 		<height>637</height>
 		<texture>info/musicinfogradient.png</texture>
 		<visible>Container.Content(episodes)</visible>
 	</control>
 
-	<control type="group">
-		<posx>55</posx>
-		<animation effect="rotatey" time="0" start="-20" end="-20" center="20,0" condition="true">Conditional</animation>
-		<animation effect="slide" start="430" end="0" time="700" tween="cubic" easing="out" delay="400">WindowOpen</animation>
-		<visible>Container.Content(episodes)</visible>
-		<control type="image">
-			<description>Cover image</description>
-			<width>370</width>
-			<height>400</height>
-			<posy>160</posy>
-			<texture>$INFO[listitem.thumb]</texture>
-			<bordertexture border="-77">info/musicinfoshadow.png</bordertexture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-		<control type="image">
-			<description>Cover image</description>
-			<posy>560</posy>
-			<width>370</width>
-			<height>400</height>
-			<texture flipy="true" diffuse="common/Thumb_Mask6.png">$INFO[listitem.thumb]</texture>
-			<aspectratio>stretch</aspectratio>
-		</control>
-	</control>
-	
 	<control type="image">
 		<description>Cover image</description>
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>486</width>
+		<width>480</width>
 		<height>720</height>
 		<texture>info/movieinfogradient.png</texture>
 		<aspectratio>stretch</aspectratio>
@@ -91,57 +69,46 @@
 		<description>Cover image</description>
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>486</width>
-		<height>720</height>
-		<texture>$INFO[listitem.thumb]</texture>
-		<aspectratio>stretch</aspectratio>
-	</control>
-	
-	<control type="largeimage">
-		<description>Cover image</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>486</width>
-		<height>720</height>
-		<texture>$INFO[listitem.path]movie.tbn</texture>
-		<aspectratio>stretch</aspectratio>
-		<fadetime>500</fadetime>
-		<visible>!Skin.HasSetting(videotv)</visible>		
-	</control>
-	
-	<control type="largeimage">
-		<description>Cover image</description>
-		<posx>0</posx>
-		<posy>0</posy>
-		<width>486</width>
+		<width>480</width>
 		<height>720</height>
 		<texture>$INFO[listitem.path]poster.jpg</texture>
 		<aspectratio>stretch</aspectratio>
-		<fadetime>500</fadetime>
-		<visible>Skin.HasSetting(videotv)</visible>		
-	</control>	
+		<visible>!Skin.HasSetting(videotv)</visible>
+	</control>
 	
 	<control type="largeimage">
 		<description>Cover image</description>
 		<posx>0</posx>
 		<posy>0</posy>
-		<width>486</width>
+		<width>480</width>
 		<height>720</height>
-		<texture>$INFO[listitem.path]-big.png</texture>
+		<texture>$INFO[listitem.path]poster.jpg</texture>
 		<aspectratio>stretch</aspectratio>
-		<fadetime>500</fadetime>
-		<visible>!Skin.HasSetting(videotv)</visible>		
+		<visible>Skin.HasSetting(videotv)</visible>
+	</control>
+	
+	<!-- added night rightpaneltop + visible condition -->
+	
+	<control type="image">
+		<description>background image</description>
+		<posx>480</posx>
+		<posy>0</posy>
+		<width>800</width>
+		<height>720</height>
+		<texture>info/info_rightpaneltop.png</texture>
+		<visible>!Skin.HasSetting(darkshowcase)</visible>
 	</control>	
 	
 	<control type="image">
 		<description>background image</description>
-		<posx>486</posx>
+		<posx>480</posx>
 		<posy>0</posy>
-		<width>795</width>
+		<width>800</width>
 		<height>720</height>
-		<texture>info/lite/info_rightpaneltop.png</texture>
-	</control>	
-
+		<texture>info/night/info_rightpaneltop.png</texture>
+		<visible>Skin.HasSetting(darkshowcase)</visible>
+	</control>
+	
 <!-- Movie info -->
 
 	<control type="group">
@@ -724,7 +691,7 @@
 	
 	</control>	
 
-	<!--<include>Background_ContextBlack</include>-->
+	<!-- <include>Background_ContextBlack</include> -->
 	
 	</controls>
 </window>
