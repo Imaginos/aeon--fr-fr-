@@ -3342,7 +3342,17 @@
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>$INFO[ListItem.Rating]</label>		
+					<label>$INFO[ListItem.Rating]</label>	
+					<visible>Skin.HasSetting(darkmultiplex)</visible>	
+				</control>
+				<control type="label">
+					<posy>469</posy>
+					<posx>30</posx>
+					<align>left</align>
+					<font>Font_FSInfoPlot</font>
+					<textcolor>b91a1a1c</textcolor>
+					<label>$INFO[ListItem.Rating]</label>
+					<visible>!Skin.HasSetting(darkmultiplex)</visible>			
 				</control>
 			</control>
 		</control>		
@@ -3927,7 +3937,15 @@
 					<align>left</align>
 					<font>Font_FSInfoPlot</font>
 					<textcolor>d0FFFFFF</textcolor>
-					<label>$INFO[ListItem.Rating]</label>			
+					<label>$INFO[ListItem.Rating]</label>
+					<visible>Skin.HasSetting(darkshowcase)</visible>			
+				</control>
+				<control type="label">
+					<align>left</align>
+					<font>Font_FSInfoPlot</font>
+					<textcolor>b91a1a1c</textcolor>
+					<label>$INFO[ListItem.Rating]</label>
+					<visible>!Skin.HasSetting(darkshowcase)</visible>			
 				</control>
 			</control>
 		</control>		
