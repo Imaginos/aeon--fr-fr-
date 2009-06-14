@@ -61,6 +61,17 @@
 		
 <!-- aeon passion mod BEGIN
 		Display season and episode numbers on the info bar -->
+				<control type="image">
+					<posx>1</posx>
+					<posy>1</posy>
+					<width>668</width>
+					<height>376</height>
+					<fadetime>400</fadetime>
+					<aspectratio>scale</aspectratio>
+					<texture>$INFO[VideoPlayer.cover]</texture>
+					<visible>Skin.HasSetting(multiplextvbigthumb) + Container.Content(episodes)</visible>
+					<include>Animation_VisibleChange200</include>
+				</control>
 		<control type="label">
 			<posx>0</posx>
 			<posy>75</posy>

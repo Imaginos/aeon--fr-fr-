@@ -61,7 +61,7 @@
 		<posy>-178</posy>    
 		<width>330</width>     
 		<height>185</height> 
-		<label>$INFO[listitem.filenameandpath]</label>
+		<label>$INFO[VideoPlayer.Year]</label>
 	</control>	
 <!-- aeon passion mod END -->
 	
