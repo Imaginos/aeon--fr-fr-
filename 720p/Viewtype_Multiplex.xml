@@ -280,6 +280,31 @@
 					<label>$INFO[ListItem.CastAndRole]</label>
 				</control>
 			</control>
+
+			<control type="group">
+				<control type="label">
+					<posx>0</posx>
+					<posy>-14</posy>
+					<width>1280</width>
+					<height>52</height>
+					<font>headline</font>	
+					<align>center</align>	
+					<shadow>FF000000</shadow>
+					<info>Container(52).ListItem.label</info>
+					<visible>![Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>	
+				</control>
+				
+				<control type="label">
+					<posx>104</posx>
+					<posy>-14</posy>
+					<width>1280</width>
+					<height>52</height>
+					<font>headline</font>
+					<shadow>FF000000</shadow> -->
+					<info>Container(52).ListItem.label</info>
+					<visible>[Skin.HasSetting(multiplexfanart) | Skin.HasSetting(multiplexbigthumb)]</visible>	
+				</control>
+			</control>
 			
 			<control type="textbox">
 				<posx>416</posx>
@@ -469,8 +494,10 @@
 <!-- aeon passion mod -->
 			<control type="label">
 				<posx>75</posx>
-				<posy>24</posy>
+				<posy>15</posy>
 				<width>1130</width>
+				<shadow>FF000000</shadow>
+				<font>headline</font>
 				<label>$INFO[ListItem.Title]</label>
 				<include>ShowcaseMainLabelWide</include>
 				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)]</visible>
@@ -479,6 +506,7 @@
 				<posx>75</posx>
 				<posy>24</posy>
 				<width>1130</width>
+				<font>headline</font>
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<include>ShowcaseMainLabelWide</include>
 				<visible>Container.Content(seasons)</visible>
@@ -1099,12 +1127,13 @@
 				<visible>Container.Content(episodes)</visible>					
 			</control>		
 <!-- aeon passion mod -->
-
-<!--			<control type="label">
+<!--
+			<control type="label">
 				<label>[UPPERCASE]$INFO[ListItem.Season].$INFO[ListItem.Episode]: $INFO[ListItem.Title][/UPPERCASE]</label>
 				<include>ShowcaseMainLabelWide</include>
 				<visible>Container.Content(episodes)</visible>					
-			</control>		-->	
+			</control>
+-->	
 			<control type="label">
 				<label>[UPPERCASE]$INFO[Container.NumItems] $LOCALIZE[31005][/UPPERCASE]</label>
 				<include>ShowcaseItemsLabel</include>
@@ -1129,11 +1158,13 @@
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(tvshows)] + !IsEmpty(ListItem.Genre)</visible>
 			</control>
-<!--			<control type="label" id="72">
+<!--
+			<control type="label" id="72">
 				<label>$INFO[ListItem.TVShowTitle]</label>
 				<include>ShowcaseDetailLabel</include>
 				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)] | Container.Content(seasons)</visible>
-			</control>-->
+			</control>
+-->
 			<control type="label" id="72">
 				<info>ListItem.PictureResolution</info>
 				<include>ShowcaseDetailLabel</include>

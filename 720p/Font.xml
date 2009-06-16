@@ -346,6 +346,33 @@
 <!-- Multiplex -->
 
     <font>
+      <name>headline</name>
+      <filename>aeon_settings.ttf</filename>
+      <size>46</size>
+	  <shadow>FF000000</shadow>
+    </font>
+	
+	<font>
+      <name>headline2</name>
+      <filename>aeon_settings.ttf</filename>
+      <size>27</size>
+	<shadow>FF000000</shadow>
+    </font>
+
+	<font>
+	  <name>trailer</name>
+	  <filename>aeon_settings.ttf</filename>
+	  <size>14</size>
+	</font>
+
+    <font>
+      <name>tagline</name>
+      <filename>aeon_settings.ttf</filename>
+      <size>20</size>
+<shadow>FF000000</shadow>
+    </font>
+
+    <font>
       <name>Font_MultiplexMainLabel</name>
       <filename>aeon_settings.ttf</filename>
       <size>55</size>
