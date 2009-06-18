@@ -323,6 +323,12 @@
 		</control>
 		<control type="radiobutton" id="450">
 			<include>Objects_SettingsDefaultRadioButton</include>
+			<label>31971</label>
+			<onclick>Skin.ToggleSetting(multiplexposter)</onclick>
+			<selected>Skin.HasSetting(multiplexposter)</selected>
+		</control>
+		<control type="radiobutton" id="453">
+			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31958], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
 			<onclick>Skin.SetString(movieshowcaseflags_pos2,codec)</onclick>
@@ -331,7 +337,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,codec) + Skin.String(movieshowcaseflags_pos3,resolution) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="451">
+		<control type="radiobutton" id="454">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31961], $LOCALIZE[31960], $LOCALIZE[31958]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
@@ -341,7 +347,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,duration) + Skin.String(movieshowcaseflags_pos3,audio) + Skin.String(movieshowcaseflags_pos4,codec)</selected>
 		</control>
-		<control type="radiobutton" id="452">
+		<control type="radiobutton" id="455">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31961], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
@@ -351,7 +357,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,duration) + Skin.String(movieshowcaseflags_pos3,resolution) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="453">
+		<control type="radiobutton" id="456">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31962], $LOCALIZE[31961], $LOCALIZE[31958]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
@@ -361,7 +367,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,rating) + Skin.String(movieshowcaseflags_pos3,duration) + Skin.String(movieshowcaseflags_pos4,codec)</selected>
 		</control>
-		<control type="radiobutton" id="454">
+		<control type="radiobutton" id="457">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31962], $LOCALIZE[31960], $LOCALIZE[31959]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
@@ -371,7 +377,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,rating) + Skin.String(movieshowcaseflags_pos3,audio) + Skin.String(movieshowcaseflags_pos4,resolution)</selected>
 		</control>
-		<control type="radiobutton" id="455">
+		<control type="radiobutton" id="458">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
@@ -381,7 +387,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,source) + Skin.String(movieshowcaseflags_pos3,codec) + Skin.String(movieshowcaseflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="456">
+		<control type="radiobutton" id="459">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31961], $LOCALIZE[31962]</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>
@@ -391,7 +397,7 @@
 			<onclick>Skin.SetBool(movieshowcaseflags_pos_set)</onclick>
 			<selected>Skin.String(movieshowcaseflags_pos1,studio) + Skin.String(movieshowcaseflags_pos2,source) + Skin.String(movieshowcaseflags_pos3,duration) + Skin.String(movieshowcaseflags_pos4,rating)</selected>
 		</control>	
-		<control type="radiobutton" id="457">
+		<control type="radiobutton" id="460">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31957], $LOCALIZE[31963], $LOCALIZE[31959], $LOCALIZE[31960]   ($LOCALIZE[31966])</label>
 			<onclick>Skin.SetString(movieshowcaseflags_pos1,studio)</onclick>

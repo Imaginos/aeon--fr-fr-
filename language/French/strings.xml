@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<!-- Date of translation : 2009-06-15 (23h30 UMT) -->
+<!-- Date of translation : 2009-06-18 (23h20 UMT) -->
 <!--  strings 31000 thru 31999 reserved for skins  -->
 
  <strings>
@@ -517,4 +517,5 @@
 	<string id="31968">Afficher les vignettes d'épisodes dans la barre de progression</string>
 	<string id="31969">Utiliser les cleararts à la place des vignettes</string>
 	<string id="31970">Affichage des icones de genre musical</string>
+	<string id="31971">Utiliser le poster sur la présentation "résumé" du multiplex</string>
 </strings>
