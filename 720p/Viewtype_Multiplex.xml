@@ -1,6 +1,14 @@
 <includes>
-
-	<!-- Light & Night Includes -->
+	<include name="ShowcaseMainTitleWide">
+		<include>ShowcaseLabelVars</include>
+        <posx>200</posx>
+        <posy>693</posy>
+        <width>880</width>
+        <font>Font_ShowcaseMainLabel</font>
+        <include>Colour_ShowcaseLabelNightShade</include>		
+		<visible>!ControlGroup(7000).HasFocus()</visible>
+        <animation effect="slide" end="0,-11" time="200" condition="[!Control.IsVisible(72) | IsEmpty(Control.GetLabel(72))] | Window.IsActive(24)">Conditional</animation>
+    </include>
 	
 	<include name="MultiplexPlotLight">
 		<texture>multiplex/multiplex_tablet.png</texture>		
@@ -499,7 +507,7 @@
 				<shadow>FF000000</shadow>
 				<font>headline</font>
 				<label>$INFO[ListItem.Title]</label>
-				<include>ShowcaseMainLabelWide</include>
+				<include>ShowcaseMainTitleWide</include>
 				<visible>[Container.Content(episodes) + !IsEmpty(ListItem.Episode)]</visible>
 			</control>
 			<control type="label">
@@ -508,7 +516,7 @@
 				<width>1130</width>
 				<font>headline</font>
 				<label>$INFO[ListItem.TVShowTitle]</label>
-				<include>ShowcaseMainLabelWide</include>
+				<include>ShowcaseMainTitleWide</include>
 				<visible>Container.Content(seasons)</visible>
 			</control>
 <!-- aeon passion mod -->

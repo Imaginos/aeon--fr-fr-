@@ -525,7 +525,7 @@
 			<selected>Skin.HasSetting(episodeclearartonseekbar)</selected>
 			<visible>Skin.HasSetting(episodecoveronseekbar)</visible>
 		</control>
-		<control type="radiobutton" id="491">
+		<control type="radiobutton" id="492">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31964], $LOCALIZE[31958], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
@@ -535,7 +535,7 @@
 			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
 			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,codec) + Skin.String(episodemediaflags_pos3,resolution) + Skin.String(episodemediaflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="492">
+		<control type="radiobutton" id="493">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31964], $LOCALIZE[31962], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
@@ -545,7 +545,7 @@
 			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
 			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,codec) + Skin.String(episodemediaflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="493">
+		<control type="radiobutton" id="494">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31964], $LOCALIZE[31962], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
@@ -555,7 +555,7 @@
 			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
 			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,rating) + Skin.String(episodemediaflags_pos3,resolution) + Skin.String(episodemediaflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="494">
+		<control type="radiobutton" id="495">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31964], $LOCALIZE[31963], $LOCALIZE[31959], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,network)</onclick>
@@ -565,7 +565,7 @@
 			<onclick>Skin.SetBool(episodemediaflags_pos_set)</onclick>
 			<selected>Skin.String(episodemediaflags_pos1,network) + Skin.String(episodemediaflags_pos2,source) + Skin.String(episodemediaflags_pos3,resolution) + Skin.String(episodemediaflags_pos4,audio)</selected>
 		</control>
-		<control type="radiobutton" id="495">
+		<control type="radiobutton" id="496">
 			<include>Objects_SettingsDefaultRadioButton</include>
 			<label>$LOCALIZE[31959], $LOCALIZE[31962], $LOCALIZE[31958], $LOCALIZE[31960]</label>
 			<onclick>Skin.SetString(episodemediaflags_pos1,resolution)</onclick>
