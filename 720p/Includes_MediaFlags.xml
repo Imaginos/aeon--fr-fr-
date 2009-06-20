@@ -790,7 +790,7 @@
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>$INFO[ListItem.VideoResolution,flags/resolutions/,.png]</texture>
 				</control>
-<!-- pour identification -->
+<!-- pour identification --
 				<control type="label">
 					<include>Furniture_EpisodeMediaTextVars</include>
 					<posx>-100</posx>
@@ -816,7 +816,7 @@
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>$INFO[ListItem.AudioCodec,flags/codecs/,.png]</texture>
 				</control>
-<!-- pour identification -->
+<!-- pour identification --
 				<control type="label">
 					<include>Furniture_EpisodeMediaTextVars</include>
 					<posx>-100</posx>
@@ -862,7 +862,7 @@
 						<include>Furniture_EpisodeMediaFlagsVars</include>
 						<texture>$INFO[ListItem.VideoCodec,flags/codecs/,.png]</texture>
 					</control>
-<!-- pour identification -->
+<!-- pour identification --
 				<control type="label">
 					<include>Furniture_EpisodeMediaTextVars</include>
 					<posx>-100</posx>
