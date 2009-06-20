@@ -65,6 +65,15 @@
 		<aspectratio align="right" aligny="bottom">keep</aspectratio>   
 		<visible>VideoPlayer.Content(episodes) + Skin.HasSetting(episodecoveronseekbar) + Skin.HasSetting(episodeclearartonseekbar)</visible>
 	</control>
+<!--	<control type ="image">  
+		<posx>1049</posx>     
+		<posy>-176</posy>    
+		<width>230</width>     
+		<height>184</height> 
+		<texture>cleararts/$INFO[VideoPlayer.TVShowTitle].season$INFO[VideoPlayer.season].png</texture> 
+		<aspectratio align="right" aligny="bottom">keep</aspectratio>
+		<visible>VideoPlayer.Content(episodes) + Skin.HasSetting(episodecoveronseekbar) + Skin.HasSetting(episodeclearartonseekbar) + Skin.HasSetting(episodeclearartbyseason)</visible>
+	</control>-->
 <!-- aeon passion mod END -->
 	
 	<control type="label">

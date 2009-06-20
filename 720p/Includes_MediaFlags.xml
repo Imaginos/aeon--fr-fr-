@@ -35,13 +35,15 @@
 	</include>
 <!-- mod for flag positions in episode view -->
 	<include name="Furniture_EpisodeLowerMediaFlags_Position1">
-		<posx>50</posx>
+		<posx>70</posx>
 	</include>
 	<include name="Furniture_EpisodeLowerMediaFlags_Position2">
-		<posx>220</posx>
+		<posx>256</posx>
+<!-- 		<posx>220</posx> -->
 	</include>
 	<include name="Furniture_EpisodeLowerMediaFlags_Position3">
-		<posx>951</posx>
+		<posx>912</posx>
+<!-- 		<posx>951</posx> -->
 	</include>
 	<include name="Furniture_EpisodeLowerMediaFlags_Position4">
 		<posx>1101</posx>
@@ -51,7 +53,7 @@
 	</include>
 
 	<include name="Furniture_EpisodeMediaFlagsVars">
-		<posy>655</posy>
+		<posy>645</posy>
 		<width>110</width>
 		<height>72</height>
 		<include>Animation_CommonFade</include>
@@ -63,8 +65,9 @@
 	</include>
 	
 	<include name="Furniture_EpisodeMediaTextVars">
-		<posy>677</posy>
-		<width>110</width>
+		<posy>681</posy>
+<!-- 		<width>110</width> -->
+		<width>300</width>
 		<height>72</height>
 		<include>Animation_CommonFade</include>
 		<include>Animation_HideShowcase</include>
@@ -729,6 +732,13 @@
 					<texture fallback="flags/hdtv.png">$INFO[ListItem.Studio,flags/tv/,_hd.png]</texture>
 					<visible>substring(ListItem.VideoResolution,720) | substring(ListItem.VideoResolution,1080)</visible>
 				</control>
+<!-- pour identification --
+				<control type="label">
+					<include>Furniture_EpisodeMediaTextVars</include>
+					<posx>-50</posx>
+					<label>Studio : $INFO[ListItem.Studio]</label>
+				</control>
+<!-- -->
 			</control>
 
 			<control type="group">
@@ -780,6 +790,13 @@
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>$INFO[ListItem.VideoResolution,flags/resolutions/,.png]</texture>
 				</control>
+<!-- pour identification -->
+				<control type="label">
+					<include>Furniture_EpisodeMediaTextVars</include>
+					<posx>-100</posx>
+					<label>Reso : $INFO[ListItem.VideoResolution]</label>
+				</control>
+<!-- -->
 			</control>
 
 			<control type="group">
@@ -799,12 +816,13 @@
 					<include>Furniture_EpisodeMediaFlagsVars</include>
 					<texture>$INFO[ListItem.AudioCodec,flags/codecs/,.png]</texture>
 				</control>
-<!-- pour identification
+<!-- pour identification -->
 				<control type="label">
 					<include>Furniture_EpisodeMediaTextVars</include>
-					<label>$INFO[ListItem.AudioCodec]</label>		
+					<posx>-100</posx>
+					<label>CODEC : $INFO[ListItem.AudioCodec]</label>		
 				</control>
--->
+<!---->
 				</control>
 <!-- Multiplex flags not managed alert -->
 			<control type="group">
@@ -844,12 +862,13 @@
 						<include>Furniture_EpisodeMediaFlagsVars</include>
 						<texture>$INFO[ListItem.VideoCodec,flags/codecs/,.png]</texture>
 					</control>
-<!-- pour identification
-					<control type="label">
-						<include>Furniture_EpisodeMediaTextVars</include>
-						<label>$INFO[ListItem.VideoCodec]</label>		
-					</control>
--->
+<!-- pour identification -->
+				<control type="label">
+					<include>Furniture_EpisodeMediaTextVars</include>
+					<posx>-100</posx>
+					<label>Codec : $INFO[ListItem.VideoCodec]</label>
+				</control>
+<!-- -->
 				</control>
 			</control>
 <!-- rating display-->
@@ -867,6 +886,11 @@
 			</control>
 		</control>
 	</include>
+	
+	
+	
+	
+	
 	
 	<include name="MusicRatingFlagsVars">
 		<posx>80</posx>
