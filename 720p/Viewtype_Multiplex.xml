@@ -882,6 +882,7 @@
 			<include condition="Skin.HasSetting(videomovies)">MultiplexFocusMovies</include>
 			<include condition="Skin.HasSetting(videotv)">MultiplexFocusTV</include>
 			<scrolltime>200</scrolltime>
+			<preloaditems>18</preloaditems>	<!-- aeon passion mod -->
 			<visible>Window.IsActive(25)</visible>
 			<include>Animation_HideMultiplex</include>
 			<itemlayout width="108" height="300" condition="Container.Content(movies)">
